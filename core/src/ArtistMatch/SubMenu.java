@@ -7,6 +7,7 @@ import com.badlogic.gdx.Screen;
 public class SubMenu implements Screen, InputProcessor, ApplicationListener{
 	private ArtistMatch AMGame;
 	
+	
 	public SubMenu(ArtistMatch game){
 		this.AMGame = game;
 	}

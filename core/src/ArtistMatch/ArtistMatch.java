@@ -21,6 +21,7 @@ public class ArtistMatch extends Game {
 	private Screen main, aGame,tScreen,instruct,subMenu,lSelect,current;
 	private int levelNumber;
 	private String genre;
+	private int score;
 	
 	public ArtistMatch(){
 	}
@@ -111,6 +112,7 @@ public class ArtistMatch extends Game {
 	public void setLevelNumber(int levelNumber) {
 		this.levelNumber = levelNumber;
 	}
+	
 	
 	
 	

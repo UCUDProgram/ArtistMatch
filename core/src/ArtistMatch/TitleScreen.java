@@ -34,7 +34,6 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 
 	@Override
 	public void render(float delta) {
-		// TODO Auto-generated method stub
 		batch.begin();
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -89,7 +88,7 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 	@Override
 	public boolean keyDown(int keycode) {
 		// TODO Auto-generated method stub
-//		AMGame.switchScreens(2);
+		game.switchScreens(2);
 		return false;
 	}
 

@@ -1,0 +1,8 @@
+<root>
+    <MainMenu>
+        <level>"Play"</level>
+        <level>"Instructions" </level>
+        <level>"Credits" </level>
+    </MainMenu>
+    
+</root>
