@@ -1,11 +1,15 @@
 package ArtistMatch;
 
 import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class LevelSelect implements Screen, InputProcessor, ApplicationListener {
 	private ArtistMatch AMGame;
+	private SpriteBatch batch;
 	
 	public LevelSelect(ArtistMatch Game){
 		this.AMGame = Game;
@@ -13,13 +17,18 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 
 	@Override
 	public void create() {
-		// TODO Auto-generated method stub
+		batch = new SpriteBatch();
 		
+		Gdx.input.setInputProcessor(this);
 	}
 
 	@Override
 	public void render() {
-		// TODO Auto-generated method stub
+		Gdx.gl.glClearColor(0, 0, 0, 0);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		batch.begin();
+		
+		batch.end();
 		
 	}
 

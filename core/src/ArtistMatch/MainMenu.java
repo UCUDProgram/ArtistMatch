@@ -37,22 +37,32 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		this.game = game;
 	}
 	 public void create(){
-			batch = new SpriteBatch();
-			font = new BitmapFont();
-			screenHeight = Gdx.graphics.getHeight(); 
-			screenWidth = Gdx.graphics.getWidth();
-			scaleX = screenWidth/640;
-			scaleY = screenHeight/480;
-			initializeButtonsArray();
-			skin = new Skin (Gdx.files.internal("uiskin.json"));
+		 	skin = new Skin (Gdx.files.internal("uiskin.json"));
 			table = new Table(skin);
 			stage = new Stage();
+			screenHeight = Gdx.graphics.getHeight(); 
+			screenWidth = Gdx.graphics.getWidth();
+			initializeButtonsArray();
 			addButtons(Levels);
 			window = new Window("Main Menu", skin);
 			window.setTitleAlignment(Align.top);
 			window.setFillParent(true);
 			window.add(table).center();
 			stage.addActor(window);
+			
+			
+			batch = new SpriteBatch();
+			font = new BitmapFont();
+			
+			scaleX = screenWidth/640;
+			scaleY = screenHeight/480;
+			
+//			Levels = new String[3];
+//			Levels[0] = "Play";
+//			Levels[1] = "Instructions";
+//			Levels[2] = "Credits";
+			
+			
 //			Gdx.input.setInputProcessor(this);
 			Gdx.input.setInputProcessor(stage);
 	 }
@@ -83,10 +93,16 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		}
 	}
 	
+//	public void initializeButtonsArray(){
+//		Levels[0] = "Play";
+//		Levels[1] = "Instructions";
+//		Levels[2] = "Credits";
+//	}
+	
 	public void addButtons(String[] array){
-		skin = new Skin (Gdx.files.internal("uiskin.json"));
+//		skin = new Skin (Gdx.files.internal("uiskin.json"));
 		for(int i =0; i<array.length; i++){
-			final TextButton button = new TextButton(array[i],skin);
+			final TextButton button = new TextButton("Level " + array[i],skin);
 			button.setName(array[i]);
 			table.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
 			table.row();

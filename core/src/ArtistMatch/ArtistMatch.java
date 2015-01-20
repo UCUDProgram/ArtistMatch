@@ -7,21 +7,17 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-//import com.myUD.game.Map;
-//import com.myUD.game.Menu;
-//import com.myUD.game.Question;
-//import com.myUD.game.SubMenu;
-//import com.myUD.game.Users;
 
 // ApplicationAdapter
 public class ArtistMatch extends Game {
-	SpriteBatch batch;
-	Texture img;
+
 	private float[] screenSize;
 	private Screen main, aGame,tScreen,instruct,subMenu,lSelect,current;
 	private int levelNumber;
 	private String genre;
 	private int score;
+	private int question;
+	private int difficulty;
 	
 	public ArtistMatch(){
 	}
@@ -112,6 +108,39 @@ public class ArtistMatch extends Game {
 	public void setLevelNumber(int levelNumber) {
 		this.levelNumber = levelNumber;
 	}
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public int getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(int question) {
+		this.question = question;
+	}
+
+	public int getDifficulty() {
+		return difficulty;
+	}
+
+	public void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
+	}
+	
 	
 	
 	
