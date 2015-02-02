@@ -1,5 +1,6 @@
 package ArtistMatch;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,29 +18,29 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-
-//import edu.udel.dlaw.SimpleSimon.SimpleSimon.Ball;
-//import edu.udel.dlaw.SimpleSimon.SimpleSimon.Box;
-//import edu.udel.dlaw.SimpleSimon.SimpleSimon.Player;
+import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.XmlReader;
+import com.badlogic.gdx.utils.XmlReader.Element;
 
 public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private ArtistMatch game;
-	private boolean fired,correct,choose,isEndTime,displayTimeCount,hiScore,moveDistanceCount,guessCounter;
-	private String ques,cAnswer,guess,question,selected,initials;
+	private boolean isEndTime,displayTimeCount,moveDistanceCount,guessCounter;
+	private String ques,cAnswer,guess,xmlFile;
 	private Texture ball,background;
 	private long startTime, endTime;
-	private char [] letters,initLetter;
-	private int letIndex1,letIndex2,letIndex3,yloc,angle,ballAngle,ballCount,guessCount,incorrectGuesses;
+	private int angle,ballAngle,ballCount,guessCount,incorrectGuesses,correctGuess;
 	private BitmapFont font,font1, font2;
 	private Stage stage;
 	private SpriteBatch batch;
-	private String [] answers;
+	private String [] answers, correctAnswers;
+	private List<String> collectedAnswers;
 	private float xloc, personScale,ballScale,playerScale,ballX, ballY,screenWidth,screenHeight,moveDistance;
 	private boolean goLeft, goRight,ballShoot, activeBall,turnUp, turnDown,win, tutorial;
 	private Ball validBall;
 	private Player YouDee;
 	private List<Box> possAnswers;
 	private ShapeRenderer shape;
+	List<String> correctA, selectedA;
 	
 	class Box{
 		private String aString;
@@ -219,7 +220,18 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		YouDee = new Player( (int)(screenWidth / 2) );
 		initializeVariables();
 		initializeBoolean();
-		initializeQuestion();
+		ques = "Who is the best Musician Ever";
+		answers = new String[4];
+		answers[0]= "Lionel Ritchie";
+		answers[1] = "Michael Jackson";
+		answers[2]= "The Temptations";
+		answers[3] = "The Jackson 5";
+		cAnswer = answers[1];
+		
+//		xmlFile = setXMLFile();
+//		initializeQuestion();
+//		initializeSelectionArray();
+//		initializeAnswer();
 		initializeText();
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
@@ -254,6 +266,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		ballCount = 0;
 		moveDistance = 0;
 		incorrectGuesses = 0;
+		correctGuess = 0;
 	}
 	
 	/*
@@ -270,22 +283,74 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		goRight = false;
 		ballShoot = false;
 		activeBall = false;
-		correct = false;
-		choose = false;
-		hiScore = false;
+	}
+	
+	/*
+	 * Sets the XML File that will be used to get the question, options and correct answers
+	 */
+	public String setXMLFile(){
+		if(game.getDifficulty() == 0)
+			return "EasyQuestions.xml";
+		if(game.getDifficulty() == 1)
+			return "MediumQuestions.xml";
+		if(game.getDifficulty() == 2)
+			return "HardQuestions.xml";
+		else
+			return "ExpertQuestions.xml";
 	}
 	
 	/*
 	 * Initialize the Question
 	 */
 	public void initializeQuestion(){
-		ques = "Who is the best Musician Ever";
-		answers = new String[4];
-		answers[0]= "Lionel Ritchie";
-		answers[1] = "Michael Jackson";
-		answers[2]= "The Temptations";
-		answers[3] = "The Jackson 5";
-		cAnswer = answers[1];
+		try{Element root = new XmlReader().parse(Gdx.files.internal(xmlFile));
+		Element genre = root.getChildByName(game.getGenre());
+		Element level = genre.getChildByName(Integer.toString(game.getLevelNumber()) );
+		Element quesNum = level.getChildByName(Integer.toString(game.getQuestion()));
+		Element question = quesNum.getChildByName("Question");
+		ques = question.getText();
+		
+		}
+		catch(IOException e){
+		}
+	}
+	
+	/*
+	 * Initialize the possible Answers Array
+	 */
+	public void initializeSelectionArray(){
+		try{Element root = new XmlReader().parse(Gdx.files.internal(xmlFile));
+		Element genre = root.getChildByName(game.getGenre());
+		Element level = genre.getChildByName(Integer.toString(game.getLevelNumber()));
+		Element quesNum = level.getChildByName(Integer.toString(game.getQuestion()));
+		Array<Element> answerE = quesNum.getChildrenByName("Selection");
+		int count = answerE.size;
+		answers = new String[count];
+		for (int i = 0; i <answerE.size; i++){
+			answers[i]=answerE.get(i).getText();
+		}
+		}
+		catch(IOException e){
+		}
+	}
+	
+	/*
+	 * Initialize the Correct Answers
+	 */
+	public void initializeAnswer(){
+		try{Element root = new XmlReader().parse(Gdx.files.internal(xmlFile));
+		Element genre = root.getChildByName(game.getGenre());
+		Element level = genre.getChildByName(Integer.toString(game.getLevelNumber()));
+		Element quesNum = level.getChildByName(Integer.toString(game.getQuestion()));
+		Array<Element> answerCA = quesNum.getChildrenByName("Correct");
+		int count = answerCA.size;
+		correctAnswers = new String[count];
+		for (int i = 0; i <answerCA.size; i++){
+			correctAnswers[i]=answerCA.get(i).getText();
+		}
+		}
+		catch(IOException e){
+		}
 	}
 	
 	/*
@@ -346,8 +411,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		if(activeBall){
 			validBall.updateBall();
 			ballBoxCollision();
-			win = boxCollision();
+//			win = boxCollision();
 			validBall.drawBall();
+			win = areAllAnswersCollect();
 		}
 
 		
@@ -391,20 +457,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 	}
 
-	/*
-	 * Sets the XML File that will be used to get the question, options and correct answers
-	 */
-	public String setXMLFile(){
-		if(game.getDifficulty() == 0)
-			return "EasyQuestions.xml";
-		if(game.getDifficulty() == 1)
-			return "MediumQuestions.xml";
-		if(game.getDifficulty() == 2)
-			return "HardQuestions.xml";
-		else
-//		if(game.getDifficulty() == 3)
-			return "ExpertQuestions.xml";
-	}
+	
 	
 	/*
 	 * Determines the time to complete the game in seconds
@@ -505,9 +558,14 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		for(Box possibleSelection: possAnswers ){
 			if(possibleSelection.drawable){
 			if (ballBoxXCollision(possibleSelection) && ballBoxYCollision(possibleSelection)){
-				if (isCorrect(possibleSelection.aString))
+				if (isCorrect(possibleSelection.aString)){
+					possibleSelection.drawable = false;
+					selectedA.add(possibleSelection.aString);
+					activeBall = false;
+					ballCount = 0;
+					correctGuess++;
 					win = true;
-				else {
+			}else {
 					possibleSelection.drawable = false;
 					guessCount++;				
 					activeBall = false;
@@ -544,10 +602,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 * Determines if the Box's String is the/part of the answer
 	 */
 	public boolean isCorrect(String theguess){
-		if (theguess == cAnswer)
-			return true;
-		else
-			return false;
+		return (correctA.contains(theguess));
 	}
 	
 	/*
@@ -561,6 +616,26 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			}
 		}
 		return false;
+	}
+
+	/*
+	 * Determines if all the correct answers have been collected
+	 * Returns true if all the correct answers have been collected
+	 * Returns false if all the correct answers have not been collected
+	 */
+	public boolean areAllAnswersCollect(){
+		boolean gameOver = false;
+		for(String Aanswer: selectedA ){
+			if(!(correctA.contains(Aanswer)))
+				return false;
+		}
+		
+		if(collectedAnswers.size() == answers.length)
+			gameOver = true;
+		else
+			gameOver = false;
+		
+		return gameOver;
 	}
 	
 	

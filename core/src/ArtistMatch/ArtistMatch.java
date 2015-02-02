@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class ArtistMatch extends Game {
 
 	private float[] screenSize;
-	private Screen main, aGame,tScreen,instruct,subMenu,lSelect,current;
+	private Screen main, aGame,tScreen,instruct,subMenu,lSelect,setting, current;
 	private int levelNumber;
 	private String genre;
 	private int score;
@@ -81,6 +81,14 @@ public class ArtistMatch extends Game {
 			((Instructions) current).create();
 			instruct = current;
 		}
+		
+		// Settings Screen
+		if(next==7){
+			current = new Settings(this);
+			((Settings) current).create();
+			setting = current;
+		}
+		
 		
 		setScreen(current);
 	}

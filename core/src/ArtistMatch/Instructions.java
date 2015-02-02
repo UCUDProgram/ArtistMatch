@@ -16,6 +16,7 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 	private boolean pageOne,pageTwo, pageThree, pageFour;
 	private String instruction;
 	private Texture pOne,pTwo,pThree,pFour;
+	private int pageCounter;
 	private BitmapFont font;
 	private float screenHeight, screenWidth;
 	
@@ -29,8 +30,10 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 		instruction = "Click to see the next instruction.";
 		font = new BitmapFont();
 		booleanInitial();
+		pageCounter = 0;
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
+		Gdx.input.setInputProcessor(this);
 	}
 
 	public void booleanInitial(){
@@ -61,6 +64,14 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 		pageFour = true;
 	}
 	
+	public void updatePageBooleans(int current){
+	if (current == 0)
+			pageTwoInstruct();
+	if (current == 1)
+			pageThreeInstruct();
+	if (current == 2)
+			pageFourInstruct();
+	}
 	
 	@Override
 	public void render(float delta) {
@@ -70,19 +81,23 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
 		if(pageOne){
-			
+			instruction = "Page One Instructions";
+//			System.out.println("Page One Instructions shown");
 		}
 		
-		if(pageTwo){
-			
+		else if(pageTwo){
+			instruction = "Page Two Instructions";
+//			System.out.println("Page Two Instructions shown");
 		}
 		
-		if(pageThree){
-	
+		else if(pageThree){
+			instruction = "Page Three Instructions";
+//			System.out.println("Page Three Instructions shown");
 		}
 
-		if(pageFour){
-	
+		else {
+			instruction = "Page Four Instructions";
+//			System.out.println("Page Four Instructions shown");
 		}
 		font.draw(batch,instruction, screenWidth / 3, screenHeight -50);
 		
@@ -134,18 +149,22 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 	@Override
 	public boolean keyDown(int keycode) {
 		// TODO Auto-generated method stub
-		if (pageOne){
-			pageTwoInstruct();
-		} 
-		if (pageTwo){
-			pageThreeInstruct();
-		} 
-		if (pageThree){
-			pageFourInstruct();
-		} 
+//		if (pageOne){
+//			pageTwoInstruct();
+//		} 
+//		if (pageTwo){
+//			pageThreeInstruct();
+//		} 
+//		if (pageThree){
+//			pageFourInstruct();
+//		} 
 		if (pageFour){
 			game.switchScreens(2);
-		} 
+			} 
+		
+		updatePageBooleans(pageCounter);
+		pageCounter++;
+		
 		
 		return false;
 	}
@@ -165,18 +184,23 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 	@Override
 	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
 		// TODO Auto-generated method stub
-		if (pageOne){
-			pageTwoInstruct();
-		} 
-		if (pageTwo){
-			pageThreeInstruct();
-		} 
-		if (pageThree){
-			pageFourInstruct();
-		} 
+//		if (pageOne){
+//			pageTwoInstruct();
+//		} 
+//		if (pageTwo){
+//			pageThreeInstruct();
+//		} 
+//		if (pageThree){
+//			pageFourInstruct();
+//		} 
+		
 		if (pageFour){
 			game.switchScreens(2);
 		} 
+		
+		updatePageBooleans(pageCounter);
+		pageCounter++;
+		
 		
 		return false;
 	}

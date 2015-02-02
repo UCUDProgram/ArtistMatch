@@ -10,13 +10,18 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.Window;
 import com.badlogic.gdx.scenes.scene2d.utils.Align;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.XmlReader;
@@ -42,28 +47,16 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 			stage = new Stage();
 			screenHeight = Gdx.graphics.getHeight(); 
 			screenWidth = Gdx.graphics.getWidth();
-			initializeButtonsArray();
-			addButtons(Levels);
-			window = new Window("Main Menu", skin);
-			window.setTitleAlignment(Align.top);
-			window.setFillParent(true);
-			window.add(table).center();
-			stage.addActor(window);
-			
-			
-			batch = new SpriteBatch();
-			font = new BitmapFont();
-			
 			scaleX = screenWidth/640;
 			scaleY = screenHeight/480;
-			
-//			Levels = new String[3];
-//			Levels[0] = "Play";
-//			Levels[1] = "Instructions";
-//			Levels[2] = "Credits";
-			
-			
-//			Gdx.input.setInputProcessor(this);
+			initializeButtonsArray();
+			addButtons(Levels);
+			table.setFillParent(true);
+			table.center();
+			stage.addActor(table);
+			batch = new SpriteBatch();
+			font = new BitmapFont();
+			Gdx.input.setInputProcessor(this);
 			Gdx.input.setInputProcessor(stage);
 	 }
 	 
@@ -72,9 +65,7 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
-//		font.setColor(Color.BLACK);
-//		font.setScale(1,1);
-//		font.draw(batch, "The Main Menu Screen Works", 0, 200);
+		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
 		batch.end();
 		stage.draw();
 	}
@@ -93,28 +84,54 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		}
 	}
 	
-//	public void initializeButtonsArray(){
-//		Levels[0] = "Play";
-//		Levels[1] = "Instructions";
-//		Levels[2] = "Credits";
-//	}
-	
+	/*
+	 * Add Buttons to the Screen
+	 */
 	public void addButtons(String[] array){
-//		skin = new Skin (Gdx.files.internal("uiskin.json"));
-		for(int i =0; i<array.length; i++){
-			final TextButton button = new TextButton("Level " + array[i],skin);
-			button.setName(array[i]);
-			table.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
-			table.row();
-			button.addListener(new ClickListener(){
-				public void clicked(InputEvent event, float x, float y){
-//					Code Here for passing the String to the new screen
-//					selected = button.getName();
-					
+		final TextButton playbutton = new TextButton(array[0],skin);
+		playbutton.setName(array[0]);
+		table.add(playbutton).width(playbutton.getWidth()*scaleX).height(playbutton.getHeight()*scaleY);
+		table.row();
+		playbutton.addListener(new ClickListener(){
+//			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				game.switchScreens(3);
+			}
+		});
+		
+		final TextButton insbutton = new TextButton(array[1],skin);
+		insbutton.setName(array[1]);
+		table.add(insbutton).width(insbutton.getWidth()*scaleX).height(insbutton.getHeight()*scaleY);
+		table.row();
+		insbutton.addListener(new ClickListener(){
+			public void clicked(InputEvent event, float x, float y){
+					game.switchScreens(6);
 				}
-			});
-		}
+		});	
+		
+		final TextButton creditbutton = new TextButton(array[2],skin);
+		creditbutton.setName(array[2]);
+		table.add(creditbutton).width(creditbutton.getWidth()*scaleX).height(creditbutton.getHeight()*scaleY);
+		table.row();
+		creditbutton.addListener(new ClickListener(){
+			public void clicked(InputEvent event, float x, float y){
+//				Checks to make sure that the submenu screen is working
+					game.switchScreens(4);
+				}
+		});	
+		
+		final TextButton settingbutton = new TextButton(array[3],skin);
+		settingbutton.setName(array[3]);
+		table.add(settingbutton).width(settingbutton.getWidth()*scaleX).height(settingbutton.getHeight()*scaleY);
+		table.row();
+		settingbutton.addListener(new ClickListener(){
+			public void clicked(InputEvent event, float x, float y){
+					game.switchScreens(7);
+				}
+		});	
+
 	}
+	
 	
 	@Override
 	public void resize(int width, int height) {
@@ -144,7 +161,8 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
-		
+		stage.dispose();
+		skin.dispose();
 	}
 	@Override
 	public void render() {

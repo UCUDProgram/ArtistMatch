@@ -1,8 +1,20 @@
 <root>
     <MainMenu>
-        <level>"Play"</level>
-        <level>"Instructions" </level>
-        <level>"Credits" </level>
+        <level>Play</level>
+        <level>Instructions</level>
+        <level>Credits</level>
+        <level>Settings</level>
     </MainMenu>
-    
+    <LevelSelect>
+        <artist>arti1</artist>
+        <artist>arti2</artist>
+        <artist>arti3</artist>
+        <artist>arti4</artist>
+        <artist>arti5</artist>
+        <artist>arti6</artist>
+        <artist>arti7</artist>
+        <artist>arti8</artist>
+        <artist>arti9</artist>
+        <artist>arti10</artist>
+    </LevelSelect>
 </root>
