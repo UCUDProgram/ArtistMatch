@@ -13,8 +13,7 @@ public class ArtistMatch extends Game {
 
 	private float[] screenSize;
 	private Screen main, aGame,tScreen,instruct,subMenu,lSelect,setting, current;
-	private int levelNumber;
-	private String genre;
+	private String artist;
 	private int score;
 	private int question;
 	private int difficulty;
@@ -29,6 +28,7 @@ public class ArtistMatch extends Game {
 		screenSize[1]=0;
 		screenSize[2]=0;
 		screenSize[3]=0;
+//		difficulty = 0;
 		switchScreens(1);
 		
 	}
@@ -92,7 +92,7 @@ public class ArtistMatch extends Game {
 		
 		setScreen(current);
 	}
-
+	
 	public float[] getScreenSize() {
 		return screenSize;
 	}
@@ -109,20 +109,12 @@ public class ArtistMatch extends Game {
 		this.current = current;
 	}
 
-	public int getLevelNumber() {
-		return levelNumber;
+	public String getArtist() {
+		return artist;
 	}
 
-	public void setLevelNumber(int levelNumber) {
-		this.levelNumber = levelNumber;
-	}
-
-	public String getGenre() {
-		return genre;
-	}
-
-	public void setGenre(String genre) {
-		this.genre = genre;
+	public void setArtist(String artist) {
+		this.artist = artist;
 	}
 
 	public int getScore() {

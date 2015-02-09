@@ -6,6 +6,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
 public class Score implements Screen, InputProcessor, ApplicationListener{
 	private ArtistMatch game;
@@ -17,6 +18,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	private int timeBonus, incorrectPenalty, correctBonus, movePenalty;
 	private BitmapFont font, font1;
 	private float screenWidth,screenHeight;
+	private Stage stage;
 	
 	public Score(ArtistMatch game, int right, int wrong, int time, int move){
 		this.game = game;
@@ -28,6 +30,8 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 
 	
 	public void create(){
+		batch = new SpriteBatch();
+		stage = new Stage();
 		initializeScoreMult();
 		displayScore = true;
 		initialEnter = false;
@@ -46,6 +50,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		font1 = new BitmapFont();
 		font1.setScale((screenWidth * 3) / 10, screenHeight);
 		Gdx.input.setInputProcessor(this);
+		Gdx.input.setInputProcessor(stage);
 	}
 	
 	
@@ -193,9 +198,9 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 * Draws the three components to enter initials on the Screen
 	 */
 	public void drawHiScore(){
-		font1.draw(batch, initLetter[0], 0, 0);
-		font1.draw(batch, initLetter[1],(float) ((screenWidth * 3) / 10),(float) 0);
-		font1.draw(batch, initLetter[2], (screenWidth * 6) / 10, 0);
+		font1.draw(batch, Character.toString(initLetter[0]), 0, 0);
+		font1.draw(batch, Character.toString(initLetter[1]),(float) ((screenWidth * 3) / 10),(float) 0);
+		font1.draw(batch, Character.toString(initLetter[2]), (screenWidth * 6) / 10, 0);
 	}
 	
 	@Override

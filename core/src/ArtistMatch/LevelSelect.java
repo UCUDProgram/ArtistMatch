@@ -112,8 +112,9 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		button.addListener(new ClickListener(){
 //			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.setGenre(button.getName());
-				System.out.println(game.getQuestion());
+				game.setArtist(button.getName());
+				game.switchScreens(4);
+				System.out.println(game.getArtist());
 			}
 		});
 		}
@@ -128,8 +129,9 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		button.addListener(new ClickListener(){
 //			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.setGenre(button.getName());
-				System.out.println(game.getQuestion());
+				game.setArtist(button.getName());
+				game.switchScreens(4);
+				System.out.println(game.getArtist());
 			}
 		});
 		}
@@ -144,7 +146,6 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 //			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				game.switchScreens(2);
-				System.out.println(game.getQuestion());
 			}
 		});
 	}

@@ -84,6 +84,7 @@ public class SubMenu implements Screen, InputProcessor, ApplicationListener{
 			public void clicked(InputEvent event, float x, float y) {
 				game.setQuestion(Integer.parseInt(button.getName() ) );
 				System.out.println(game.getQuestion());
+				game.switchScreens(5);
 			}
 		});
 		}
@@ -100,6 +101,7 @@ public class SubMenu implements Screen, InputProcessor, ApplicationListener{
 			public void clicked(InputEvent event, float x, float y) {
 				game.setQuestion(Integer.parseInt(button.getName() ) );
 				System.out.println(game.getQuestion());
+				game.switchScreens(5);
 			}
 		});
 		}

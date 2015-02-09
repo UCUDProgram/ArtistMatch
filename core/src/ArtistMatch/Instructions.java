@@ -9,6 +9,11 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class Instructions implements Screen, InputProcessor, ApplicationListener {
 	private ArtistMatch game;
@@ -19,7 +24,10 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 	private int pageCounter;
 	private BitmapFont font;
 	private float screenHeight, screenWidth;
-	
+	private boolean touchInstr,mouseInstr;
+	private Skin skin;
+	private float scaleX, scaleY;
+	private Table table;
 	
 	public Instructions(ArtistMatch amGame){
 		this.game = amGame;
@@ -27,12 +35,16 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 	
 	public void create(){
 		batch = new SpriteBatch();
+		skin = new Skin (Gdx.files.internal("uiskin.json"));
 		instruction = "Click to see the next instruction.";
 		font = new BitmapFont();
 		booleanInitial();
 		pageCounter = 0;
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
+		scaleX = screenWidth/640;
+		scaleY = screenHeight/480;
+		table = new Table(skin);
 		Gdx.input.setInputProcessor(this);
 	}
 
@@ -104,6 +116,40 @@ public class Instructions implements Screen, InputProcessor, ApplicationListener
 		batch.end();
 	}
 
+//	public void addChoiceButton(){
+//		
+//		
+//		final TextButton mouseButton = new TextButton("Mouse Instructions",skin);
+//		mouseButton.setName("Mouse Instructions");
+//		table.add(mouseButton).width(mouseButton.getWidth()*scaleX).height(mouseButton.getHeight()*scaleY);
+//		table.row();
+//		mouseButton.addListener(new ClickListener(){
+////			@Override
+//			public void clicked(InputEvent event, float x, float y) {
+//				mouseInstr = true;
+//				mouseButton.setVisible(false);
+//				touchButton.setVisible(false);
+//			}
+//		});
+//		
+//		final TextButton touchButton = new TextButton("Touch Instructions",skin);
+//		touchButton.setName("Touch Instructions");
+//		table.add(touchButton).width(touchButton.getWidth()*scaleX).height(touchButton.getHeight()*scaleY);
+//		table.row();
+//		touchButton.addListener(new ClickListener(){
+////			@Override
+//			public void clicked(InputEvent event, float x, float y) {
+//				touchInstr = true;
+//				touchButton.setVisible(false);
+//				mouseButton.setVisible(false);
+//			}
+//		});
+//		
+//		
+//		
+//		}
+	
+	
 	@Override
 	public void resize(int width, int height) {
 		// TODO Auto-generated method stub

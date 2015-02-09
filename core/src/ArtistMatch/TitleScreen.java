@@ -16,7 +16,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 	private ArtistMatch game;
 	private SpriteBatch batch;
-	private BitmapFont font;
+	private BitmapFont font,font1;
 	private float screenHeight, screenWidth;
 	private Texture background;
 	
@@ -27,6 +27,7 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 	public void create(){
 		batch = new SpriteBatch();
 		font = new BitmapFont();
+		font1 = new BitmapFont();
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
 		Gdx.input.setInputProcessor(this);
@@ -37,9 +38,14 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 		batch.begin();
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		
 		font.setColor(Color.WHITE);
 		font.setScale(1,1);
 		font.draw(batch, "The Title Screen Works", 0, 100);
+		font1.setColor(Color.WHITE);
+		font1.setScale(4,4);
+		font1.draw(batch, "A", 300, 300);
+		
 		batch.end();
 	}
 

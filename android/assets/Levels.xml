@@ -6,15 +6,15 @@
         <level>Settings</level>
     </MainMenu>
     <LevelSelect>
-        <artist>arti1</artist>
-        <artist>arti2</artist>
-        <artist>arti3</artist>
-        <artist>arti4</artist>
-        <artist>arti5</artist>
-        <artist>arti6</artist>
-        <artist>arti7</artist>
-        <artist>arti8</artist>
-        <artist>arti9</artist>
-        <artist>arti10</artist>
+        <artist>The Beatles</artist>
+        <artist>Michael Jackson</artist>
+        <artist>Whitney Houston</artist>
+        <artist>Mariah Carey</artist>
+        <artist>Tupac Shakur</artist>
+        <artist>The Notorious B.I.G.</artist>
+        <artist>Beyonce</artist>
+        <artist>Eminem</artist>
+        <artist>Carrie Underwood</artist>
+        <artist>Taylor Swift</artist>
     </LevelSelect>
 </root>
