@@ -29,7 +29,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	private Skin skin;
 	private Stage stage;
 	private Table table,table1,table2;
-	
+	int artistCount;
 	
 	public LevelSelect(ArtistMatch game){
 		this.game = game;
@@ -44,9 +44,11 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		stage = new Stage();
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
+		
 		scaleX = screenWidth/640;
 		scaleY = screenHeight/480;
 		initializeButtonsArray();
+		artistCount = artists.size();
 		addLeftButtons();
 		addRightButtons();
 		addBackButton();
@@ -104,7 +106,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	}
 	
 	public void addLeftButtons(){
-		for(int i = 0;i< 5;i++){
+		for(int i = 0;i< (artistCount / 2);i++){
 		final TextButton button = new TextButton(artists[i],skin);
 		button.setName(artists[i]);
 		table.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
@@ -121,7 +123,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	}
 	
 	public void addRightButtons(){
-		for(int i = 5;i< 10;i++){
+		for(int i = (artistCount / 2)  ;i< artistCount ;i++){
 		final TextButton button = new TextButton(artists[i],skin);
 		button.setName(artists[i]);
 		table1.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
