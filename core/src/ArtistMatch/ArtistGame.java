@@ -24,7 +24,11 @@ import com.badlogic.gdx.utils.XmlReader.Element;
 
 public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private ArtistMatch game;
+	// These booleans are used to display results once
+	// Will be used to pass data to score class
+	// Will be removed later
 	private boolean isEndTime,displayTimeCount,moveDistanceCount,guessCounter;
+	
 	private String ques,cAnswer,xmlFile;
 	private Texture background;
 	private long startTime, endTime;
@@ -34,284 +38,12 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private SpriteBatch batch;
 	private String [] answers;
 	private List<String> correctA, selectedA;
-	private float ballX,screenWidth,screenHeight,moveDistance;
-	private boolean goLeft, goRight,ballShoot, activeBall,turnUp, turnDown,win, tutorial;
+	private float screenWidth,screenHeight,moveDistance;
+	private boolean goLeft, goRight,ballShoot, activeBall,turnUp, turnDown,win,tutorial;
 	private Ball validBall;
 	private Player Player;
 	private List<Box> possAnswers;
 	private ShapeRenderer shape;
-
-	
-	class Box{
-		private String aString;
-		private char displaySelection;
-		private int drawXLoc,drawYLoc;
-		private Texture image;
-		private float yStart,yHeight, xWidth, xStart;
-		private boolean drawable;
-		private float boxScale;
-		
-		
-		/*
-		 * Constructor for the Box class where the X & Y Coordinate changes
-		 */
-		public Box(String aStr, int xSt,int yStLoc, char dis,int dXloc, int dYloc){
-			aString = aStr;
-			xStart = xSt;
-			yStart = setYLocation(yStLoc);
-			displaySelection = dis;
-			drawXLoc = dXloc;
-			drawYLoc = dYloc;
-			boxScale = setBoxScale();
-			image = new Texture("YouDee.png");
-			yHeight = image.getHeight()* boxScale;
-			xWidth = image.getWidth() * boxScale;
-			drawable = true;
-			
-		}
-		
-//		public Texture setBoxImage(){
-//			
-//		}
-		
-		/*
-		 * Sets the Y Location of the Box
-		 */
-		public float setYLocation(int yStartLocation){
-			if (yStartLocation == 0)
-				return screenHeight - 100;
-			else{
-				return (screenHeight -100) - (yStartLocation * 100);
-			}
-		}
-		
-		/*
-		 * Sets the X Location of the Box
-		 */
-		public int setAnswerXDraw(int vert){
-			if (vert == 0)
-				return 25;
-			else
-				return (int) ( (screenWidth / 2) + 25);
-		}
-		
-		/*
-		 * Sets the Y Location of the Box
-		 */
-		public int setAnswerYDraw(int hor){
-			if (hor == 0)
-				return 25;
-			else
-				return 50;
-		}
-		
-		/*
-		 * Draws the Box Properties on the screen
-		 * 		The Image of the Selection on the Screen
-		 * 		The Letter associated with the Box
-		 * 		The Option underneath the Question, representing the options left to choose from
-		 */
-		public void drawBox(){
-			batch.draw(image, xStart, yStart, image.getWidth() * boxScale,image.getHeight() * boxScale);			
-			font1.draw(batch,Character.toString(displaySelection), xStart, yStart);
-			font.draw(batch,(displaySelection + ": " + aString), setAnswerXDraw(drawXLoc),setAnswerYDraw(drawYLoc));
-		}
-		
-		/*
-		 * Sets the Box's Scale, which is the size that the box will be drawn on the screen
-		 */
-		public float setBoxScale(){
-			if (game.getDifficulty() ==0)
-				return .25f;
-			else if (game.getDifficulty() ==0)
-				return .2f;
-			else if (game.getDifficulty() ==0)
-				return .18f;
-			else
-				return .12f;
-		}
-		
-	}
-	
-	class Ball{
-		private float xLoc, yLoc;
-		private int ballAngle;
-		private Texture ballImage;
-		private boolean activeBall;
-		private double ballSpeed;
-		private float ballScale;
-		/*
-		 * Constructor for the ball class
-		 * 
-		 */
-		public Ball(float xLocation, float yLocation, int bAngle,boolean active){
-			xLoc = xLocation;
-			yLoc = yLocation;
-			ballAngle = bAngle;
-			ballImage = new Texture("SoccerBall.png");
-			activeBall = active;
-			ballScale = ballS();
-			ballSpeed = setBallSpeed();
-		}
-		
-		/*
-		 * Converts the angle to pi radians
-		 */
-		public double convertToRadians(int degree){
-			return (double) (degree / 57.3 );
-		}
-		
-		/*
-		 * Updates the Ball's X Position
-		 */
-		public void updateBallXPos(){
-			if (ballX < 0 ){
-				activeBall = false;
-			} else 
-				validBall.xLoc += (Math.cos(convertToRadians(validBall.ballAngle))* ballSpeed);
-		}
-		
-		/*
-		 * Updates the Ball's Y Position
-		 */
-		public void updateBallYPos(){
-			validBall.yLoc += (Math.sin(convertToRadians(validBall.ballAngle))* ballSpeed);
-		}
-		
-		/*
-		 * Update Ball Count total
-		 */
-		public void updateBallCount(){
-			if (validBall.xLoc < 0 || validBall.xLoc > screenWidth)
-				ballCount = 0;
-			else if (validBall.yLoc < 0 || validBall.yLoc > screenHeight)
-				ballCount = 0;
-			else
-				ballCount = 1;
-		}
-		
-		/*
-		 * Initialize the Ball
-		 */
-		public void setBallInitial(){
-		validBall = new Ball(Player.xPlayerLoc,100, angle,true);
-//		activeBall = true;
-//		ballCount = 1;
-	}
-		
-		/*
-		 * Updates the Ball
-		 */
-		public void updateBall(){
-			updateBallXPos();
-			updateBallYPos();
-			updateBallCount();
-		}
-		
-		/*
-		 * Draws the Ball on the Screen
-		 */
-		public void drawBall(){
-			batch.draw(validBall.ballImage, validBall.xLoc,validBall.yLoc, validBall.ballImage.getWidth() * ballScale,validBall.ballImage.getHeight() * ballScale );
-		}
-		
-		/*
-		 * Sets the Speed of the Ball
-		 */
-		public double setBallSpeed(){
-			if (game.getDifficulty() ==0)
-				return 2.5;
-			else if (game.getDifficulty() ==0)
-				return 3;
-			else if (game.getDifficulty() ==0)
-				return 3.5;
-			else
-				return 4.75;
-		}
-		
-		/*
-		 * Determines the Ball's Size, which is passed to the set Ball Scale function
-		 */
-		public float ballS(){
-			if (game.getDifficulty() == 0)
-				return .30f;
-			else if (game.getDifficulty() == 1)
-				return .25f;
-			else if (game.getDifficulty() == 2)
-				return .20f;
-			else 
-				return .10f;
-		}
-	}
-	
-	class Player{
-		private float xPlayerLoc, yPlayerLoc;
-		private Texture playerImage;
-		private float playerScale;
-		
-		/*
-		 * Constructor for the player class that passes nothing in
-		 */
-		public Player (){
-			xPlayerLoc = setPlayerXStart();
-			yPlayerLoc = 100;
-			playerImage = new Texture("YouDee.png");
-			playerScale = .25f;
-		}
-		
-		/*
-		 * Updates the player's X Location, based on the player moving left or right
-		 */
-		public void updateXPos(){
-			if(goRight&&Player.xPlayerLoc<=(screenWidth - (Player.playerImage.getWidth()* playerScale) ) ){
-				Player.xPlayerLoc+=10;
-			}
-			if(goLeft&&Player.xPlayerLoc >=( (Player.playerImage.getWidth() / 2) * playerScale) ){
-				Player.xPlayerLoc-=10;
-			}
-		}
-		
-		/*
-		 * Draws the player on the Screen
-		 */
-		public void drawPlayer(){
-			batch.draw(Player.playerImage, Player.xPlayerLoc, Player.yPlayerLoc, Player.playerImage.getWidth() * playerScale,Player.playerImage.getHeight() * playerScale);		
-		}
-		
-		/*
-		 * Sets the player's Scale, which is the height the player will appear
-		 */
-//		public float setPlayerScale(){
-//			if (game.getDifficulty() ==0)
-//				return 2.5;
-//			else if (game.getDifficulty() ==0)
-//				return 3.;
-//			else if (game.getDifficulty() ==0)
-//				return 3.5;
-//			else
-//				return 4.75;
-//		}
-		
-		/*
-		 * Sets the Player's X Location, which is the starting location for the player
-		 */
-		public float setPlayerXStart(){
-			if (game.getDifficulty() ==0)
-				return screenWidth /2;
-			else if (game.getDifficulty() ==1){
-				int random = (int)( (Math.random() * 5) + 1);
-				return ( (screenWidth / 6) * random );
-			}
-			else if (game.getDifficulty() ==2){
-				int random = (int)( (Math.random() * 7) + 1);
-				return ( (screenWidth / 8) * random );
-		}
-			else{
-				int random = (int)( (Math.random() * 9) + 1);
-				return ( (screenWidth / 10) * random );
-			}
-		}
-	}
 	
 	public ArtistGame(ArtistMatch game){
 		this.game = game;
@@ -324,8 +56,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		screenWidth = Gdx.graphics.getWidth();
 		Gdx.input.setInputProcessor(this);		
 		background = new Texture("ShooterBackground.png");
-		Player = new Player();
-		validBall = new Ball(0,0,angle,false);
+		Player = new Player(setPlayerXStart(), game.getDifficulty());
+		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		initializeVariables();
 		initializeBoolean();
 		initializeText();
@@ -467,8 +199,58 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	}
 	
 	/*
-	 * Function to initialize the Boxes
+	 * Functions to initialize the Boxes
+	 * Used to set Properties that are passed to the constructor of the Box class
 	 */
+	
+	/*
+	 * Sets the X Location of the Box
+	 */
+	public float setBoxXLoc(int boxNum){
+		if(boxNum < 5)
+			return (float)( (screenWidth * boxNum) / 5);
+		else{
+			if(boxNum % 2 == 1)
+				return (float) (screenWidth / 5);
+			else
+				return (float) ( (screenWidth / 5) * 4);
+		}
+	}
+	
+	/*
+	 * Sets the Y Location of the Box
+	 */
+	public float setBoxYLoc(int boxNum){
+		int yStartLoc;
+		if (boxNum < 5 )
+			yStartLoc = 0;
+		else{
+			yStartLoc = ( ( (boxNum - 5) / 2) + 1);
+		}
+		
+		return (screenHeight -100) - (yStartLoc * 100);
+	}
+	
+	/*
+	 * Sets the X Location of the Display Selection
+	 */
+	public float setDisplayXDraw(int vert){
+		if (vert == 0)
+			return 25;
+		else
+			return (int) ( (screenWidth / 2) + 25);
+	}
+	
+	/*
+	 * Sets the Y Location of the Display Selection
+	 */
+	public float setDisplayYDraw(int hor){
+		if (hor == 0)
+			return 25;
+		else
+			return 50;
+	}
+	
 	public void setBoxes(){
 		char[] displayAnswer = {'A','B','C','D','E','F','G','H','I','J','K','L'};
 		int count = 5;  //Think about how to set the positioning of the boxes
@@ -494,12 +276,37 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 				boxPlace = 1;
 			else if ( (i == 8) || (i == 9 ) )
 				boxPlace = 1;
-			possAnswers.add(new Box(answers[i], (int)((screenWidth / count) * numcount),boxPlace,displayAnswer[i],vertdet,hordet ));
+			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDraw(vertdet),setDisplayYDraw(hordet),game.getDifficulty() ) );
 			numcount++;
 		}
 	}
 	
+	/*
+//	 * Sets the Player's X Location, which is the starting location for the player
+//	 */
+	public float setPlayerXStart(){
+//		int random = (int)( (Math.random() * (5 ) ) + 1);
+		
+		if (game.getDifficulty() ==0)
+			return screenWidth /2;
+		else{
+			/* Computation to set the random number size for start position
+		Medium = 6
+		Hard =	8
+		Expert = 10
 	
+		Scale should be between 1 & segments dividing the window
+		Basic formula 
+		int random = (int)( (Math.random() * x-1) + 1);
+			return ( (screenWidth / x) * random );
+		*/
+			int base = 4 + (2 * game.getDifficulty());
+			int random = (int) (Math.random() * base ) ;
+			if(random == 0)
+				random = 1;
+			return (float) ( (screenWidth / base) * random );
+		}
+	}
 	
 	
 	
@@ -517,39 +324,26 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			font.setScale(1,1);
 			font.draw(batch, "Press, 'ESC' to return to menu", 0f, screenHeight);		
 		} else if((!win) && !tutorial){
-		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
-		Gdx.gl.glClearColor(1, 1, 1, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.draw(background, 0, 0, screenWidth, screenHeight);
-		
-		Player.updateXPos();
-		Player.drawPlayer();
-		updateAngle();
-		drawQuestion();
-		drawBoxes();	
-		drawAngleInfo();
-		
-		if(ballShoot){
-			validBall.setBallInitial();
-			activeBall = true;
-			ballCount = 1;
-		}
-//		if(validBall.activeBall){
-		if(activeBall){
-			validBall.updateBall();
-			ballBoxCollision();
-			validBall.drawBall();
-//			win = boxCollision();	
-			win = areAllAnswersCollect();
-		}
-
-		
-//		drawAngleIndicator();
-
-				
+			stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
+			Gdx.gl.glClearColor(1, 1, 1, 1);
+			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+			batch.draw(background, 0, 0, screenWidth, screenHeight);
 			
-		
-
+//			Drawing and Game Maintenance, while game is being played
+			updatePlayerXPos();
+			updateAngle();	
+			drawEssentialComponents();
+			drawAngleInfo();
+			if(ballShoot){
+				setBallInitial();
+				activeBall = true;
+				ballCount = 1;
+			}
+			if(activeBall){
+				ballManagement();
+				ballBoxCollision();	
+				win = areAllAnswersCollect();
+			}
 		} else {
 			Gdx.gl.glClearColor(0, 0, 0, 0);
 			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -571,20 +365,25 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			System.out.println("The number of incorrect guesses is " + incorrectGuesses);
 			guessCounter = false;
 			}
+			
+			
 /*
  * Next lines are for end of level and passing certain parameters to the score class
  */
 			int duration = duration(startTime,endTime);
 			
+			
+			
 //			Score score = new Score(game, right, incorrectGuesses,duration, moveDistance);
 			
 			
+			
+			game.switchScreens(4);
 		}
 		batch.end();
 		
 	}
 
-	
 	
 	/*
 	 * Determines the time to complete the game in seconds
@@ -596,23 +395,115 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	}
 	
 	// THIS GROUP OF FUNCTIONS ADDRESS PHYSICAL ASPECTS OF THE GAME THAT MAY OR MAY NOT BE VISIBLE TO THE PLAYER
+	// ALSO THIS ADDRESSES ASPECTS OF THE GAME THAT CHANGE, SUCH AS THE BALL
 	
-	/*
-	 * Draws the Question on the Screen
-	 */
 	public void drawQuestion(){
 		font.draw(batch, ques, screenWidth / 5 , 75 );
 	}
-	
 	/*
-	 * Draws the Boxes, which the player must choose from, on the screen
+	 * Draws the Essential/Vital Game Information on the Screen
+	 * -- The Player, where ball firing originates from
+	 * -- The Boxes, where the player has to choose from
+	 * -- The Question, what the player has to answer correctly
 	 */
-	public void drawBoxes(){
+	public void drawEssentialComponents(){
+//		Draw the Player
+		batch.draw(Player.getPlayerImage(), Player.getxPlayerLoc(), Player.getyPlayerLoc(), Player.getPlayerImage().getWidth() * Player.getPlayerScale(),Player.getPlayerImage().getHeight() * Player.getPlayerScale());		
+		
+		
+//		Draw the Boxes
 		for(Box aAnswer:possAnswers){
-			if(aAnswer.drawable)
-				aAnswer.drawBox();
+			if(aAnswer.isDrawable()){
+				batch.draw(aAnswer.getImage(), aAnswer.getBoxXStart(), aAnswer.getBoxYStart(), aAnswer.getImage().getWidth() * aAnswer.getBoxScale(),aAnswer.getImage().getHeight() * aAnswer.getBoxScale());			
+				font1.draw(batch,Character.toString(aAnswer.getDisplaySelection()), aAnswer.getBoxXStart(), aAnswer.getBoxYStart());
+				font.draw(batch,(aAnswer.getDisplaySelection() + ": " + aAnswer.getaString()), aAnswer.getDrawXLoc(),aAnswer.getDrawYLoc() );
+			
+			}
+		}
+
+//		Draw the Question
+		font.draw(batch, ques, (screenWidth/5) , 75 );
+
+	}
+	
+	
+	// This next function address the player in the game
+	/*
+	 * Updates the player's X Location, based on the player moving left or right
+	 */
+	public void updatePlayerXPos(){
+		if(goRight&&Player.getxPlayerLoc()<=(screenWidth - (Player.getPlayerImage().getWidth()* Player.getPlayerScale() ) ) ){
+			Player.updateXPos(true);
+			
+		}
+		if(goLeft&&Player.getxPlayerLoc() >=( (Player.getPlayerImage().getWidth() / 2) * Player.getPlayerScale() ) ){
+			Player.updateXPos(false);
 		}
 	}
+	
+	
+	 // These next functions address the ball (s) in the game
+	/*
+	 * Update Ball Count total
+	 */
+	public void updateBallCount(){
+		if (validBall.getxLoc() < 0 || validBall.getxLoc() > screenWidth)
+			ballCount = 0;
+		else if (validBall.getyLoc() < 0 || validBall.getyLoc() > screenHeight)
+			ballCount = 0;
+		else
+			ballCount = 1;
+	}
+	
+	/*
+	 * Initializes the Ball
+	 */
+	public void setBallInitial(){
+	validBall = new Ball(Player.getxPlayerLoc(),100, angle,true,game.getDifficulty());
+}
+	
+	
+	/*
+	 * Ball(s) Manipulation
+	 * -- Update the X Position of the Ball
+	 * -- Update the Y Position of the Ball
+	 * -- Updates the number of Balls on the game
+	 * -- Draws the Ball on the screen
+	 */
+	public void ballManagement(){
+		
+//		Updates the Ball's X Position
+		if (validBall.getxLoc() <0)
+			validBall.setActiveBall(false);
+		else
+			validBall.updateBallXPos();
+
+//		Updates the Ball's Y Position
+		if (validBall.getyLoc() > screenHeight)
+			validBall.setActiveBall(false);
+		else
+			validBall.updateBallYPos();
+		
+//		Updates the Ball Count of the Level
+		updateBallCount();
+		
+//		Draw the Ball on the Screen
+		batch.draw(validBall.getBallImage(), validBall.getxLoc(),validBall.getyLoc(), validBall.getBallImage().getWidth() * validBall.getBallScale(),validBall.getBallImage().getHeight() * validBall.getBallScale() );
+		
+	}
+	/*
+	 * Display's NonEssential Components
+	 * These components provide visual cues to the player, for feedback on game play
+	 * The Difficulty of the game will determine the visiblity of these components
+	 * -- Angle Indicator
+	 * 	-- Difficulty level could give a false indicator
+	 * 	-- Could override the appearance of the player
+	 * -- Angle Display (Tells the Angle the ball will shoot)
+	 */
+	public void drawNonEssentialComponents(){
+		
+	}
+	
 	
 	/*
 	 * Draws the String, representing the current angle at which the ball will fire at, on the screen
@@ -632,14 +523,14 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		float bottomXCoord = (float) ((Math.cos(Math.toRadians(angle) ) ) * bottomLineHyp);
 		float bottomYCoord = (float) ((Math.sin(Math.toRadians(angle) ) ) * bottomLineHyp);
 		
-		float bottomX = Player.xPlayerLoc + ((Player.playerImage.getWidth() * Player.playerScale) / 2 ) + bottomXCoord;
-		float bottomY = Player.yPlayerLoc + ((Player.playerImage.getHeight() * Player.playerScale) / 2 )  + bottomYCoord ;
+		float bottomX = Player.getxPlayerLoc() + ((Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2 ) + bottomXCoord;
+		float bottomY = Player.getyPlayerLoc() + ((Player.getPlayerImage().getHeight() * Player.getPlayerScale()) / 2 )  + bottomYCoord ;
 		
 		float topXCoord = (float) ((Math.cos(Math.toRadians(angle) ) ) * topLineHyp);
 		float topYCoord = (float) ((Math.sin(Math.toRadians(angle) ) ) * topLineHyp);
 		
-		float topX = Player.xPlayerLoc + ((Player.playerImage.getWidth() * Player.playerScale) / 2 ) + topXCoord;
-		float topY = Player.yPlayerLoc + ((Player.playerImage.getHeight() * Player.playerScale) / 2 ) + topYCoord;
+		float topX = Player.getxPlayerLoc() + ((Player.getPlayerImage().getWidth() * Player.getPlayerScale() ) / 2 ) + topXCoord;
+		float topY = Player.getyPlayerLoc() + ((Player.getPlayerImage().getHeight() * Player.getPlayerScale() ) / 2 ) + topYCoord;
 		
 		ShapeRenderer shape = new ShapeRenderer();
 		shape.setColor(Color.BLACK);
@@ -651,6 +542,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	/*
 	 * Updates the angle's value
+	 * later a second variable will be used to determine the amount that the angle will change
+	 * 	Difficulty will affect the amount that the angle changes
 	 */
 	public void updateAngle(){
 		if (turnUp && (angle < 180) ){
@@ -662,8 +555,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	}
 
 	public void setAngle(int xCoord, int yCoord){
-		int length = (int) Math.abs( (Player.xPlayerLoc + (Player.playerImage.getWidth() / 2) + xCoord ) );
-		float height = yCoord - Player.yPlayerLoc;
+		int length = (int) Math.abs( (Player.getxPlayerLoc() + (Player.getPlayerImage().getWidth() / 2) + xCoord ) );
+		float height = yCoord - Player.getyPlayerLoc();
 		double anglerad = Math.tanh(height/length);
 		angle = (int)Math.toDegrees(anglerad);
 		
@@ -678,20 +571,16 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	public boolean ballBoxCollision(){
 		boolean collision = false;
 		for(Box possibleSelection: possAnswers ){
-			if(possibleSelection.drawable){
+			if(possibleSelection.isDrawable()){
 			if (ballBoxXCollision(possibleSelection) && ballBoxYCollision(possibleSelection)){
-				if (isCorrect(possibleSelection.aString)){
-					possibleSelection.drawable = false;
-					
-					selectedA.add(possibleSelection.aString);
-//					collectedAnswers.add(possibleSelection.aString);
-					
+				if (isCorrect(possibleSelection.getaString())){
+					possibleSelection.setDrawable(false);
+					selectedA.add(possibleSelection.getaString());
 					activeBall = false;
 					ballCount = 0;
 					correctGuess += 1;
-//					win = true;
 			}else {
-					possibleSelection.drawable = false;			
+					possibleSelection.setDrawable(false);			
 					activeBall = false;
 					ballCount = 0;
 					incorrectGuesses += 1;
@@ -706,7 +595,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 * Determines if a Ball and a Selection collision has occurred, based only on the X coordinate
 	 */
 	public boolean ballBoxXCollision(Box aBox){
-		if( (aBox.xStart <= validBall.xLoc) && (validBall.xLoc <= (aBox.xStart + aBox.xWidth)))
+		if( (aBox.getBoxXStart() <= validBall.getxLoc()) && (validBall.getxLoc() <= (aBox.getBoxXStart() + (aBox.getImage().getWidth() * aBox.getBoxScale() ))) )
 			return true;
 		else
 			return false;
@@ -716,7 +605,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 * Determines if a Ball and a Selection collision has occurred, based only on the Y coordinate
 	 */
 	public boolean ballBoxYCollision(Box aBox){
-		if( (aBox.yStart <= validBall.yLoc) && (validBall.yLoc <= (aBox.yStart + aBox.yHeight)))
+		if( (aBox.getBoxYStart() <= validBall.getyLoc()) && (validBall.getyLoc() <= (aBox.getBoxYStart() + (aBox.getImage().getHeight() * aBox.getBoxScale() ))) )
 			return true;
 		else
 			return false;
@@ -735,7 +624,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	public boolean boxCollision(){
 		for(Box aBox:possAnswers){
 			if (ballBoxXCollision(aBox) && ballBoxYCollision(aBox) ){
-				if(aBox.aString.equals(cAnswer))
+				if(aBox.getaString().equals(cAnswer))
 					return true;
 			}
 		}
@@ -862,14 +751,14 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 		if(!win){	
 			int bufferXWindow = 50;
-			int bufferYWindow = 50;
-			if( (Player.xPlayerLoc + bufferXWindow) < screenX)
+//			int bufferYWindow = 50;
+			if( (Player.getxPlayerLoc() + bufferXWindow) < screenX)
 				turnDown = true;
-			if(screenX < (Player.xPlayerLoc - bufferXWindow) )
+			if(screenX < (Player.getxPlayerLoc() - bufferXWindow) )
 				turnUp = true;
-			if( ( (Player.xPlayerLoc + ((Player.playerImage.getWidth() * Player.playerScale) / 2) - bufferXWindow ) < screenX) 
-					&& ( screenX <= (Player.xPlayerLoc + ( (Player.playerImage.getWidth() * Player.playerScale) / 2) + bufferXWindow ) ) 
-					&& ( screenY <= ( (Player.playerImage.getHeight() * Player.playerScale) + bufferYWindow) ) ) {
+			if( ( (Player.getxPlayerLoc() + ((Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) - bufferXWindow ) < screenX) 
+					&& ( screenX <= (Player.getxPlayerLoc() + ( (Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) + bufferXWindow ) ) ){
+//					&& ( screenY <= ( (Player.playerImage.getHeight() * Player.playerScale) + bufferYWindow) ) ) {
 				if (ballCount == 0){
 				ballShoot = true;
 				ballCount++;
@@ -889,12 +778,12 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			
 		if(!win){	
 				int bufferWindow = 50;
-				if( (Player.xPlayerLoc + bufferWindow) < screenX)
+				if( (Player.getxPlayerLoc() + bufferWindow) < screenX)
 					turnDown = false;
-				if(screenX < (Player.xPlayerLoc - bufferWindow) )
+				if(screenX < (Player.getxPlayerLoc() - bufferWindow) )
 					turnUp = false;
-				if( ( (Player.xPlayerLoc + ((Player.playerImage.getWidth() * Player.playerScale) / 2) - bufferWindow ) < screenX) 
-						&& ( screenX <= (Player.xPlayerLoc + ( (Player.playerImage.getWidth() * Player.playerScale) / 2) + bufferWindow ) 
+				if( ( (Player.getxPlayerLoc() + ((Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) - bufferWindow ) < screenX) 
+						&& ( screenX <= (Player.getxPlayerLoc() + ( (Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) + bufferWindow ) 
 						&& (ballCount == 0) ) ) 
 					ballShoot = false;
 			}
@@ -918,9 +807,4 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	
-	
-	
-	
 }
