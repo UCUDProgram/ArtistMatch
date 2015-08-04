@@ -233,6 +233,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	/*
 	 * Sets the X Location of the Display Selection
+	 * REFACTOR TO TAKE IN THE BOX NUMBER
 	 */
 	public float setDisplayXDraw(int vert){
 		if (vert == 0)
@@ -243,12 +244,15 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	/*
 	 * Sets the Y Location of the Display Selection
+	 * REFACTOR TO TAKE IN THE BOX NUMBER
 	 */
 	public float setDisplayYDraw(int hor){
 		if (hor == 0)
 			return 25;
-		else
+		else if (hor == 1)
 			return 50;
+		else
+			return 75;
 	}
 	
 	public void setBoxes(){
@@ -267,8 +271,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 //			Sets the Y coordinate for drawing the option, below the queston
 			if ( (i==0)|| (i==2))
 				hordet =1;
-			else
+			else 
 				hordet = 0;
+			
 //			Sets the Y coordinate placement of the box, based on the difficulty and the number of options available
 			if(i <6)
 				boxPlace = 0;
@@ -400,6 +405,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	public void drawQuestion(){
 		font.draw(batch, ques, screenWidth / 5 , 75 );
 	}
+	
 	/*
 	 * Draws the Essential/Vital Game Information on the Screen
 	 * -- The Player, where ball firing originates from
@@ -491,6 +497,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		batch.draw(validBall.getBallImage(), validBall.getxLoc(),validBall.getyLoc(), validBall.getBallImage().getWidth() * validBall.getBallScale(),validBall.getBallImage().getHeight() * validBall.getBallScale() );
 		
 	}
+	
 	/*
 	 * Display's NonEssential Components
 	 * These components provide visual cues to the player, for feedback on game play

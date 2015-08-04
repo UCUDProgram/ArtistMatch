@@ -5,13 +5,11 @@ package ArtistMatch;
 import com.badlogic.gdx.graphics.Texture;
 
 class Ball{
-	private float xLoc, yLoc;
-	private int ballAngle;
+	private float xLoc, yLoc,ballScale;
+	private int ballAngle,gameDiff;
 	private Texture ballImage;
 	private boolean activeBall;
 	private double ballSpeed;
-	private float ballScale;
-	private int gameDiff;
 	/*
 	 * Constructor for the ball class
 	 * 

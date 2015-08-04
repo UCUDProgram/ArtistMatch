@@ -48,7 +48,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		scaleX = screenWidth/640;
 		scaleY = screenHeight/480;
 		initializeButtonsArray();
-		artistCount = artists.size();
+//		artistCount = artists.size();
 		addLeftButtons();
 		addRightButtons();
 		addBackButton();
@@ -106,7 +106,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	}
 	
 	public void addLeftButtons(){
-		for(int i = 0;i< (artistCount / 2);i++){
+		for(int i = 0;i< 5;i++){
 		final TextButton button = new TextButton(artists[i],skin);
 		button.setName(artists[i]);
 		table.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
@@ -123,7 +123,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	}
 	
 	public void addRightButtons(){
-		for(int i = (artistCount / 2)  ;i< artistCount ;i++){
+		for(int i = 5  ;i< 10 ;i++){
 		final TextButton button = new TextButton(artists[i],skin);
 		button.setName(artists[i]);
 		table1.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);

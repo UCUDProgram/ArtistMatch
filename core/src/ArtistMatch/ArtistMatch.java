@@ -14,9 +14,7 @@ public class ArtistMatch extends Game {
 	private float[] screenSize;
 	private Screen main, aGame,tScreen,instruct,subMenu,lSelect,setting, current;
 	private String artist;
-	private int score;
-	private int question;
-	private int difficulty;
+	private int score,question,difficulty;
 	
 	public ArtistMatch(){
 	}
