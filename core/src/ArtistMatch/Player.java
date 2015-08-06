@@ -26,6 +26,14 @@ class Player{
 		playerScale = setPlayerScale();
 	}
 	
+	public Player (float xLoc, float yLoc, int diff){
+		xPlayerLoc = xLoc;
+		yPlayerLoc = yLoc;
+		playerImage = new Texture("YouDee.png");
+		diffSett = diff;
+		playerScale = setPlayerScale();
+	}
+	
 	/*
 	 * Constructor for the player class that passes starting xLocation, image and Difficulty in
 	 */

@@ -56,11 +56,11 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		screenWidth = Gdx.graphics.getWidth();
 		Gdx.input.setInputProcessor(this);		
 		background = new Texture("ShooterBackground.png");
-		Player = new Player(setPlayerXStart(), game.getDifficulty());
-		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		initializeVariables();
 		initializeBoolean();
 		initializeText();
+		Player = new Player(setPlayerXStart(), setPlayerYPos() , game.getDifficulty());
+		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		xmlFile = setXMLFile();
 //		initializeQuestion();
 //		initializeSelectionArray();
@@ -81,6 +81,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
+		
+		System.out.println("The height of the font for the options text and the question is " + font.getLineHeight() );
+		
 		
 //	System.out.println("The height dimensions of the box is " + (possAnswers.get(0).image.getHeight() * possAnswers.get(0).boxScale) );
 	
@@ -198,10 +201,37 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 	}
 	
+	
 	/*
 	 * Functions to initialize the Boxes
 	 * Used to set Properties that are passed to the constructor of the Box class
 	 */
+	
+	/*
+	 * Sets the Number of rows for displaying the possible answers
+	 * Code needs to be reworked
+	 */
+	public int setRowTotal(){
+		if (game.getDifficulty() == 0 )
+			return 2;
+		else if( game.getDifficulty() == 1 )
+			return 3;
+		else 
+			return 4;
+	}
+	
+	/*
+	 * Sets the Scale for the Y Position
+	 */
+//	public float setYScale(){
+//		if(game.getDifficulty() == 0 )
+//			return 35;
+//		else if (game.getDifficulty() == 1)
+//			return ;
+//		else
+//			return (font.getLineHeight() * 2);
+//	}
+	
 	
 	/*
 	 * Sets the X Location of the Box
@@ -231,15 +261,103 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		return (screenHeight -100) - (yStartLoc * 100);
 	}
 	
+	
+	/*
+	 * Sets the Horizontal Window, in which the options are drawn on the screen
+	 */
+	public float setBoxWindow(int boxNum){
+		int padding = 10;
+		if (game.getDifficulty() == 0)
+			return (screenWidth / 2) - padding ;
+		else if (game.getDifficulty() == 1){
+			if (boxNum <=6)
+				return (screenWidth / 3) - padding;
+			else
+				return (screenWidth / 2) - padding;
+		}
+		else if (game.getDifficulty() == 2){
+			if (boxNum <=9)
+				return (screenWidth / 3) - padding;
+			else
+				return (screenWidth / 2) - padding;
+		}
+		else
+			return (screenWidth / 3) - padding;
+	}
+	
+	/*
+	 * Sets the Scale for the Y Position
+	 */
+//	public float setYScale(){
+//		
+//	}
+	
+	/*
+	 * Sets the X Position of the Option being drawn on the screen 
+	 */
+	public float setDisplayXDrawPos(int boxNum){
+		if (game.getDifficulty() == 0){
+			if (boxNum % 2 == 1)
+				return 0;
+			else
+				return ( (screenWidth / 2) );
+		}
+		else if (game.getDifficulty() == 1){
+			if (boxNum < 7){
+				return ( ( (boxNum - 1) % 3) * (screenWidth / 3) ) ;
+			} else {
+				return ( ( (boxNum % 2) * (screenWidth / 2) ));
+			}
+		} 
+		else if (game.getDifficulty() == 2){
+			if (boxNum < 10){
+				return ( ( (boxNum - 1) % 3) * (screenWidth / 3) ) ;
+			} else {
+				return 0;
+			}
+		}
+		else{
+			return ( ( (boxNum - 1) % 3) * (screenWidth / 3) ) ;
+		}
+	}
+	
+	/*
+	 * Sets the Y Position of the Option being drawn on the screen 
+	 */
+	public float setDisplayYDrawPos(int boxNum){
+		int rowCount, rowNum;
+		if (game.getDifficulty() == 0)
+			rowCount = 2;
+		else
+			rowCount = 3;
+		if ( boxNum % rowCount == 0 )
+			rowNum = (boxNum / rowCount) - 1;
+		else
+			rowNum = boxNum / rowCount;
+		return (setYMax() - ( (font.getLineHeight() * 2) * rowNum ) );
+	}
+	
+	
+	/*
+	 * Sets the Base, representing the highest value that the options will appear on the screen, in the Y 
+	 */
+	public float setYMax(){
+		if (game.getDifficulty() == 0)
+			return 72;
+		else if (game.getDifficulty() == 1)
+			return 108;
+		else
+			return 144;
+	}
 	/*
 	 * Sets the X Location of the Display Selection
 	 * REFACTOR TO TAKE IN THE BOX NUMBER
 	 */
 	public float setDisplayXDraw(int vert){
 		if (vert == 0)
-			return 25;
+			return 0;
 		else
-			return (int) ( (screenWidth / 2) + 25);
+			return (int) ( (screenWidth / 2) );
 	}
 	
 	/*
@@ -263,28 +381,38 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		int hordet=0;
 		int boxPlace = 0;
 		for(int i=0; i< answers.length; i++){
-//			Sets the X coordinate for drawing the option, below the question
-			if( (i<4) && (i>1) ){
-				vertdet= 1;
-			}else 
-				vertdet = 0;
-//			Sets the Y coordinate for drawing the option, below the queston
-			if ( (i==0)|| (i==2))
-				hordet =1;
-			else 
-				hordet = 0;
+//			
+//			
+////			Sets the X coordinate for drawing the option, below the question
+//			if( (i<4) && (i>1) ){
+//				vertdet= 1;
+//			}else 
+//				vertdet = 0;
+////			Sets the Y coordinate for drawing the option, below the queston
+//			if ( (i==0)|| (i==2))
+//				hordet =1;
+//			else 
+//				hordet = 0;
+//			
+////			Sets the Y coordinate placement of the box, based on the difficulty and the number of options available
+//			if(i <6)
+//				boxPlace = 0;
+//			else if( (i == 6 ) || (i == 7) )
+//				boxPlace = 1;
+//			else if ( (i == 8) || (i == 9 ) )
+//				boxPlace = 1;
+//			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDraw(vertdet),setDisplayYDraw(hordet),game.getDifficulty() ) );
+//			
 			
-//			Sets the Y coordinate placement of the box, based on the difficulty and the number of options available
-			if(i <6)
-				boxPlace = 0;
-			else if( (i == 6 ) || (i == 7) )
-				boxPlace = 1;
-			else if ( (i == 8) || (i == 9 ) )
-				boxPlace = 1;
-			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDraw(vertdet),setDisplayYDraw(hordet),game.getDifficulty() ) );
+			
+			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
 			numcount++;
 		}
 	}
+	
+	/*
+	 * FUNCTIONS TO INITIATE THE PLAYER
+	 */
 	
 	/*
 //	 * Sets the Player's X Location, which is the starting location for the player
@@ -313,9 +441,21 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 	}
 	
+	/*
+	 * Sets the Y Position of the Player
+	 */
+	public float setPlayerYPos(){
+		return setYMax() + 25;
+//		return ((font.getLineHeight() * 2 ) * (setRowTotal() + 1)) + 20;
+	}
 	
 	
-	
+	/*
+	 * Sets the Y Position of the Question, to be drawn on the screen
+	 */
+	public float setQuesDrawYPos(){
+		return (font.getLineHeight() * 2) * (setRowTotal() +1); 
+	}
 	
 	
 	@Override
@@ -401,6 +541,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	// THIS GROUP OF FUNCTIONS ADDRESS PHYSICAL ASPECTS OF THE GAME THAT MAY OR MAY NOT BE VISIBLE TO THE PLAYER
 	// ALSO THIS ADDRESSES ASPECTS OF THE GAME THAT CHANGE, SUCH AS THE BALL
+//	This function will be deleted because the draw function is now in the draw Essential Components function 
 	
 	public void drawQuestion(){
 		font.draw(batch, ques, screenWidth / 5 , 75 );
@@ -428,7 +569,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 
 //		Draw the Question
-		font.draw(batch, ques, (screenWidth/5) , 75 );
+		font.draw(batch, ques, 0 , screenHeight );
 
 	}
 	
@@ -465,7 +606,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 * Initializes the Ball
 	 */
 	public void setBallInitial(){
-	validBall = new Ball(Player.getxPlayerLoc(),100, angle,true,game.getDifficulty());
+	validBall = new Ball(Player.getxPlayerLoc(),Player.getyPlayerLoc(), angle,true,game.getDifficulty());
 }
 	
 	
