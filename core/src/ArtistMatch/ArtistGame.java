@@ -22,6 +22,12 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.XmlReader;
 import com.badlogic.gdx.utils.XmlReader.Element;
 
+/*
+ * NEED TO REDO/REWORK 
+ * THE CORRECT ANSWERS/END OF LEVEL FUNCTIONS
+ * THE PLACEMENT OF BOXES ON THE SCREEN
+ */
+
 public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private ArtistMatch game;
 	// These booleans are used to display results once
@@ -61,20 +67,23 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeText();
 		Player = new Player(setPlayerXStart(), setPlayerYPos() , game.getDifficulty());
 		validBall = new Ball(0,0,angle,false,game.getDifficulty());
-		xmlFile = setXMLFile();
-//		initializeQuestion();
-//		initializeSelectionArray();
-//		initializeAnswer();	
+		
 		selectedA = new ArrayList<String>();
 		correctA = new ArrayList<String>();
 		
+		xmlFile = setXMLFile();
+		initializeQuestion();
+		initializeSelectionArray();
+		initializeAnswer();	
 		
-		ques = "Who is the best Musician Ever";
-		answers = new String[4];
-		answers[0]= "Lionel Ritchie";
-		answers[1] = "Michael Jackson";
-		answers[2]= "The Temptations";
-		answers[3] = "The Jackson 5";
+		
+		
+//		ques = "Who is the best Musician Ever";
+//		answers = new String[4];
+//		answers[0]= "Lionel Ritchie";
+//		answers[1] = "Michael Jackson";
+//		answers[2]= "The Temptations";
+//		answers[3] = "The Jackson 5";
 //		cAnswer = answers[1];
 		initializeArray();
 		
@@ -193,6 +202,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		Element artist = root.getChildByName(game.getArtist());
 		Element quesNum = artist.getChildByName(Integer.toString(game.getQuestion()));
 		Array<Element> answerCA = quesNum.getChildrenByName("Correct");
+		System.out.println("The size of the correct array is " + answerCA.size);
 		for (int i = 0; i <answerCA.size; i++){
 			correctA.add(answerCA.get(i).getText());
 		}

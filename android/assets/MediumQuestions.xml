@@ -1,4 +1,34 @@
 <root>
+    <TaylorSwift>
+        <1>
+            <Question> Which songs from the Speak Now Album went at least 3x platinum, by RIAA Standards?</Question>
+            <Option>Mine</Option>
+            <Option>The Story of Us</Option>
+            <Option>Back to December</Option>
+            <Option>Mean</Option>
+            <Option>Sparks Fly</Option>
+            <Option>Better Than Revenge</Option>
+            <Option>Ours</Option>
+            <Option>Dear John</Option>
+            <Correct>Mine</Correct>
+            <Correct>Mean</Correct>
+        </1>
+        
+        <2>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </2>
+    </TaylorSwift>
+    
     <artist>
         <1>
             <Question>   </Question>
@@ -15,4 +45,5 @@
         </1>
         
     </artist>
+    
 </root>  

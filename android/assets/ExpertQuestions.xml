@@ -1,4 +1,46 @@
 <root>
+    <TaylorSwift>
+        <1>
+            <Question>What Taylor Swift songs were about past relationships?</Question>
+            <Option>We Are Never Getting Back Together</Option>
+            <Option>Mine</Option>
+            <Option>White Horse</Option>
+            <Option>Teardrops on My Guitar</Option>
+            <Option>You Belong With Me</Option>
+            <Option>Fifteen</Option>
+            <Option>Back to December</Option>
+            <Option>Love Story</Option>
+            <Option>Today was a Fairytale</Option>
+            <Option>Ours</Option>
+            <Option>Picture to Burn</Option>
+            <Option>Our Song</Option>
+            <Correct>White Horse</Correct>
+            <Correct>We Are Never Getting Back Together</Correct>
+            <Correct>Back to December</Correct>
+            <Correct>Picture to Burn</Correct>
+        </1>
+        
+        <2>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </2>
+    </TaylorSwift>
+    
     <artist>
         <1>
             <Question>   </Question>
@@ -21,4 +63,5 @@
         </1>
         
     </artist>
+    
 </root>  

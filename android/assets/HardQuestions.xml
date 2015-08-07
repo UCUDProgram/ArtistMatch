@@ -1,4 +1,40 @@
 <root>
+    <TaylorSwift>
+        <1>
+            <Question>What music videos did Taylor Swift direct?</Question>
+            <Option>I’m Only Me When I’m With You</Option>
+            <Option>Fearless</Option>
+            <Option>You Belong With Me</Option>
+            <Option>Back to December</Option>
+            <Option>Crazier</Option>
+            <Option>The Best Day</Option>
+            <Option>Fifteen</Option>
+            <Option>Love Story</Option>
+            <Option>Mine</Option>
+            <Option>Mean</Option>
+            <Correct>I’m Only Me When I’m With You</Correct>
+            <Correct>The Best Day</Correct>
+            <Correct>Mine</Correct>
+        </1>
+        
+        <2>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </2>
+    </TaylorSwift>
+    
     <artist>
         <1>
             <Question>   </Question>

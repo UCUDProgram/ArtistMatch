@@ -31,6 +31,11 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	private Table table,table1,table2;
 	int artistCount;
 	
+	/*
+	 * NEED TO REDO/REWORK 
+	 * A FUNCTION THAT PARSES THE ARTIST'S NAME INTO A BETTER FORMAT (INCLUDING SPACES AND OTHER CHARACTERS)
+	 */
+	
 	public LevelSelect(ArtistMatch game){
 		this.game = game;
 	}
