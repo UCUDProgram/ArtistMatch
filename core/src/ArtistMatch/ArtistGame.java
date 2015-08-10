@@ -36,7 +36,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private boolean isEndTime,displayTimeCount,moveDistanceCount,guessCounter;
 	
 	private String ques,cAnswer,xmlFile;
-	private Texture background;
+	private Texture background, ballImage;
 	private long startTime, endTime;
 	private int angle,ballCount,incorrectGuesses,correctGuess;
 	private BitmapFont font,font1, font2;
@@ -66,6 +66,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeBoolean();
 		initializeText();
 		Player = new Player(setPlayerXStart(), setPlayerYPos() , game.getDifficulty());
+//		ballImage = setBallImage();
 		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		
 		selectedA = new ArrayList<String>();
@@ -85,7 +86,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 //		answers[2]= "The Temptations";
 //		answers[3] = "The Jackson 5";
 //		cAnswer = answers[1];
-		initializeArray();
+//		initializeArray();
 		
 		
 		possAnswers = new ArrayList<Box>();
@@ -101,11 +102,33 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		screenWidth = Gdx.graphics.getWidth();
 	}
 	
-	public void initializeArray(){
-		selectedA.clear();
-		correctA.add(answers[1]);
-		correctA.add(answers[3]);
+//	public void initializeArray(){
+//		selectedA.clear();
+//		correctA.add(answers[1]);
+//		correctA.add(answers[3]);
+//	}
+	
+	
+	/*
+	 * Formats the artist's name to proper formatting, including spacing
+	 * Any update to the Levels.xml file needs to be updated here, as well
+	 */
+	public String formatName(String artName){
+		if (game.getArtist().equals("Michael Jackson"))
+			return "MichaelJackson";
+		else if (game.getArtist().equals("Whitney Houston"))
+			return "WhitneyHouston";
+		else if (game.getArtist().equals("Mariah Carey"))
+			return "MariahCarey";
+		else if (game.getArtist().equals("Carrie Underwood"))
+			return "CarrieUnderwood";
+		else if (game.getArtist().equals("Taylor Swift"))
+			return "TaylorSwift";
+		else
+			return artName;
 	}
+	
+	
 	
 	/*
 	 * Initialize font settings
@@ -166,7 +189,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 */
 	public void initializeQuestion(){
 		try{Element root = new XmlReader().parse(Gdx.files.internal(xmlFile));
-		Element artist = root.getChildByName(game.getArtist());
+		Element artist = root.getChildByName(formatName(game.getArtist()));
 		Element quesNum = artist.getChildByName(Integer.toString(game.getQuestion()));
 		Element question = quesNum.getChildByName("Question");
 		ques = question.getText();
@@ -181,7 +204,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 */
 	public void initializeSelectionArray(){
 		try{Element root = new XmlReader().parse(Gdx.files.internal(xmlFile));
-		Element artist = root.getChildByName(game.getArtist());
+		Element artist = root.getChildByName(formatName(game.getArtist()));
 		Element quesNum = artist.getChildByName(Integer.toString(game.getQuestion()));
 		Array<Element> answerE = quesNum.getChildrenByName("Option");
 		int count = answerE.size;
@@ -199,7 +222,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 */
 	public void initializeAnswer(){
 		try{Element root = new XmlReader().parse(Gdx.files.internal(xmlFile));
-		Element artist = root.getChildByName(game.getArtist());
+		Element artist = root.getChildByName(formatName(game.getArtist()));
 		Element quesNum = artist.getChildByName(Integer.toString(game.getQuestion()));
 		Array<Element> answerCA = quesNum.getChildrenByName("Correct");
 		System.out.println("The size of the correct array is " + answerCA.size);
@@ -209,6 +232,25 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 		catch(IOException e){
 		}
+	}
+	
+	/*
+	 * Function to set the Image of the Ball
+	 */
+	
+/* DELETE THIS COMMENT ONCE IMPLEMENTED	
+ * Think about creating an xml file that will store the images String
+ * The image strings should be two types added, general and artist Specific
+ */	
+	
+	public Texture setBallImage(){
+		List<String> balls = new ArrayList<String>();
+		
+//		Use of xml file readers to add strings to the balls List
+		
+		
+		int randomBall = (int) Math.random() * balls.size();
+		return new Texture(balls.get(randomBall));
 	}
 	
 	
@@ -383,6 +425,25 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			return 75;
 	}
 	
+	/*
+	 * Function to set the Image of the Box
+	 */
+	
+/* DELETE THIS COMMENT ONCE IMPLEMENTED	
+ * Think about creating an xml file that will store the images String
+ * The image strings should be two types added, general and artist Specific
+ */	
+	
+	public Texture setBoxImage(){
+		List<String> box = new ArrayList<String>();
+		
+//		Use of xml file readers to add strings to the balls List
+		
+		
+		int randomBall = (int) Math.random() * box.size();
+		return new Texture(box.get(randomBall));
+	}
+	
 	public void setBoxes(){
 		char[] displayAnswer = {'A','B','C','D','E','F','G','H','I','J','K','L'};
 		int count = 5;  //Think about how to set the positioning of the boxes
@@ -423,6 +484,27 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	/*
 	 * FUNCTIONS TO INITIATE THE PLAYER
 	 */
+	
+	/*
+	 * Function to set the Image of the Player
+	 */
+	
+/* DELETE THIS COMMENT ONCE IMPLEMENTED	
+ * Think about creating an xml file that will store the images String
+ * The image strings should be two types added, general and artist Specific
+ */	
+	
+	public Texture setPlayerImage(){
+		List<String> player = new ArrayList<String>();
+		
+//		Use of xml file readers to add strings to the balls List
+		
+		
+		int randomBall = (int) Math.random() * player.size();
+		return new Texture(player.get(randomBall));
+	}
+	
+	
 	
 	/*
 //	 * Sets the Player's X Location, which is the starting location for the player

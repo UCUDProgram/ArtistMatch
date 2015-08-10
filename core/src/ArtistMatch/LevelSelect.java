@@ -95,7 +95,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 //		font.draw(batch, "The Level Select Screen Works", 0, 100);
 //		batch.end();
 	}
-	
+
 	public void initializeButtonsArray(){
 		try{Element root = new XmlReader().parse(Gdx.files.internal("Levels.xml"));
 		Element level = root.getChildByName("LevelSelect");
@@ -109,6 +109,11 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		catch(IOException e){
 		}
 	}
+	
+	/*
+	 * NEED TO MODIFY TO INCLUDE THE FORMAT STRING FOR THE BUTTON DISPLAY
+	 * AND KEEP THE XML FILE NAME FOR LEVEL NAME
+	 */
 	
 	public void addLeftButtons(){
 		for(int i = 0;i< 5;i++){
@@ -156,6 +161,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 			}
 		});
 	}
+	
 	
 	@Override
 	public void render() {

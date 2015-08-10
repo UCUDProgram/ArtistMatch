@@ -59,8 +59,7 @@ public class SubMenu implements Screen, InputProcessor, ApplicationListener{
 		Gdx.input.setInputProcessor(this);
 		Gdx.input.setInputProcessor(stage);
 	}
-	
-	
+		
 	@Override
 	public void render(float delta) {
 		batch.begin();
