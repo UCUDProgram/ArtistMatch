@@ -26,6 +26,23 @@ class Box{
 		drawable = true;
 	}
 	
+	/*
+	 * Constructor for Box
+	 * Purpose is to aid in defining box size, in the level and set size,
+	 */
+	public Box(int diff){
+		aString = "";
+		boxXStart = 0;
+		boxYStart = 0;
+		displaySelection = '0';
+		drawXLoc = 0;
+		drawYLoc = 0;
+		gameDiff = diff;
+		boxScale = setBoxScale();
+		image = new Texture("YouDee.png");
+		drawable = false;
+	}
+	
 //	public Texture setBoxImage(){
 //		
 //	}

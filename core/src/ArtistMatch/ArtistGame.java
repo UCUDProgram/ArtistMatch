@@ -50,6 +50,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private Player Player;
 	private List<Box> possAnswers;
 	private ShapeRenderer shape;
+	private Box boxTester;
 	
 	public ArtistGame(ArtistMatch game){
 		this.game = game;
@@ -88,7 +89,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 //		cAnswer = answers[1];
 //		initializeArray();
 		
-		
+		boxTester = new Box(game.getDifficulty());
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
 		
@@ -310,7 +311,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			yStartLoc = ( ( (boxNum - 5) / 2) + 1);
 		}
 		
-		return (screenHeight -100) - (yStartLoc * 100);
+		return (screenHeight -50) - (25 * yStartLoc) - (yStartLoc * boxTester.getImage().getHeight() * boxTester.getBoxScale() )   ;
 	}
 	
 	
@@ -537,7 +538,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 * Sets the Y Position of the Player
 	 */
 	public float setPlayerYPos(){
-		return setYMax() + 25;
+		return setYMax(); 
+//				+ 25;
 //		return ((font.getLineHeight() * 2 ) * (setRowTotal() + 1)) + 20;
 	}
 	
