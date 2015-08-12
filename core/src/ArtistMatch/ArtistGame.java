@@ -311,7 +311,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			yStartLoc = ( ( (boxNum - 5) / 2) + 1);
 		}
 		
-		return (screenHeight -50) - (25 * yStartLoc) - (yStartLoc * boxTester.getImage().getHeight() * boxTester.getBoxScale() )   ;
+		return (screenHeight -(boxTester.getImage().getHeight() * boxTester.getBoxScale() ) - 25 ) - (25 * yStartLoc) - (yStartLoc * boxTester.getImage().getHeight() * boxTester.getBoxScale() )   ;
 	}
 	
 	
@@ -658,7 +658,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 				batch.draw(aAnswer.getImage(), aAnswer.getBoxXStart(), aAnswer.getBoxYStart(), aAnswer.getImage().getWidth() * aAnswer.getBoxScale(),aAnswer.getImage().getHeight() * aAnswer.getBoxScale());			
 				font1.draw(batch,Character.toString(aAnswer.getDisplaySelection()), aAnswer.getBoxXStart(), aAnswer.getBoxYStart());
 				font.draw(batch,(aAnswer.getDisplaySelection() + ": " + aAnswer.getaString()), aAnswer.getDrawXLoc(),aAnswer.getDrawYLoc() );
-			
+//				font.drawWrapped(batch, (aAnswer.getDisplaySelection() + ": " + aAnswer.getaString()), aAnswer.getDrawXLoc(),aAnswer.getDrawYLoc(), setBoxWindow(aAnswer.))
 			}
 		}
 
@@ -751,7 +751,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 * Draws the String, representing the current angle at which the ball will fire at, on the screen
 	 */
 	public void drawAngleInfo(){
-		font2.draw(batch, ("The angle of Projection is " + angle),(float)(screenWidth * .45), screenHeight - 25);
+		font2.draw(batch, ("The angle of Projection is " + angle),(float)(screenWidth * .45), 20);
 	}
 	
 	
@@ -994,10 +994,18 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		if(!win){	
 			int bufferXWindow = 50;
 //			int bufferYWindow = 50;
+			
+//			Handles Angle determination
+//			if( (game.getDifficulty() == 2)| game.getDifficulty() == 3){
 			if( (Player.getxPlayerLoc() + bufferXWindow) < screenX)
 				turnDown = true;
 			if(screenX < (Player.getxPlayerLoc() - bufferXWindow) )
 				turnUp = true;
+//			} else {
+//				setAngle(screenX,screenY);
+//			}
+			
+//			Handles Ball Shooting
 			if( ( (Player.getxPlayerLoc() + ((Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) - bufferXWindow ) < screenX) 
 					&& ( screenX <= (Player.getxPlayerLoc() + ( (Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) + bufferXWindow ) ) ){
 //					&& ( screenY <= ( (Player.playerImage.getHeight() * Player.playerScale) + bufferYWindow) ) ) {
@@ -1020,10 +1028,15 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			
 		if(!win){	
 				int bufferWindow = 50;
+				
+//				Handles Angle determination
+
 				if( (Player.getxPlayerLoc() + bufferWindow) < screenX)
 					turnDown = false;
 				if(screenX < (Player.getxPlayerLoc() - bufferWindow) )
 					turnUp = false;
+				
+//				Handles Ball Shooting	
 				if( ( (Player.getxPlayerLoc() + ((Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) - bufferWindow ) < screenX) 
 						&& ( screenX <= (Player.getxPlayerLoc() + ( (Player.getPlayerImage().getWidth() * Player.getPlayerScale()) / 2) + bufferWindow ) 
 						&& (ballCount == 0) ) ) 
