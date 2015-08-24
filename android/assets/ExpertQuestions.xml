@@ -19,8 +19,103 @@
             <Correct>Back to December</Correct>
             <Correct>Picture to Burn</Correct>
         </1>
+        <2> 
+            <Question>Who were directors of Taylor Swift music video from the Red Album?</Question>
+            <Option>Declan Whitebloom</Option>
+            <Option>Shane Drake</Option>
+            <Option>Yoann Lemoine</Option>
+            <Option>Phillip Andelman</Option>
+            <Option>Noble Jones</Option>
+            <Option>Mark Romanek</Option>
+            <Option>Kyle Newman</Option>
+            <Option>Anthony Mandler</Option>
+            <Option>Joseph Kahn</Option>
+            <Option>Roman White</Option>
+            <Option>Giles Dunning</Option>
+            <Option>Taylor Swift</Option>
+            <Correct>Declan Whitebloom</Correct>
+            <Correct>Phillip Andelman</Correct>
+            <Correct>Anthony Mandler</Correct>
+            <Correct>Giles Dunning</Correct>
+        </2>
+        <3>  
+            <Question>What are the names of Taylor Swift fragrances?</Question>
+            <Option>Incredible Things</Option>
+            <Option>Swift</Option>
+            <Option>Enchanted</Option>
+            <Option>Taylor</Option>
+            <Option>Fearless</Option>
+            <Option>Heart</Option>
+            <Option>Wonderstruck Enchanted</Option>
+            <Option>Speak Now</Option>
+            <Option>13</Option>
+            <Option>Wonderstruck</Option>
+            <Option>Red</Option>
+            <Option>1989</Option>
+            <Correct>Wonderstruck</Correct>
+            <Correct>Wonderstruck Enchanted</Correct>
+            <Correct>Taylor</Correct>
+            <Correct>Incredible Things</Correct>
+        </3>
+        <4> 
+            <Question>Director(s) of Music Videos that featured Taylor Swift?   </Question>
+            <Option>Meiert Avis</Option>
+            <Option>Christian Lamb</Option>
+            <Option>Terry Richardson</Option>
+            <Option>Kenny Jackson</Option>
+            <Option>Jeremy Alter</Option>
+            <Option>Joseph Kahn</Option>
+            <Option>Jake Nava</Option>
+            <Option>Anthony Mandler</Option>
+            <Option>Roman White</Option>
+            <Option>Declan Whitebloom</Option>
+            <Option>Shane Drake</Option>
+            <Option>Philip Andelman</Option>
+            <Correct>Meiert Avis</Correct>
+            <Correct>Jeremy Alter</Correct>
+            <Correct>Jake Nava</Correct>
+            <Correct>Roman White</Correct>
+        </4>
+        <5> 
+            <Question>Which Taylor Swift singles went at least 6x platinum in the US?</Question>
+            <Option>Mine</Option>
+            <Option>Fearless</Option>
+            <Option>Red</Option>
+            <Option>Picture To Burn</Option>
+            <Option>Speak Now</Option>
+            <Option>Blank Space</Option>
+            <Option>We Are Never Ever Getting Back Together</Option>
+            <Option>Love Story</Option>
+            <Option>I Knew You Were Trouble</Option>
+            <Option>Should've Said No</Option>
+            <Option>Tim McGraw</Option>
+            <Option>Forever And Always</Option>
+            <Correct>Love Story</Correct>
+            <Correct>We Are Never Ever Getting Back Together</Correct>
+            <Correct>I Knew You Were Trouble</Correct>
+            <Correct>Blank Space</Correct>
+        </5>
+        <6> 
+            <Question>What actors have Taylor Swift shared Movie scenes with?</Question>
+            <Option>Brenton Thwaites</Option>
+            <Option>Rob Reiner</Option>
+            <Option>Jessica Biel</Option>
+            <Option>Taylor Lautner</Option>
+            <Option>Jaime Foxx</Option>
+            <Option>Matthew Walker</Option>
+            <Option>Zooey Deschanel</Option>
+            <Option>Jeff Bridges</Option>
+            <Option>Ashton Kutcher</Option>
+            <Option>Jessica Alba</Option>
+            <Option>George Lopez</Option>
+            <Option>Scott Sener</Option>
+            <Correct>Taylor Lautner</Correct>
+            <Correct>Jeff Bridges</Correct>
+            <Correct>Matthew Walker</Correct>
+            <Correct>Scott Sener</Correct>
+        </6>
         
-        <2>
+        <7>
             <Question>   </Question>
             <Option>     </Option>
             <Option>     </Option>
@@ -38,7 +133,67 @@
             <Correct>	</Correct>
             <Correct>	</Correct>
             <Correct>	</Correct>
-        </2>
+        </7>
+        
+        <8>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </8>
+        
+        <9>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </9>
+        
+        <10>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </10>      
     </TaylorSwift>
     
     <artist>

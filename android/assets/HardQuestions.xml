@@ -16,8 +16,105 @@
             <Correct>The Best Day</Correct>
             <Correct>Mine</Correct>
         </1>
+        <2> 
+            <Question>Who has Taylor Swift collaborated with?</Question>
+            <Option>Ed Sheeran</Option>
+            <Option>The Civil Wars</Option>
+            <Option>Paramore</Option>
+            <Option>Lorde</Option>
+            <Option>Keith Urban</Option>
+            <Option>Ellie Goulding</Option>
+            <Option>Haim</Option>
+            <Option>Carrie Underwood</Option>
+            <Option>B.o.B</Option>
+            <Option>Selena Gomez</Option>
+            <Correct>The Civil Wars</Correct>
+            <Correct>Keith Urban</Correct>
+            <Correct>B.o.B</Correct>
+        </2>
+        <3> 
+            <Question>What musicians made special guest performances with Taylor Swift on her Red Tour?</Question>
+            <Option>Luke Bryan</Option>
+            <Option>Nelly</Option>
+            <Option>Tegan & Sara</Option>
+            <Option>Patrick Stump</Option>
+            <Option>Hunter Hayes</Option>
+            <Option>John Mayer</Option>
+            <Option>B.o.B</Option>
+            <Option>Ellie Goulding</Option>
+            <Option>Rascal Flatts</Option>
+            <Option>Faith Hill</Option>
+            <Correct>Nelly</Correct>
+            <Correct>B.o.B</Correct>
+            <Correct>Patrick Stump</Correct>
+        </3>
+        <4> 
+            <Question>Who were the opening acts from Taylor Swift’s Fearless World Tour?</Question>
+            <Option>Ed Sheeran</Option>
+            <Option>Neon Trees</Option>
+            <Option>Ellie Goulding</Option>
+            <Option>Brett Eldredge</Option>
+            <Option>Florida Georgia Line</Option>
+            <Option>Kellie Pickler</Option>
+            <Option>Austin Mahone</Option>
+            <Option>Gloriana</Option>
+            <Option>The Vamps</Option>
+            <Option>Justin Bieber</Option>
+            <Correct>Kellie Pickler</Correct>
+            <Correct>Gloriana</Correct>
+            <Correct>Justin Bieber</Correct>
+        </4>
+        <5> 
+            <Question>What award shows were Taylor Switt’s winning percentage is greater than 50%, with at least 15 nominations?</Question>
+            <Option>Grammys</Option>
+            <Option>Academy of Country Music</Option>
+            <Option>American Music Awards</Option>
+            <Option>Country Music Awards</Option>
+            <Option>Billboard Music Awards</Option>
+            <Option>People’s Choice Awards</Option>
+            <Option>Teen Choice Awards</Option>
+            <Option>Brit Awards</Option>
+            <Option>MTV Video Music Awards</Option>
+            <Option>MuchMusic Video Awards</Option>
+            <Correct>American Music Awards</Correct>
+            <Correct>Billboard Music Awards</Correct>
+            <Correct>Teen Choice Awards</Correct>
+        </5>
+        <6> 
+            <Question>Who are the directors of Taylor Swift music videos, from the Fearless Album?</Question>
+            <Option>Trey Fanjoy</Option>
+            <Option>Shawn Robbins</Option>
+            <Option>Christian Lamb</Option>
+            <Option>Shane Drake</Option>
+            <Option>Todd Cassetty</Option>
+            <Option>Yoann Lemoine</Option>
+            <Option>Noble Jones</Option>
+            <Option>Phillip Andelman</Option>
+            <Option>Declan Whitebloom</Option>
+            <Option>Roman White</Option>
+            <Correct>Trey Fanjoy</Correct>
+            <Correct>Roman White</Correct>
+            <Correct>Todd Cassetty</Correct>
+        </6>
         
-        <2>
+        <7> 
+            <Question>Which songs went at least 2x Platinum, by RIAA metrics, on Taylor Swift’s self-titled album?</Question>
+            <Option>Should’ve Said No</Option>
+            <Option>Picture to Burn</Option>
+            <Option>Stay Beautiful</Option>
+            <Option>Tied Together with a Smile</Option>
+            <Option>Teardrops on My Guitar</Option>
+            <Option>Tim McGraw</Option>
+            <Option>A Place in this World</Option>
+            <Option>The Outside</Option>
+            <Option>Our Song</Option>
+            <Option>I’m Only Me When I’m WIth You</Option>
+            <Correct>Picture to Burn</Correct>
+            <Correct>Teardrops on My Guitar</Correct>
+            <Correct>Our Song</Correct>
+        </7>
+        
+        <8>
             <Question>   </Question>
             <Option>     </Option>
             <Option>     </Option>
@@ -32,7 +129,42 @@
             <Correct>	</Correct>
             <Correct>	</Correct>
             <Correct>	</Correct>
-        </2>
+        </8>
+        
+        <9>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </9>
+        
+        <10>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </10>
+        
     </TaylorSwift>
     
     <artist>

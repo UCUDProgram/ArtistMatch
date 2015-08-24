@@ -1,6 +1,71 @@
 <root>
     <TaylorSwift>
-        <1>
+        <1> 
+            <Question>What TV shows did Taylor Swift guest star on?</Question>
+            <Option>CSI Miami</Option>
+            <Option>CSI: Crime Scene Investigation</Option>
+            <Option>Raising Hope</Option>
+            <Option>CSI New York</Option>
+            <Option>Blue Bloods</Option>
+            <Option> Law & Order SVU</Option>
+            <Option>New Girl</Option>
+            <Option>Til’ Death</Option>
+            <Correct>CSI: Crime Scene Investigation</Correct>
+            <Correct>New Girl</Correct>
+        </1>
+        <2> 
+            <Question>What movies did Taylor Swift appear in?</Question>
+            <Option>Valentine’s Day</Option>
+            <Option>The Lorax</Option>
+            <Option>Sharknado</Option>
+            <Option>The Getaway</Option>
+            <Option>Letter’s to Juliet</Option>
+            <Option>The Giver</Option>
+            <Option>Beverly Hills Chihuahua 3</Option>
+            <Option>New Year’s Eve</Option>
+            <Correct>Valentine’s Day</Correct>
+            <Correct>The Giver</Correct>
+        </2>
+       <3> 
+            <Question>What movies did Taylor Swift contribute to their soundtrack?</Question>
+            <Option>New Year’s Eve</Option>
+            <Option>Hannah Montana: Best of Both Worlds</Option>
+            <Option>The Hunger Games</Option>
+            <Option>The Giver</Option>
+            <Option>Divergent</Option>
+            <Option>Valentine’s Day</Option>
+            <Option>The Lorax</Option>
+            <Option>The Hunger Games Catching Fire</Option>
+            <Correct>Valentine’s Day</Correct>
+            <Correct>The Hunger Games</Correct>
+        </3>
+        <4>
+            <Question>What Award Shows did Taylor Swift win a collaboration award at?</Question>
+            <Option>Billboard Awards</Option>
+            <Option>Country Music Association Awards</Option>
+            <Option>CMT Music Awards</Option>
+            <Option>American Country Awards</Option>
+            <Option>Golden Globes</Option>
+            <Option>Academy of Country Music Awards</Option>
+            <Option>Grammy Awards</Option>
+            <Option>People’s Choice Awards</Option>
+            <Correct>American Country Awards</Correct>
+            <Correct>Country Music Association Awards</Correct>
+        </4>
+        <5> 
+            <Question>What awards did Taylor Swift win best artist?</Question>
+            <Option>American Music Awards</Option>
+            <Option>Academy of Country Music Awards</Option>
+            <Option>Grammys</Option>
+            <Option>People’s Choice</Option>
+            <Option>Billboard Music Awards</Option>
+            <Option>Country Music Awards</Option>
+            <Option>Teen Choice Awards</Option>
+            <Option>Brit Awards</Option>
+            <Correct>Teen Choice Awards</Correct>
+            <Correct>Academy of Country Music Awards</Correct>
+        </5>
+        <6>
             <Question> Which songs from the Speak Now Album went at least 3x platinum, by RIAA Standards?</Question>
             <Option>Mine</Option>
             <Option>The Story of Us</Option>
@@ -12,9 +77,22 @@
             <Option>Dear John</Option>
             <Correct>Mine</Correct>
             <Correct>Mean</Correct>
-        </1>
+        </6>
+        <7> 
+            <Question>Who are the hosts of SNL when Taylor Swift was the performer?</Question>
+            <Option>Rosario Dawson</Option>
+            <Option>Gerald Butler</Option>
+            <Option>Neil Patrick Harris</Option>
+            <Option>Hugh Laurie</Option>
+            <Option>January Jones</Option>
+            <Option>Taylor Swift</Option>
+            <Option>Tim McGraw</Option>
+            <Option>Joseph Gordon-Levitt</Option>
+            <Correct>Taylor Swift</Correct>
+            <Correct>Neil Patrick Harris</Correct>
+        </7>
         
-        <2>
+  		<8>
             <Question>   </Question>
             <Option>     </Option>
             <Option>     </Option>
@@ -26,7 +104,8 @@
             <Option>     </Option>
             <Correct>	</Correct>
             <Correct>	</Correct>
-        </2>
+        </8>
+  
     </TaylorSwift>
     
     <artist>
