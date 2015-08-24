@@ -107,6 +107,118 @@
         </8>
   
     </TaylorSwift>
+    <CarrieUnderwood>
+        <1> 
+            <Question>What singles were released on the Carnival Ride album?</Question>
+            <Option>Get Out of This Town</Option>
+            <Option>So Small</Option>
+            <Option>Twisted</Option>
+            <Option>Just a Dream</Option>
+            <Option>Wheel of the World</Option>
+            <Option>Crazy Dreams</Option>
+            <Option>I Know You Won’t</Option>
+            <Option>The More Boys I Meet</Option>
+            <Correct>So Small</Correct>
+            <Correct>Just a Dream</Correct>
+        </1>
+        
+        <2>
+            <Question>Which Carrie Underwood Christmas related songs were duets?</Question>
+            <Option>The First Noel</Option>
+            <Option>What Child is This</Option>
+            <Option>Do You Hear What I Hear</Option>
+            <Option>All is Well</Option>
+            <Option>Here Comes Santa Claus</Option>
+            <Option>Hark! The Herald Angel Sings</Option>
+            <Option>O Holy Night</Option>
+            <Option>I’ll Be Home for Christmas</Option>
+            <Correct>All is Well</Correct>
+            <Correct>I’ll Be Home for Christmas</Correct>
+        </2>
+        
+        <3> 
+            <Question>What were the Opening Acts for Carrie Underwood’s Carnival Ride Tour?</Question>
+            <Option>Josh Turner</Option>
+            <Option>Sons of Sylvia</Option>
+            <Option>Jason Michael Carroll</Option>
+            <Option>Damien Leith</Option>
+            <Option>Craig Morgan</Option>
+            <Option>Hunter Hayes</Option>
+            <Option>Billy Currington</Option>
+            <Option>Kira Isabella</Option>
+            <Correct>Josh Turner</Correct>
+            <Correct>Jason Michael Carroll</Correct>
+        </3>
+        
+        <4>
+            <Question>What Carrie Underwood music videos were directed by Deaton-Flanigen?</Question>
+            <Option>Undo It</Option>
+            <Option>I Told You So</Option>
+            <Option>Cowboy Casanova</Option>
+            <Option>Temporary Home</Option>
+            <Option>Good Girl</Option>
+            <Option>Mama’s Song</Option>
+            <Option>Blown Away</Option>
+            <Option>Remind Me</Option>
+            <Correct>Temporary Home</Correct>
+            <Correct>Remind Me</Correct>
+        </4>
+        <5> 
+            <Question>What awards shows does Carrie Underwood have a winning percentage greater than 50%, with at least 15 nominations?</Question>
+            <Option>American Music Awards</Option>
+            <Option>Grammy Awards</Option>
+            <Option>Academy of Country Music Awards</Option>
+            <Option>People’s Choice Awards</Option>
+            <Option>CMT Music Awards</Option>
+            <Option>Teen Choice Awards</Option>
+            <Option>American Country Awards</Option>
+            <Option>Billboard Music Awards</Option>
+            <Correct>CMT Music Awards</Correct>
+            <Correct>Billboard Music Awards</Correct>
+        </5>
+        <6>
+            <Question>Which NBA Teams has Carrie Underwood performed for?</Question>
+            <Option>Miami Heat</Option>
+            <Option>Dallas Mavericks</Option>
+            <Option>Toronto Raptors</Option>
+            <Option>Detroit Pistons</Option>
+            <Option>San Antonio Spurs</Option>
+            <Option>Houston Rockets</Option>
+            <Option>New York Knicks</Option>
+            <Option>Los Angeles Lakers</Option>
+            <Correct>Detroit Pistons</Correct>
+            <Correct>San Antonio Spurs</Correct>
+        </6>
+        
+        <7> (Medium)
+            <Question>Which two teams did Carrie Underwood Perform for in the 2007 World Series?</Question>
+            <Option>Saint Louis Cardinals</Option>
+            <Option>Chicago White Sox</Option>
+            <Option>Detroit Tigers</Option>
+            <Option>Philadelphia Phillies</Option>
+            <Option>San Francisco Giants</Option>
+            <Option>Boston Red Sox</Option>
+            <Option>Colorado Rockies</Option>
+            <Option>New York Yankees</Option>
+            <Correct>Boston Red Sox</Correct>
+            <Correct>Colorado Rockies</Correct>
+        </7>
+        
+        <1>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </1>    
+    </CarrieUnderwood>
+    
     
     <artist>
         <1>
@@ -122,7 +234,5 @@
             <Correct>	</Correct>
             <Correct>	</Correct>
         </1>
-        
     </artist>
-    
 </root>  

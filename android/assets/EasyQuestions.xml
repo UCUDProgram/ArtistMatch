@@ -80,11 +80,97 @@
             <Option> Love Story</Option>
             <Correct>Love Story</Correct>
         </10>
-        
-        
-        
-        
     </TaylorSwift>
+    
+   <CarrieUnderwood>
+        <1> 
+            <Question>Who Did Carrie Underwood beat to win season 4 of American Idol?</Question>
+            <Option>Ruben Studdard</Option>
+            <Option>Taylor Hicks</Option>
+            <Option>Vonzell Solomon</Option>
+            <Option>Bo Bice</Option>
+            <Correct>Bo Bice</Correct>
+        </1>
+        <2>
+            <Question>What Song did Carrie Underwood sing after winning American Idol?</Question>
+            <Option>Angels Brought Me Here</Option>
+            <Option>Inside Your Heaven</Option>
+            <Option>Independence Day</Option>
+            <Option>Long, Long Road</Option>
+            <Correct>Inside Your Heaven</Correct>
+        </2>
+        <3> 
+            <Question>Which Song, where Carrie Underwood was the guest artist, did the best in US Certification?</Question>
+            <Option>Oh Love</Option>
+            <Option>Always on My Mind</Option>
+            <Option>Can’t Stop Lovin’ You</Option>
+            <Option>Remind Me</Option>
+            <Correct>Remind Me</Correct>
+        </3>
+        <4>
+            <Question>What record did SoundScan give to Carrie Underwood’s album Some Hearts?</Question>
+            <Option>Quickest rise to #1 on the country charts for a debut</Option>
+            <Option>fastest-selling debut country album</Option>
+            <Option>Most number ! hits for a country debut album</Option>
+            <Option>Longest time at number 1 for an American Idol Contestant</Option>
+            <Correct>fastest-selling debut country album</Correct>
+        </4>
+        <5>
+            <Question>Which album has not gone at least 2x Platinum?</Question>
+            <Option>Play On</Option>
+            <Option>Some Hearts</Option>
+            <Option>Blown Away</Option>
+            <Option>Carnival Ride</Option>
+            <Correct>Blown Away</Correct>
+        </5>
+        <6> 
+            <Question>Which Soundtrack did Carrie Underwood contribute to?</Question>
+            <Option>Enchanted</Option>
+            <Option>Chronicle of Narnia: The Lion, the Witch & the Wardrobe</Option>
+            <Option>Soul Surfer</Option>
+            <Option>Sex and the City 2</Option>
+            <Correct>Enchanted</Correct>
+        </6>
+        <7>
+            <Question>Which Super Bowl did Carrie Underwood perform the National Anthem for?</Question>
+            <Option>XLIV</Option>
+            <Option>XLV</Option>
+            <Option>XLIII</Option>
+            <Option>XLVI</Option>
+            <Correct>XLIV</Correct>
+        </7>
+        <8> 
+            <Question>Which Award show has Carrie Underwood won the Triple Crown Award?</Question>
+            <Option>Academy of Country Music Awards</Option>
+            <Option>CMA Awards</Option>
+            <Option>American Country Music Awards</Option>
+            <Option>CMT Music Awards</Option>
+            <Correct>Academy of Country Music Awards</Correct>
+        </8>
+        <9> 
+            <Question>Which non-Country Award show has Carrie Underwood won the Triple Crown Award?</Question>
+            <Option>People’s Choice Awards</Option>
+            <Option>Teen Choice Awards</Option>
+            <Option>American Music Awards</Option>
+            <Option>Grammy’s</Option>
+            <Correct>American Music Awards</Correct>
+        </9>
+        <10> 
+            <Question>What female first did Billboard bestow on Carrie Underwood?</Question>
+            <Option>10 Consecutive number 1 songs in less than 5 years</Option>
+            <Option>Most consecutive number 1 songs since the debut song</Option>
+            <Option>Back to Back to Back for top album</Option>
+            <Option>Back to Back for top Country album</Option>
+            <Correct>Back to Back for top Country album</Correct>
+        </10>    
+    </CarrieUnderwood> 
+    
+    
+    
+    
+    
+    
+    
     <artist>
         <1>
             <Question>   </Question>

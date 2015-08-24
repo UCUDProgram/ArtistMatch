@@ -166,8 +166,158 @@
         </10>
         
     </TaylorSwift>
+    <CarrieUnderwood>
+        <1> 
+            <Question>Which Singles were released from the Some Hearts album?</Question>
+            <Option>Lessons Learned</Option>
+            <Option>Some Hearts</Option>
+            <Option>The Night Before</Option>
+            <Option>Starts with Goodbye</Option>
+            <Option>We’re Young and Beautiful</Option>
+            <Option>Don’t Forget to Remember Me</Option>
+            <Option>That’s Where It is</Option>
+            <Option>I Just Can’t Live a Lie</Option>
+            <Option>Wasted</Option>
+            <Option>Whenever You Remember</Option>
+            <Correct>Some Hearts</Correct>
+            <Correct>Don’t Forget to Remember Me</Correct>
+            <Correct>Wasted</Correct>
+        </1>
+        <2> 
+            <Question>Which singles were released on the Play On album?</Question>
+            <Option>Undo It</Option>
+            <Option>Quitter</Option>
+            <Option>Songs Like This</Option>
+            <Option>Look at Me</Option>
+            <Option>Cowboy Casanova</Option>
+            <Option>Change</Option>
+            <Option>This Time</Option>
+            <Option>Someday When I Stop Loving You</Option>
+            <Option>Unapologize</Option>
+            <Option>Temporary Home</Option>
+            <Correct>Temporary Home</Correct>
+            <Correct>Cowboy Casanova</Correct>
+            <Correct>Undo It</Correct>
+        </2>
+        <3> 
+            <Question>Which Singles peaked in the top 5 on the country charts and top 15 on US Charts?</Question>
+            <Option>So Small</Option>
+            <Option>Before He Cheats</Option>
+            <Option>Jesus, Take the Wheel</Option>
+            <Option>I Told You So</Option>
+            <Option>Inside Your Heaven</Option>
+            <Option>Cowboy Cassanova</Option>
+            <Option>Undo It</Option>
+            <Option>Last Name</Option>
+            <Option>Two Black Cadillacs</Option>
+            <Option>Good Girl</Option>
+            <Correct>Before He Cheats</Correct>
+            <Correct>I Told You So</Correct>
+            <Correct>Cowboy Cassanova</Correct>
+        </3>
+        <4> 
+            <Question>Which songs were a duet Carrie Underwood had with Brad Paisley?</Question>
+            <Option>When I Get Where I’m Going</Option>
+            <Option>Oh Love</Option>
+            <Option>Remind Me</Option>
+            <Option>High Life</Option>
+            <Option>It Had to Be You</Option>
+            <Option>Is It Still Over</Option>
+            <Option>Whiskey Lullaby</Option>
+            <Option>Southern Comfort Zone</Option>
+            <Option>This is Country Music</Option>
+            <Option>Can’t Stop Lovin’ You</Option>
+            <Correct>Oh Love</Correct>
+            <Correct>Remind Me</Correct>
+            <Correct>High Life</Correct>
+        </4>
+        <5> 
+            <Question>Which Carrie Underwood singles have gone double platinum in the US?</Question>
+            <Option>Before He Cheats</Option>
+            <Option>Cowboy Casanova</Option>
+            <Option>Last Name</Option>
+            <Option>Temporary Home</Option>
+            <Option>Don’t Forget to Remember Me</Option>
+            <Option>Blown Away</Option>
+            <Option>All-American Girl</Option>
+            <Option>I Told You So</Option>
+            <Option>Two Black Cadillacs</Option>
+            <Option>Jesus Take the Wheel</Option>
+            <Correct>Blown Away</Correct>
+            <Correct>Cowboy Casanova</Correct>
+            <Correct>Jesus Take the Wheel</Correct>
+        </5>
+        <6>
+            <Question>Which songs were nominated for Song/Single Record of the Year at an Awards Show?</Question>
+            <Option>All-American Girl</Option>
+            <Option>Temporary Home</Option>
+            <Option>Cowboy Casanova</Option>
+            <Option>Good Girl</Option>
+            <Option>Undo It</Option>
+            <Option>Before He Cheats</Option>
+            <Option>Two Black Cadillacs</Option>
+            <Option>Jesus, Take the Wheel</Option>
+            <Option>Last Name</Option>
+            <Option>Blown Away</Option>
+            <Correct>Jesus, Take the Wheel</Correct>
+            <Correct>Before He Cheats</Correct>
+            <Correct>Cowboy Casanova</Correct>
+        </6>
+        <7> 
+            <Question>What TV shows did Carrie Underwood make a guest appearance on?</Question>
+            <Option>The Big Bang Theory</Option>
+            <Option>Hawaii Five-O</Option>
+            <Option>Modern Family</Option>
+            <Option>How I Met Your Mother</Option>
+            <Option>Two Broke Girls</Option>
+            <Option>Boston Legal</Option>
+            <Option>Blue Bloods</Option>
+            <Option>Law & Order SVU</Option>
+            <Option>CSI</Option>
+            <Option>Nashville</Option>
+            <Correct>Nashville</Correct>
+            <Correct>Blue Bloods</Correct>
+            <Correct>How I Met Your Mother</Correct>
+        </7>
+        
+        <1>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </1>
+        
+        <1>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </1>
+        
+        
+    </CarrieUnderwood>
     
-    <artist>
+     <artist>
         <1>
             <Question>   </Question>
             <Option>     </Option>
@@ -186,4 +336,6 @@
         </1>
         
     </artist>
+    
+    
 </root>  

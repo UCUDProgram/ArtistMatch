@@ -196,6 +196,144 @@
         </10>      
     </TaylorSwift>
     
+    <CarrieUnderwood>
+        <1>
+            <Question>What Carrie Underwood music videos were directed by Roman White?</Question>
+            <Option>I’ll Stand by You</Option>
+            <Option>Jesus, Take the Wheel</Option>
+            <Option>Two Black Cadillacs</Option>
+            <Option>All-American Girl</Option>
+            <Option>Cowboy Casanova</Option>
+            <Option>I Told You So</Option>
+            <Option>Just a Dream</Option>
+            <Option>Mama’s Song</Option>
+            <Option>Undo It</Option>
+            <Option>Wasted</Option>
+            <Option>Temporary Song</Option>
+            <Option>Good Girl</Option>
+            <Correct>Jesus, Take the Wheel</Correct>
+            <Correct>All-American Girl</Correct>
+            <Correct>Just a Dream</Correct>
+            <Correct>Wasted</Correct>
+        </1>
+        
+        <2>
+            <Question>Which Carrie Underwood singles went top 10 in the US, excluding any Country charts?</Question>
+            <Option>Last Name</Option>
+            <Option>Undo It</Option>
+            <Option>Cowboy Casanova</Option>
+            <Option>Good Girl</Option>
+            <Option>Jesus Take the Wheel</Option>
+            <Option>So Small</Option>
+            <Option>Blown Away</Option>
+            <Option>Something in the Water</Option>
+            <Option>Wasted</Option>
+            <Option>Before He Cheats</Option>
+            <Option>Some Hearts</Option>
+            <Option>I Told You So</Option>
+            <Correct>I Told You So</Correct>
+            <Correct>Jesus Take the Wheel</Correct>
+            <Correct>Before He Cheats</Correct>
+            <Correct>Something in the Water</Correct>
+        </2>
+        <3>
+            <Question>Which Canadian Cities did Carrie Underwood visit during the Play on and Blown Away tours?</Question>
+            <Option>Winnipeg</Option>
+            <Option>London</Option>
+            <Option>Waterloo</Option>
+            <Option>Oshawa</Option>
+            <Option>Hamilton</Option>
+            <Option>Montreal</Option>
+            <Option>Niagara</Option>
+            <Option>Halifax</Option>
+            <Option>Edmonton</Option>
+            <Option>Gatineau</Option>
+            <Option>Victoria</Option>
+            <Option>Saskatoon</Option>
+            <Correct>Saskatoon</Correct>
+            <Correct>Hamilton</Correct>
+            <Correct>Edmonton</Correct>
+            <Correct>Winnipeg</Correct>
+        </3>
+        <4>
+            <Question>What actors in Movies or TV Shows did Carrie Underwood share the scene with?</Question>
+            <Option>Jason Segel</Option>
+            <Option>Jeff Leaf</Option>
+            <Option>David Ramsey</Option>
+            <Option>Neil Patrick Harris</Option>
+            <Option>Will Estes</Option>
+            <Option>Cobie Smulders</Option>
+            <Option>Josh Radnor</Option>
+            <Option>Bridget Moynahan</Option>
+            <Option>Tom Selleck</Option>
+            <Option>Donnie Wahlberg</Option>
+            <Option>Tony Bennett</Option>
+            <Option>Alyson Hannigan</Option>
+            <Correct>Tony Bennett</Correct>
+            <Correct>Josh Radnor</Correct>
+            <Correct>Neil Patrick Harris</Correct>
+            <Correct>Jeff Leaf</Correct>
+        </4>
+        <5>
+            <Question>What products have Carrie Underwood been a spokeswoman for?</Question>
+            <Option>Olay</Option>
+            <Option>Maybelline</Option>
+            <Option>Max Factor</Option>
+            <Option>Vitamin Water</Option>
+            <Option>Revlon</Option>
+            <Option>Adidas</Option>
+            <Option>Neutrogena</Option>
+            <Option>Gatorade</Option>
+            <Option>Sketchers</Option>
+            <Option>Nike</Option>
+            <Option>Sony</Option>
+            <Option>Nintendo</Option>
+            <Correct>Olay</Correct>
+            <Correct>Nintendo</Correct>
+            <Correct>Sketchers</Correct>
+            <Correct>Vitamin Water</Correct>
+        </5>
+        <6>
+            <Question>What Football teams has Carrie Underwood performed the National Anthem or the Star-Spangled Banner for?</Question>
+            <Option>New England Patriots</Option>
+            <Option>New York Giants</Option>
+            <Option>Carolina Panthers</Option>
+            <Option>San Francisco 49ers</Option>
+            <Option>Seattle Seahawks</Option>
+            <Option>Baltimore Ravens</Option>
+            <Option>Tennessee Titans</Option>
+            <Option>Tampa Bay Buccaneers</Option>
+            <Option>Philadelphia Eagles</Option>
+            <Option>Houston Texans</Option>
+            <Option>Indianapolis Colts</Option>
+            <Option>Green Bay Packers</Option>
+            <Correct>Seattle Seahawks</Correct>
+            <Correct>Carolina Panthers</Correct>
+            <Correct>Tampa Bay Buccaneers</Correct>
+            <Correct>Indianapolis Colts</Correct>
+        </6>
+        <7>
+            <Question>   </Question>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Option>     </Option>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+            <Correct>	</Correct>
+        </7>
+        
+    </CarrieUnderwood>
+    
     <artist>
         <1>
             <Question>   </Question>
