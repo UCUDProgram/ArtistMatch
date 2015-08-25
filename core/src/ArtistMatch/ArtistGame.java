@@ -35,6 +35,11 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	// Will be removed later
 	private boolean isEndTime,displayTimeCount,moveDistanceCount,guessCounter;
 	
+	//Delete answers array and replace with 2 List<String> Structures
+	//1st List has all the options
+	//2nd List is to be used to randomize the options
+	private String [] answers;
+	
 	private String ques,cAnswer,xmlFile;
 	private Texture background, ballImage;
 	private long startTime, endTime;
@@ -42,7 +47,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private BitmapFont font,font1, font2;
 	private Stage stage;
 	private SpriteBatch batch;
-	private String [] answers;
+	
 	private List<String> correctA, selectedA;
 	private float screenWidth,screenHeight,moveDistance;
 	private boolean goLeft, goRight,ballShoot, activeBall,turnUp, turnDown,win,tutorial;
@@ -78,17 +83,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeSelectionArray();
 		initializeAnswer();	
 		
-		
-		
-//		ques = "Who is the best Musician Ever";
-//		answers = new String[4];
-//		answers[0]= "Lionel Ritchie";
-//		answers[1] = "Michael Jackson";
-//		answers[2]= "The Temptations";
-//		answers[3] = "The Jackson 5";
-//		cAnswer = answers[1];
-//		initializeArray();
-		
 		boxTester = new Box(game.getDifficulty());
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
@@ -102,13 +96,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
 	}
-	
-//	public void initializeArray(){
-//		selectedA.clear();
-//		correctA.add(answers[1]);
-//		correctA.add(answers[3]);
-//	}
-	
 	
 	/*
 	 * Formats the artist's name to proper formatting, including spacing
@@ -125,11 +112,11 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			return "CarrieUnderwood";
 		else if (game.getArtist().equals("Taylor Swift"))
 			return "TaylorSwift";
+		else if (game.getArtist().equals("The Beatles"))
+			return "TheBeatles";
 		else
 			return artName;
 	}
-	
-	
 	
 	/*
 	 * Initialize font settings
@@ -211,6 +198,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		int count = answerE.size;
 		answers = new String[count];
 		for (int i = 0; i <answerE.size; i++){
+//			Modify to add to the two lists
+//			Delete the reference to the answers array
 			answers[i]=answerE.get(i).getText();
 		}
 		}
@@ -274,19 +263,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	}
 	
 	/*
-	 * Sets the Scale for the Y Position
-	 */
-//	public float setYScale(){
-//		if(game.getDifficulty() == 0 )
-//			return 35;
-//		else if (game.getDifficulty() == 1)
-//			return ;
-//		else
-//			return (font.getLineHeight() * 2);
-//	}
-	
-	
-	/*
 	 * Sets the X Location of the Box
 	 */
 	public float setBoxXLoc(int boxNum){
@@ -314,7 +290,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		return (screenHeight -(boxTester.getImage().getHeight() * boxTester.getBoxScale() ) - 25 ) - (25 * yStartLoc) - (yStartLoc * boxTester.getImage().getHeight() * boxTester.getBoxScale() )   ;
 	}
 	
-	
 	/*
 	 * Sets the Horizontal Window, in which the options are drawn on the screen
 	 */
@@ -337,13 +312,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		else
 			return (screenWidth / 3) - padding;
 	}
-	
-	/*
-	 * Sets the Scale for the Y Position
-	 */
-//	public float setYScale(){
-//		
-//	}
 	
 	/*
 	 * Sets the X Position of the Option being drawn on the screen 
@@ -402,29 +370,24 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		else
 			return 144;
 	}
-	/*
-	 * Sets the X Location of the Display Selection
-	 * REFACTOR TO TAKE IN THE BOX NUMBER
-	 */
-	public float setDisplayXDraw(int vert){
-		if (vert == 0)
-			return 0;
-		else
-			return (int) ( (screenWidth / 2) );
-	}
 	
 	/*
-	 * Sets the Y Location of the Display Selection
-	 * REFACTOR TO TAKE IN THE BOX NUMBER
+	 * Randomize the options list, the options associated with each box is presented differently each time 
 	 */
-	public float setDisplayYDraw(int hor){
-		if (hor == 0)
-			return 25;
-		else if (hor == 1)
-			return 50;
-		else
-			return 75;
+	public String setBoxOptionString(){
+		String result;
+		/*
+		 * Randomly choose a number to represent the String
+		 * Assign it to a String variable
+		 * remove string from Secondary list
+		 * return string variable
+		 */
+		
+		
+		
+		return result;
 	}
+	
 	
 	/*
 	 * Function to set the Image of the Box
@@ -447,36 +410,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	public void setBoxes(){
 		char[] displayAnswer = {'A','B','C','D','E','F','G','H','I','J','K','L'};
-		int count = 5;  //Think about how to set the positioning of the boxes
 		int numcount = 1;
-		int vertdet=0;
-		int hordet=0;
-		int boxPlace = 0;
-		for(int i=0; i< answers.length; i++){
-//			
-//			
-////			Sets the X coordinate for drawing the option, below the question
-//			if( (i<4) && (i>1) ){
-//				vertdet= 1;
-//			}else 
-//				vertdet = 0;
-////			Sets the Y coordinate for drawing the option, below the queston
-//			if ( (i==0)|| (i==2))
-//				hordet =1;
-//			else 
-//				hordet = 0;
-//			
-////			Sets the Y coordinate placement of the box, based on the difficulty and the number of options available
-//			if(i <6)
-//				boxPlace = 0;
-//			else if( (i == 6 ) || (i == 7) )
-//				boxPlace = 1;
-//			else if ( (i == 8) || (i == 9 ) )
-//				boxPlace = 1;
-//			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDraw(vertdet),setDisplayYDraw(hordet),game.getDifficulty() ) );
-//			
-			
-			
+		for(int i=0; i< answers.length; i++){			
 			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
 			numcount++;
 		}

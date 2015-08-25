@@ -334,25 +334,162 @@
         
     </CarrieUnderwood>
     
+    <TheBeatles>
+        <1>
+            <Question>What Beatles singles went #1 in the US & the UK?</Question>
+            <Option>Ticket to Ride</Option>
+            <Option>From Me to You</Option>
+            <Option>Paperback Writer</Option>
+            <Option>Yesterday</Option>
+            <Option>I Want to Hold Your Hand</Option>
+            <Option>She Loves You</Option>
+            <Option>Penny Lane</Option>
+            <Option>We Can Work It Out</Option>
+            <Option>Lady Madonna</Option>
+            <Option>Eight Days a Week</Option>
+            <Option>Let It Be</Option>
+            <Option>Something</Option>
+            <Correct>Paperback Writer</Correct>
+            <Correct>She Loves You</Correct>
+            <Correct>Ticket to Ride</Correct>
+            <Correct>We Can Work It Out</Correct>
+        </1>
+        <2>
+            <Question>Which Beatles songs went #1 in exactly 2 other countries other than the US or UK?</Question>
+            <Option>Roll Over Beethoven</Option>
+            <Option>Michelle</Option>
+            <Option>Nowhere Man</Option>
+            <Option>Strawberry Fields Forever</Option>
+            <Option>All My Loving</Option>
+            <Option>Revolution</Option>
+            <Option>I Saw Her Standing There</Option>
+            <Option>If I Fell</Option>
+            <Option>Rain</Option>
+            <Option>This Boy</Option>
+            <Option>Rock and Roll Music</Option>
+            <Option>I Should Have Known Better</Option>
+            <Correct>All My Loving</Correct>
+            <Correct>Rock and Roll Music</Correct>
+            <Correct>If I Fell</Correct>
+            <Correct>Nowhere Man</Correct>
+        </2>
+        <3>
+            <Question>What Beatles albums went platinum in the UK & Australia?</Question>
+            <Option>Yellow Submarine</Option>
+            <Option>Abbey Road</Option>
+            <Option>Something New</Option>
+            <Option>Beatles ‘65</Option>
+            <Option>Revolver</Option>
+            <Option>The Beatles’ Long Tall Sally</Option>
+            <Option>Magical Mystery Tour</Option>
+            <Option>A Hard Day’s Night</Option>
+            <Option>Rubber Soul</Option>
+            <Option>With the Beatles</Option>
+            <Option>Help!</Option>
+            <Option>Let It Be</Option>
+            <Correct>Rubber Soul</Correct>
+            <Correct>Magical Mystery Tour</Correct>
+            <Correct>Revolver</Correct>
+            <Correct>Abbey Road</Correct>
+        </3>
+        <4>
+            <Question>What studio or live albums went 3x or 4x platinum by RIAA certification?</Question>
+            <Option>Meet the Beatles</Option>
+            <Option>Help!</Option>
+            <Option>Sgt. Pepper’s Lonely Hearts Band</Option>
+            <Option>Rubber Soul</Option>
+            <Option>A Hard Day’s Night</Option>
+            <Option>Magical Mystery Tour</Option>
+            <Option>Let it Be</Option>
+            <Option>Abbey Road</Option>
+            <Option>Beatles ‘65</Option>
+            <Option>The Beatles (“White Album”)</Option>
+            <Option>Revolver</Option>
+            <Option>The Beatles’ Second Album</Option>
+            <Correct>A Hard Day’s Night</Correct>
+            <Correct>Help!</Correct>
+            <Correct>Beatles ‘65</Correct>
+            <Correct>Let it Be</Correct>
+        </4>
+        <5>
+            <Question>Which Beatles albums went #1 in exactly 1 country other than the US or UK?</Question>
+            <Option>1962-1970</Option>
+            <Option>Requests</Option>
+            <Option>The Number Ones</Option>
+            <Option>The Beatles Beat</Option>
+            <Option>Revolver</Option>
+            <Option>Yellow Submarine Songtrack</Option>
+            <Option>20 Golden Hits</Option>
+            <Option>Greatest Hits Volume 1</Option>
+            <Option>The Beatles’ Ballads</Option>
+            <Option>Yesterday and Today</Option>
+            <Option>1962-1966</Option>
+            <Option>Love</Option>
+            <Correct>The Beatles’ Ballads</Correct>
+            <Correct>Yellow Submarine Songtrack</Correct>
+            <Correct>The Number Ones</Correct>
+            <Correct>Requests</Correct>
+        </5>
+        <6>
+            <Question>What movies did the Beatles appear in between 1965 & 1970?</Question>
+            <Option>Help!</Option>
+            <Option>The Beatles: The First U.S. Visit</Option>
+            <Option>The Beatles Anthology</Option>
+            <Option>BeatleMania</Option>
+            <Option>Yellow Submarine</Option>
+            <Option>A Hard Day’s Night</Option>
+            <Option>Let It Be</Option>
+            <Option>The Beatles at Shea Stadium</Option>
+            <Option>Magical Mystery Tour</Option>
+            <Option>All Together Now</Option>
+            <Option>The Complete Beatles</Option>
+            <Option>Abbey Road</Option>
+            <Correct>Help!</Correct>
+            <Correct>Let It Be</Correct>
+            <Correct>Magical Mystery Tour</Correct>
+            <Correct>Yellow Submarine</Correct>
+        </6>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </TheBeatles>
+    
+    
     <artist>
         <1>
-            <Question>   </Question>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Correct>	</Correct>
-            <Correct>	</Correct>
-            <Correct>	</Correct>
-            <Correct>	</Correct>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
         </1>
         
     </artist>

@@ -81,7 +81,6 @@
             <Correct>Love Story</Correct>
         </10>
     </TaylorSwift>
-    
    <CarrieUnderwood>
         <1> 
             <Question>Who Did Carrie Underwood beat to win season 4 of American Idol?</Question>
@@ -165,7 +164,88 @@
         </10>    
     </CarrieUnderwood> 
     
-    
+    <TheBeatles>
+        <1>
+            <Question>What is the name of the Beatles before they became the Beatles?</Question>
+            <Option>The British Rebels</Option>
+            <Option>Lennon</Option>
+            <Option>The McCartney Band</Option>
+            <Option>Quarrymen</Option>
+            <Correct>Quarrymen</Correct>
+        </1>
+        <2> 
+            <Question>What airport did the Beatles arrive in America at?</Question>
+            <Option>Philadelphia International</Option>
+            <Option>JFK International</Option>
+            <Option>Baltimore Washington</Option>
+            <Option>Laguardia</Option>
+            <Correct>JFK International</Correct>
+        </2>
+        <3>
+            <Question>Who was a member of the Beatles during the year of BeatleMania?</Question>
+            <Option>Billy Preston</Option>
+            <Option>Jimmie Nicol</Option>
+            <Option>Gerry Marsden</Option>
+            <Option>Les Maguire</Option>
+            <Correct>Jimmie Nicol</Correct>
+        </3>
+        <4>
+            <Question>What war was Beatles music used for in a war documentary?</Question>
+            <Option>Korean War</Option>
+            <Option>Vietnam War</Option>
+            <Option>Iraqi War</Option>
+            <Option>WWII</Option>
+            <Correct>WWII</Correct>
+        </4>
+        <5>
+            <Question>Which former Beatle band mate is the only one to have an album go 6x Platinum by the RIAA?</Question>
+            <Option>George Harrison</Option>
+            <Option>John Lennon</Option>
+            <Option>Paul McCartney</Option>
+            <Option>Ringo Starr</Option>
+            <Correct>George Harrison</Correct>
+        </5>
+        <6>
+            <Question>What Beatles extended play album went #1 in the UK & Australia?</Question>
+            <Option>Long Tall Sally</Option>
+            <Option>Magical Mystery Tour</Option>
+            <Option>All My Loving</Option>
+            <Option>Requests</Option>
+            <Correct>All My Loving</Correct>
+        </6>
+        <7>
+            <Question>According to the RIAA, at least how many certified million units of Beatles albums have been sold?</Question>
+            <Option>150</Option>
+            <Option>175</Option>
+            <Option>178</Option>
+            <Option>200</Option>
+            <Correct>178</Correct>
+        </7>
+        <8>
+            <Question>How many millions of records have the Beatles of sold worldwide?</Question>
+            <Option>600</Option>
+            <Option>575</Option>
+            <Option>550</Option>
+            <Option>650</Option>
+            <Correct>600</Correct>
+        </8>
+        <9>
+            <Question>What musician purchased the publishing rights to the beatle anthology in the mid 1990’s?</Question>
+            <Option>Paul McCartney</Option>
+            <Option>Michael Jackson</Option>
+            <Option>Mick Jagger</Option>
+            <Option>Bono</Option>
+            <Correct>Michael Jackson</Correct>
+        </9>
+        <10>
+            <Question>What boy group covered 6 Beatles songs for a movie?</Question>
+            <Option>Big Time Rush</Option>
+            <Option>One Direction</Option>
+            <Option>Backstreet Boys</Option>
+            <Option>O-Town</Option>
+            <Correct>Big Time Rush</Correct>
+        </10>
+    </TheBeatles>
     
     
     
@@ -173,14 +253,13 @@
     
     <artist>
         <1>
-            <Question>   </Question>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Correct>	</Correct>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
         </1>
-        
     </artist>
     
 </root>    

@@ -121,7 +121,6 @@
             <Correct>So Small</Correct>
             <Correct>Just a Dream</Correct>
         </1>
-        
         <2>
             <Question>Which Carrie Underwood Christmas related songs were duets?</Question>
             <Option>The First Noel</Option>
@@ -135,7 +134,6 @@
             <Correct>All is Well</Correct>
             <Correct>I’ll Be Home for Christmas</Correct>
         </2>
-        
         <3> 
             <Question>What were the Opening Acts for Carrie Underwood’s Carnival Ride Tour?</Question>
             <Option>Josh Turner</Option>
@@ -149,7 +147,6 @@
             <Correct>Josh Turner</Correct>
             <Correct>Jason Michael Carroll</Correct>
         </3>
-        
         <4>
             <Question>What Carrie Underwood music videos were directed by Deaton-Flanigen?</Question>
             <Option>Undo It</Option>
@@ -188,9 +185,8 @@
             <Option>Los Angeles Lakers</Option>
             <Correct>Detroit Pistons</Correct>
             <Correct>San Antonio Spurs</Correct>
-        </6>
-        
-        <7> (Medium)
+        </6>        
+        <7>
             <Question>Which two teams did Carrie Underwood Perform for in the 2007 World Series?</Question>
             <Option>Saint Louis Cardinals</Option>
             <Option>Chicago White Sox</Option>
@@ -218,9 +214,98 @@
             <Correct>	</Correct>
         </1>    
     </CarrieUnderwood>
-    
-    
-    <artist>
+     <TheBeatles>
+        <1>
+            <Question>Who were guest members of the Beatles between August of 1962 and September of 1969?</Question>
+            <Option>Stuart de Stael</Option>
+            <Option>Stuart Sutcliffe</Option>
+            <Option>Jimmie Nicol</Option>
+            <Option>Norman Chapman</Option>
+            <Option>Billy Preston</Option>
+            <Option>Pete Best</Option>
+            <Option>Tommy Moore</Option>
+            <Option>Chas Newby</Option>
+            <Correct>Jimmie Nicol</Correct>
+            <Correct>Billy Preston</Correct>
+        </1>
+        <2>
+            <Question>Which songs, from the Rubber Soul, were on the British release but not the US release?</Question>
+            <Option>I’ve Just Seen a Face</Option>
+            <Option>Run for Your Life</Option>
+            <Option>It’s Only Love</Option>
+            <Option>Wait</Option>
+            <Option>Michelle</Option>
+            <Option>Drive My Car</Option>
+            <Option>What Goes On</Option>
+            <Option>You Won’t See Me</Option>
+            <Correct>Drive My Car</Correct>
+            <Correct>What Goes On</Correct>
+        </2>
+        <3>
+            <Question>Which singles, from a studio album went #1 in the US, went #1 and platinum?</Question>
+            <Option>Love Me Do</Option>
+            <Option>Get Back</Option>
+            <Option>Lady Madonna</Option>
+            <Option>Something</Option>
+            <Option>Hey Jude</Option>
+            <Option>Twist and Shout</Option>
+            <Option>Revolution</Option>
+            <Option>Let It Be</Option>
+            <Correct>Something</Correct>
+            <Correct>Let It Be</Correct>
+        </3>
+        <4>
+            <Question>Which Beatles EP’s were released in the US in 1964?</Question>
+            <Option>Long Tall Sally</Option>
+            <Option>All My Loving</Option>
+            <Option>Four by the Beatles</Option>
+            <Option>Hard Day’s Night No. 1</Option>
+            <Option>Requests</Option>
+            <Option>Beatles Again!</Option>
+            <Option>Beatles No. 2</Option>
+            <Option>Souvenir of Their Visit to America</Option>
+            <Correct>Four by the Beatles</Correct>
+            <Correct>Souvenir of Their Visit to America</Correct>
+        </4>
+        <5>
+            <Question>What Beatles studio albums went multi-platinum in the US & UK?</Question>
+            <Option>Live at the BBC</Option>
+            <Option>Sgt. Pepper’s Lonely Hearts Club Band</Option>
+            <Option>Love</Option>
+            <Option>Anthology 1</Option>
+            <Option>A Hard Day’s Night</Option>
+            <Option>1</Option>
+            <Option>Abbey Road</Option>
+            <Option>Anthology 2</Option>
+            <Correct>Sgt. Pepper’s Lonely Hearts Club Band</Correct>
+            <Correct>Abbey Road</Correct>
+        </5>
+        <6>
+            <Question>Which Beatles albums went at least 2x Platinum by BPI certification?</Question>
+            <Option>Let It Be</Option>
+            <Option>The Beatles (“White Album”)</Option>
+            <Option>Sgt. Pepper’s Lonely Hearts Band</Option>
+            <Option>Revolver</Option>
+            <Option>Abbey Road</Option>
+            <Option>With the Beatles</Option>
+            <Option>Help!</Option>
+            <Option>Magical Mystery Tour</Option>
+            <Correct>Sgt. Pepper’s Lonely Hearts Band</Correct>
+            <Correct>Abbey Road</Correct>
+        </6>
+        <7>
+            <Question>Which 1960’s Beatles studio albums went Platinum but did not go #1?</Question>
+            <Option>Beatles ‘65</Option>
+            <Option>Something New</Option>
+            <Option>The Beatles’ Long Tall Sally</Option>
+            <Option>Introducing… Beatles</Option>
+            <Option>20 Greatest Hits</Option>
+            <Option>Beatles for Sale</Option>
+            <Option>The Early Beatles</Option>
+            <Option>Rock ‘n’ Roll Music</Option>
+            <Correct>Something New</Correct>
+            <Correct>Introducing… Beatles</Correct>
+        </7>
         <1>
             <Question>   </Question>
             <Option>     </Option>
@@ -233,6 +318,22 @@
             <Option>     </Option>
             <Correct>	</Correct>
             <Correct>	</Correct>
+        </1>
+    </TheBeatles>
+    
+    <artist>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
         </1>
     </artist>
 </root>  

@@ -316,23 +316,159 @@
         
         
     </CarrieUnderwood>
+    <TheBeatles>
+        <1>
+            <Question>Which Beatles singles went 2x Platinum by RIAA certification?</Question>
+            <Option>Let It Be</Option>
+            <Option>Love Me</Option>
+            <Option>From Me to You</Option>
+            <Option>Get Back Don’t Let Me Down</Option>
+            <Option>The Inner Light</Option>
+            <Option>Hey Jude</Option>
+            <Option>Twist and Shout</Option>
+            <Option>Something Come Together</Option>
+            <Option>For You Blue</Option>
+            <Option>Got to Get You into My Life</Option>
+            <Correct>Get Back Don’t Let Me Down</Correct>
+            <Correct>Something Come Together</Correct>
+            <Correct>Let It Be</Correct>
+        </1>
+        <2>
+            <Question>Which Beatles singles had 3 different versions of the music video?</Question>
+            <Option>I Feel Fine</Option>
+            <Option>Hey Jude</Option>
+            <Option>Rain</Option>
+            <Option>Revolution</Option>
+            <Option>Day Tripper</Option>
+            <Option>Baby It’s You</Option>
+            <Option>We Can Work it Out</Option>
+            <Option>Real Love</Option>
+            <Option>Paperback Writer</Option>
+            <Option>Lady Madonna</Option>
+            <Correct>Day Tripper</Correct>
+            <Correct>We Can Work it Out</Correct>
+            <Correct>Rain</Correct>
+        </2>
+        <3>
+            <Question>What years did Michael Lindsay-Hogg direct a Beatles music video?</Question>
+            <Option>1966</Option>
+            <Option>1960</Option>
+            <Option>1967</Option>
+            <Option>1962</Option>
+            <Option>1964</Option>
+            <Option>1965</Option>
+            <Option>1969</Option>
+            <Option>1961</Option>
+            <Option>1963</Option>
+            <Option>1968</Option>
+            <Correct>1966</Correct>
+            <Correct>1968</Correct>
+            <Correct>1969</Correct>
+        </3>
+        <4>
+            <Question>What Beatles studio albums went Diamond in Canada or the US?</Question>
+            <Option>Live at the BBC</Option>
+            <Option>Sgt. Pepper’s Lonely Hearts Club</Option>
+            <Option>1962-1966</Option>
+            <Option>The Early Beatles</Option>
+            <Option>Abbey Road</Option>
+            <Option>Love Songs</Option>
+            <Option>1967-1970</Option>
+            <Option>The Beatles Stereo Box Set</Option>
+            <Option>The Beatles (White Album)</Option>
+            <Option>1</Option>
+            <Correct>Sgt. Pepper’s Lonely Hearts Club</Correct>
+            <Correct>The Beatles (White Album)</Correct>
+            <Correct>Abbey Road</Correct>
+        </4>
+        <5>
+            <Question>What American record labels released Beatles studio albums in the 1960’s?</Question>
+            <Option>Polydor</Option>
+            <Option>EMI</Option>
+            <Option>Pickwick</Option>
+            <Option>Parlophone</Option>
+            <Option>Apple Records</Option>
+            <Option>Vee-Jay</Option>
+            <Option>United Artists</Option>
+            <Option>MGM</Option>
+            <Option>Atco</Option>
+            <Option>Lingasong</Option>
+            <Correct>Vee-Jay</Correct>
+            <Correct>United Artists</Correct>
+            <Correct>Apple Records</Correct>
+        </5>
+        <6>
+            <Question>What countries did the label Parlophone release Beatles albums in?</Question>
+            <Option>Canada</Option>
+            <Option>Portugal</Option>
+            <Option>France</Option>
+            <Option>United Kingdom</Option>
+            <Option>Czech Republic</Option>
+            <Option>United States</Option>
+            <Option>Italy</Option>
+            <Option>Germany</Option>
+            <Option>New Zealand</Option>
+            <Option>Spain</Option>
+            <Correct>Italy</Correct>
+            <Correct>United Kingdom</Correct>
+            <Correct>New Zealand</Correct>
+        </6>
+        
+        <7>
+            <Question>Who directed Beatles Films from the 1960’s?</Question>
+            <Option>Kathy Dougherty</Option>
+            <Option>Michael Lindsay-Hogg</Option>
+            <Option>Richard Lester</Option>
+            <Option>Bob Smeaton</Option>
+            <Option>Patrick Montgomery</Option>
+            <Option>Adrian Wills</Option>
+            <Option>George Dunning</Option>
+            <Option>Neil Aspinall</Option>
+            <Option>Geoff Wonfor</Option>
+            <Option>Tony Bramwell</Option>
+            <Correct>Richard Lester</Correct>
+            <Correct>George Dunning</Correct>
+            <Correct>Kathy Dougherty</Correct>
+        </7>
+        
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+        
+    </TheBeatles>
+    
+    
+    
     
      <artist>
         <1>
-            <Question>   </Question>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Option>     </Option>
-            <Correct>	</Correct>
-            <Correct>	</Correct>
-            <Correct>	</Correct>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
         </1>
         
     </artist>
