@@ -48,7 +48,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private Stage stage;
 	private SpriteBatch batch;
 	
-	private List<String> correctA, selectedA;
+	private List<String> correctA, selectedA,options,optionsList;
 	private float screenWidth,screenHeight,moveDistance;
 	private boolean goLeft, goRight,ballShoot, activeBall,turnUp, turnDown,win,tutorial;
 	private Ball validBall;
@@ -77,6 +77,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 		selectedA = new ArrayList<String>();
 		correctA = new ArrayList<String>();
+		options = new ArrayList<String>();
+		optionsList = new ArrayList<String>();
 		
 		xmlFile = setXMLFile();
 		initializeQuestion();
@@ -201,6 +203,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 //			Modify to add to the two lists
 //			Delete the reference to the answers array
 			answers[i]=answerE.get(i).getText();
+			
+			options.add(answerE.get(i).getText());
+			optionsList.add(answerE.get(i).getText());
 		}
 		}
 		catch(IOException e){
@@ -373,18 +378,23 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	/*
 	 * Randomize the options list, the options associated with each box is presented differently each time 
+	 * Randomly choose a number to represent the String
+	 * Assign it to a String variable
+	 * remove string from Secondary list
+	 * return string variable
 	 */
 	public String setBoxOptionString(){
 		String result;
-		/*
-		 * Randomly choose a number to represent the String
-		 * Assign it to a String variable
-		 * remove string from Secondary list
-		 * return string variable
-		 */
 		
-		
-		
+		if(optionsList.size() == 1){
+			result = optionsList.get(0);
+			optionsList.remove(result);
+		} 
+		else {
+			int option = (int) (Math.random() * optionsList.size());
+			result = optionsList.get(option);
+			optionsList.remove(result);
+		}
 		return result;
 	}
 	
@@ -412,7 +422,10 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		char[] displayAnswer = {'A','B','C','D','E','F','G','H','I','J','K','L'};
 		int numcount = 1;
 		for(int i=0; i< answers.length; i++){			
-			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
+			possAnswers.add(new Box(setBoxOptionString(), setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
+
+			
+//			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
 			numcount++;
 		}
 	}
