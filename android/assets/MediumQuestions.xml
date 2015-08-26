@@ -426,7 +426,115 @@
             <Correct></Correct>
         </1>
     </MariahCarey>
-     
+    <MichaelJackson>
+        <1>
+            <Question>Which Michael Jackson collaborations have gone platinum?</Question>
+            <Option>Do the Bartman</Option>
+            <Option>Say Say Say</Option>
+            <Option>Eaten Alive</Option>
+            <Option>Love Never Felt So Good</Option>
+            <Option>I Just Can’t Stop Loving You</Option>
+            <Option>Somebody’s Watching Me</Option>
+            <Option>Scream</Option>
+            <Option>I Want You Back ‘88</Option>
+            <Correct>Say Say Say</Correct>
+            <Correct>Scream</Correct>
+        </1>
+        <2>
+            <Question>Which Michael Jackson collaboration songs have a peak position in the US outside the top 100?</Question>
+            <Option>Get It</Option>
+            <Option>Ease on Down the Road</Option>
+            <Option>Why</Option>
+            <Option>State of Independence</Option>
+            <Option>Whatzupwitu</Option>
+            <Option>Eaten Alive</Option>
+            <Option>Save Me</Option>
+            <Option>You Can’t Win</Option>
+            <Correct>Whatzupwitu</Correct>
+            <Correct>Why</Correct>
+        </2>
+        <3>
+            <Question>Which songs did Michael Jackson not perform at the Live at Wembley Concert?</Question>
+            <Option>Beat It</Option>
+            <Option>Bad</Option>
+            <Option>Smooth Criminal</Option>
+            <Option>Remember the Time</Option>
+            <Option>I Just Can’t Stop Loving You</Option>
+            <Option>Man in the Mirror</Option>
+            <Option>Billie Jean</Option>
+            <Option>Thriller</Option>
+            <Correct>Smooth Criminal</Correct>
+            <Correct>Remember the Time</Correct>
+        </3>
+        <4>
+            <Question>Which Michael Jackson remix albums have gone platinum in the world?</Question>
+            <Option>Blood on the Dance Floor: HIStory in the Mix</Option>
+            <Option>The Definitive Collection</Option>
+            <Option>The Stripped Mixes</Option>
+            <Option>The Remix Suite</Option>
+            <Option>The Ultimate Collection</Option>
+            <Option>Immortal</Option>
+            <Option>King of Pop</Option>
+            <Option>The Michael Jackson Mix</Option>
+            <Correct>The Michael Jackson Mix</Correct>
+            <Correct>Blood on the Dance Floor: HIStory in the Mix</Correct>
+        </4>
+        <5>
+            <Question>Which Michael Jackson greatest hits albums have gone at least 3x platinum in the US?</Question>
+            <Option>14 Greatest Hits</Option>
+            <Option>The Essential Michael Jackson</Option>
+            <Option>The Ultimate Collection</Option>
+            <Option>Greatest Hits: HIStory, Volume I</Option>
+            <Option>Number Ones</Option>
+            <Option>The Collection</Option>
+            <Option>King of Pop</Option>
+            <Option>The Best of Michael Jackson</Option>
+            <Correct>Number Ones</Correct>
+            <Correct>The Essential Michael Jackson</Correct>
+        </5>
+        <6>
+            <Question>Which video album have gone at least 9x platinum?</Question>
+            <Option>Moonwalker</Option>
+            <Option>Live in Bucharest: The Dangerous Tour</Option>
+            <Option>Dangerous: The Short Films</Option>
+            <Option>Michael Jackson’s Vision</Option>
+            <Option>Video Greatest Hits - HIStory</Option>
+            <Option>Michael Jackson’s Ghosts</Option>
+            <Option>Number Ones</Option>
+            <Option>HIStory on Film, Volume II</Option>
+            <Correct>Number Ones</Correct>
+            <Correct>Video Greatest Hits - HIStory</Correct>
+        </6>
+        <7>
+            <Question>Which two cities hosted the stops of Michael Jackson’s MJ & Friends Tour?</Question>
+            <Option>London</Option>
+            <Option>Seoul</Option>
+            <Option>Los Angeles</Option>
+            <Option>Amsterdam</Option>
+            <Option>Chicago</Option>
+            <Option>Munich</Option>
+            <Option>Sidney</Option>
+            <Option>New York City</Option>
+            <Correct>Munich</Correct>
+            <Correct>Seoul</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+        
+        
+        
+    </MichaelJackson> 
      
      
      

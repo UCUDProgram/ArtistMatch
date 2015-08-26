@@ -162,8 +162,7 @@
             <Option>Back to Back for top Country album</Option>
             <Correct>Back to Back for top Country album</Correct>
         </10>    
-    </CarrieUnderwood> 
-    
+    </CarrieUnderwood>
     <TheBeatles>
         <1>
             <Question>What is the name of the Beatles before they became the Beatles?</Question>
@@ -328,7 +327,88 @@
             <Correct>Columbia</Correct>
         </10>
     </MariahCarey>
-    
+    <MichaelJackson>
+        <1>
+            <Question>Which Michael Jackson album has gone at least 10x platinum in the US?</Question>
+            <Option>Thriller</Option>
+            <Option>Off the Wall</Option>
+            <Option>Bad</Option>
+            <Option>Dangerous</Option>
+            <Correct>Thriller</Correct>
+        </1>
+        <2>
+            <Question>Which album from Michael Jackson’s teenage years went gold?</Question>
+            <Option>Music & Me</Option>
+            <Option>Forever Michael</Option>
+            <Option>Ben</Option>
+            <Option>Got to Be There</Option>
+            <Correct>Got to Be There</Correct>
+        </2>
+        <3>
+            <Question>Which Michael Jackson album had a peak position that was outside the top 100 in the US?</Question>
+            <Option>Forever, Michael</Option>
+            <Option>Music & Me</Option>
+            <Option>Got to Be There</Option>
+            <Option>Ben</Option>
+            <Correct>Forever, Michael</Correct>
+        </3>
+        <4>
+            <Question>What song from Michael Jackson’s teenage albums peaked at #1?</Question>
+            <Option>I Wanna Be Where You Are</Option>
+            <Option>Got to Be there</Option>
+            <Option>Rockin’ Robin</Option>
+            <Option>Ben</Option>
+            <Correct>Ben</Correct>
+        </4>
+        <5>
+            <Question>What Michael Jackson single went platinum from the Dangerous album?</Question>
+            <Option>Jam</Option>
+            <Option>Black or White</Option>
+            <Option>Remember the Time</Option>
+            <Option>Heal the World</Option>
+            <Correct>Black or White</Correct>
+        </5>
+        <6>
+            <Question>What Michael Jackson song transformed music videos?</Question>
+            <Option>Billie Jean</Option>
+            <Option>Thriller</Option>
+            <Option>Wanna Be Startin’ Somethin</Option>
+            <Option>Beat It</Option>
+            <Correct>Thriller</Correct>
+        </6>
+        <7>
+            <Question>Which label released Michael Jackson album?</Question>
+            <Option>Stylus</Option>
+            <Option>Motown</Option>
+            <Option>Epic</Option>
+            <Option>MJJ Productions</Option>
+            <Correct>Epic</Correct>
+        </7>
+        <8>
+            <Question>Which new video format can you get a Michael Jackson video album on?</Question>
+            <Option>HD DVD</Option>
+            <Option>Blu-ray</Option>
+            <Option>UMD</Option>
+            <Option>Digital DVD</Option>
+            <Correct>Blu-ray</Correct>
+        </8>
+        <9>
+            <Question>What old video format can you get a Michael Jackson video album on?</Question>
+            <Option>CD</Option>
+            <Option>Betamax</Option>
+            <Option>VHS</Option>
+            <Option>Laser Disc</Option>
+            <Correct>VHS</Correct>
+        </9>
+        <10>
+            <Question>What soft drink product did Michael Jackson endorse?</Question>
+            <Option>Pepsi</Option>
+            <Option>Sprite</Option>
+            <Option>Barq’s Root Beer</Option>
+            <Option>Coke</Option>
+            <Correct>Pepsi</Correct>
+        </10>
+    </MichaelJackson>
     
     
     

@@ -605,7 +605,160 @@
             <Correct></Correct>
         </1>
     </MariahCarey>
-    
+    <MichaelJackson>
+        <1>
+            <Question>What Michael Jackson non-studio albums were ranked in only two countries?</Question>
+            <Option>Singles Souvenir Pack</Option>
+            <Option>Farewell My Summer Love</Option>
+            <Option>One Day in Your Life</Option>
+            <Option>Visionary: The Video Singles</Option>
+            <Option>Gold</Option>
+            <Option>The Michael Jackson Mix</Option>
+            <Option>Their Very Best --  Back to Back</Option>
+            <Option>Anthology</Option>
+            <Option>The Definitive Collection</Option>
+            <Option>The Best of Michael Jackson</Option>
+            <Option>The Best of Michael Jackson & The Jackson 5</Option>
+            <Option>Tour Souvenir Pack</Option>
+            <Correct>Gold</Correct>
+            <Correct>One Day in Your Life</Correct>
+            <Correct>Anthology</Correct>
+            <Correct>Tour Souvenir Pack</Correct>
+        </1>
+        <2>
+            <Question>What Michael Jackson albums went between 7 and 9 times platinum, inclusively, in the US?</Question>
+            <Option>Michael Jackson’s This is It</Option>
+            <Option>Invincible</Option>
+            <Option>Number Ones</Option>
+            <Option>HIStory: Past, Present and Future, Book I</Option>
+            <Option>The Ultimate Collection</Option>
+            <Option>Off the Wall</Option>
+            <Option>The Collection</Option>
+            <Option>Dangerous</Option>
+            <Option>The Essential Michael Jackson</Option>
+            <Option>Bad</Option>
+            <Option>King of Pop</Option>
+            <Option>Michael</Option>
+            <Correct>HIStory: Past, Present and Future, Book I</Correct>
+            <Correct>Dangerous</Correct>
+            <Correct>Off the Wall</Correct>
+            <Correct>Bad</Correct>
+        </2>
+        <3>
+            <Question>What singles, from a studio album that went #1 in the US, also go #1 and platinum?</Question>
+            <Option>You Are Not Alone</Option>
+            <Option>Dirty Diana</Option>
+            <Option>I Just Can’t Stop Loving You</Option>
+            <Option>Don’t Stop Til You Get Enough</Option>
+            <Option>Black or White</Option>
+            <Option>Rock with You</Option>
+            <Option>Thriller</Option>
+            <Option>Beat It</Option>
+            <Option>Man in the Mirror</Option>
+            <Option>The Way You Make Me Feel</Option>
+            <Option>Billie Jean</Option>
+            <Option>Bad</Option>
+            <Correct>Beat It</Correct>
+            <Correct>Black or White</Correct>
+            <Correct>Billie Jean</Correct>
+            <Correct>You Are Not Alone</Correct>
+        </3>
+        <4>
+            <Question>What are the directors of movies that Michael Jackson appeared in?</Question>
+            <Option>Sofia Coppola</Option>
+            <Option>Francis Ford Coppola</Option>
+            <Option>Luc Besson</Option>
+            <Option>Martin Scorsese</Option>
+            <Option>Bryan Michael Stoller</Option>
+            <Option>Rob Reiner</Option>
+            <Option>Jerry Kramer</Option>
+            <Option>Tim Burton</Option>
+            <Option>Steven Spielberg</Option>
+            <Option>Barry Sonnenfeld</Option>
+            <Option>Roland Emmerich</Option>
+            <Option>Steven Soderbergh</Option>
+            <Correct>Barry Sonnenfeld</Correct>
+            <Correct>Francis Ford Coppola</Correct>
+            <Correct>Bryan Michael Stoller</Correct>
+            <Correct>Jerry Kramer</Correct>
+        </4>
+        <5>
+            <Question>What artists did Michael Jackson appear as a featured artist on one of their songs?</Question>
+            <Option>Notorious B.I.G.</Option>
+            <Option>Justin Timberlake</Option>
+            <Option>Eddie Murphy</Option>
+            <Option>Donna Summer</Option>
+            <Option>Chris Rock</Option>
+            <Option>3T</Option>
+            <Option>Mariah Carey</Option>
+            <Option>Heavy D</Option>
+            <Option>Rockwell</Option>
+            <Option>Janet Jackson</Option>
+            <Option>Whitney Houston</Option>
+            <Option>Diana Ross</Option>
+            <Correct>Rockwell</Correct>
+            <Correct>Eddie Murphy</Correct>
+            <Correct>3T</Correct>
+            <Correct>Diana Ross</Correct>
+        </5>
+        <6>
+            <Question>What video games did Michael Jackson contributed to?</Question>
+            <Option>Rock Band</Option>
+            <Option>Michael Jackson:The Experience</Option>
+            <Option>Ready 2 Rumble Boxing</Option>
+            <Option>Dance Central</Option>
+            <Option>Just Dance</Option>
+            <Option>Moon walker</Option>
+            <Option>Karaoke Revolution</Option>
+            <Option>Space Channel 5</Option>
+            <Option>Just Dance 2</Option>
+            <Option>Thriller</Option>
+            <Option>Ready 2 Rumble Boxing: Round 2</Option>
+            <Option>Dance Dance Revolution</Option>
+            <Correct>Space Channel 5</Correct>
+            <Correct>Ready 2 Rumble Boxing: Round 2</Correct>
+            <Correct>Michael Jackson:The Experience</Correct>
+            <Correct>Moon walker</Correct>
+        </6>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </MichaelJackson>
     
     
     <artist>

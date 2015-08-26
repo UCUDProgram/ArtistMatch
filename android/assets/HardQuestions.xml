@@ -579,7 +579,136 @@
             <Correct></Correct>
         </1>
     </MariahCarey>
-    
+    <MichaelJackson>
+        <1>
+            <Question>What ranked singles, from the Dangerous album, did not peak in the top 10 in the US?</Question>
+            <Option>Will You Be There</Option>
+            <Option>Remember the Time</Option>
+            <Option>Who Is It</Option>
+            <Option>Gone too Soon</Option>
+            <Option>Give in to Me</Option>
+            <Option>Jam</Option>
+            <Option>Dangerous</Option>
+            <Option>In the Closet</Option>
+            <Option>Heal the World</Option>
+            <Option>Black or White</Option>
+            <Correct>Heal the World</Correct>
+            <Correct>Jam</Correct>
+            <Correct>Who Is It</Correct>
+        </1>
+        <2>
+            <Question>What singles, from the Bad album, went #1 in the US & another Country?</Question>
+            <Option>Liberian Girl</Option>
+            <Option>The Way You Make Me Feel</Option>
+            <Option>Smooth Criminal</Option>
+            <Option>Another Part of Me</Option>
+            <Option>Just Good Friends</Option>
+            <Option>Dirty Diana</Option>
+            <Option>Speed Demon</Option>
+            <Option>Leave Me Alone</Option>
+            <Option>I Just Can’t Stop Loving You</Option>
+            <Option>Man in the Mirror</Option>
+            <Correct>I Just Can’t Stop Loving You</Correct>
+            <Correct>The Way You Make Me Feel</Correct>
+            <Correct>Dirty Diana</Correct>
+        </2>
+        <3>
+            <Question>What singles peaked in the top 5 of all major countries charts?</Question>
+            <Option>You Rock My World</Option>
+            <Option>Remember the Time</Option>
+            <Option>Man in the Mirror</Option>
+            <Option>Billie Jean</Option>
+            <Option>Thriller</Option>
+            <Option>Beat It</Option>
+            <Option>Scream</Option>
+            <Option>Black or White</Option>
+            <Option>You are Not Alone</Option>
+            <Option>Don’t Stop ‘Til You Get Enough</Option>
+            <Correct>Beat It</Correct>
+            <Correct>Black or White</Correct>
+            <Correct>Billie Jean</Correct>
+        </3>
+        <4>
+            <Question>What Michael Jackson albums went at least 6x platinum in exactly two countries other than the US?</Question>
+            <Option>The Essential Michael Jackson</Option>
+            <Option>Off the Wall</Option>
+            <Option>Dangerous</Option>
+            <Option>Thriller</Option>
+            <Option>Bad</Option>
+            <Option>Michael Jackson’s This Is It</Option>
+            <Option>HIStory: Past, Present and Future, Book I</Option>
+            <Option>King of Pop</Option>
+            <Option>Invincible</Option>
+            <Option>Number Ones</Option>
+            <Correct>HIStory: Past, Present and Future, Book I</Correct>
+            <Correct>Number Ones</Correct>
+            <Correct>Off the Wall</Correct>
+        </4>
+        <5>
+            <Question>What Michael Jackson video albums have gone between 7 and 9 Platinum, in a country other than the US?</Question>
+            <Option>Michael Jackson’s Vision</Option>
+            <Option>Michael Jackson’s Thriller</Option>
+            <Option>Video Greatest Hits - HIStory</Option>
+            <Option>Michael Jackson’s This is It</Option>
+            <Option>Live in Bucharest : The Dangerous Tour</Option>
+            <Option>Michael Jackson’s Ghosts</Option>
+            <Option>HIStory on Film, Volume II</Option>
+            <Option>Moonwalker</Option>
+            <Option>Dangerous: The Short Films</Option>
+            <Option>Number Ones</Option>
+            <Correct>Video Greatest Hits - HIStory</Correct>
+            <Correct>Live in Bucharest : The Dangerous Tour</Correct>
+            <Correct>Moonwalker</Correct>
+        </5>
+        <6>
+            <Question>What are the names of the directors that directed a Michael Jackson video from the Thriller album?</Question>
+            <Option>John Landis</Option>
+            <Option>Francis Delia</Option>
+            <Option>Tom Trbovich</Option>
+            <Option>Steve Barron</Option>
+            <Option>Bruce Gowers</Option>
+            <Option>Colin Chilvers</Option>
+            <Option>Bob Giraldi</Option>
+            <Option>Nick Saxton</Option>
+            <Option>Robert Abert</Option>
+            <Option>David Hogan</Option>
+            <Correct>Bob Giraldi</Correct>
+            <Correct>John Landis</Correct>
+            <Correct>Steve Barron</Correct>
+        </6>
+        <7>
+            <Question>What movie soundtracks did Michael Jackson contributed to?</Question>
+            <Option>Independence Day</Option>
+            <Option>The Wiz</Option>
+            <Option>Men in Black III</Option>
+            <Option>Men in Black II</Option>
+            <Option>E.T. the Extra-Terrestrial</Option>
+            <Option>Space Jam</Option>
+            <Option>Free Willy</Option>
+            <Option>Species</Option>
+            <Option>Free Willy II</Option>
+            <Option>Free Willy III</Option>
+            <Correct>The Wiz</Correct>
+            <Correct>E.T. the Extra-Terrestrial</Correct>
+            <Correct>Free Willy II</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </MichaelJackson>
     
     
      <artist>
