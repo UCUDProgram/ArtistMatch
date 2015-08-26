@@ -71,7 +71,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeVariables();
 		initializeBoolean();
 		initializeText();
-		Player = new Player(setPlayerXStart(), setPlayerYPos() , game.getDifficulty());
+		Player = new Player(setPlayerXStart(), setYMax() , game.getDifficulty());
 //		ballImage = setBallImage();
 		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		
@@ -469,14 +469,14 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 	}
 	
-	/*
-	 * Sets the Y Position of the Player
-	 */
-	public float setPlayerYPos(){
-		return setYMax(); 
-//				+ 25;
-//		return ((font.getLineHeight() * 2 ) * (setRowTotal() + 1)) + 20;
-	}
+//	/*
+//	 * Sets the Y Position of the Player
+//	 */
+//	public float setPlayerYPos(){
+//		return setYMax(); 
+////				+ 25;
+////		return ((font.getLineHeight() * 2 ) * (setRowTotal() + 1)) + 20;
+//	}
 	
 	
 	/*

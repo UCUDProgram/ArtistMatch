@@ -320,7 +320,118 @@
             <Correct>	</Correct>
         </1>
     </TheBeatles>
-    
+    <MariahCarey>
+        <1>
+            <Question>Which songs from the Music Box album went platinum?</Question>
+            <Option>Hero</Option>
+            <Option>All I’ve Ever Wanted</Option>
+            <Option>Anytime You Need a Friend</Option>
+            <Option>Never Forget You</Option>
+            <Option>Now that I Know</Option>
+            <Option>Without You</Option>
+            <Option>Music Box</Option>
+            <Option>Dreamlover</Option>
+            <Correct>Hero</Correct>
+            <Correct>Dreamlover</Correct>
+        </1>
+        <2>
+            <Question>What are the names of the song collaborations that went platinum?</Question>
+            <Option>Thank God I Found You</Option>
+            <Option>When You Believe</Option>
+            <Option>#Beautiful</Option>
+            <Option>Breakdown</Option>
+            <Option>Endless Love</Option>
+            <Option>One Sweet Day</Option>
+            <Option>Heartbreaker</Option>
+            <Option>I’ll Be There</Option>
+            <Correct>#Beautiful</Correct>
+            <Correct>One Sweet Day</Correct>
+        </2>
+        <3>
+            <Question>Which Mariah Carey albums have gone diamond?</Question>
+            <Option>Rainbow</Option>
+            <Option>Butterfly</Option>
+            <Option>The Emancipation of Mimi</Option>
+            <Option>Emotions</Option>
+            <Option>Music Box</Option>
+            <Option>E=MC2</Option>
+            <Option>Daydream</Option>
+            <Option>Mariah Carey</Option>
+            <Correct>Music Box</Correct>
+            <Correct>Daydream</Correct>
+        </3>
+        <4>
+            <Question>What Mariah Carey albums did not have a tour associated with it?</Question>
+            <Option>Daydream</Option>
+            <Option>Emotions</Option>
+            <Option>Rainbow</Option>
+            <Option>E=MC2</Option>
+            <Option>The Emancipation of Mimi</Option>
+            <Option>Music Box</Option>
+            <Option>Charmbracelet</Option>
+            <Option>Butterfly</Option>
+            <Correct>Emotions</Correct>
+            <Correct>E=MC2</Correct>
+        </4>
+        <5>
+            <Question>What Mariah Carey music videos did Hype Williams direct?</Question>
+            <Option>H.A.T.E.U.</Option>
+            <Option>When You Believe</Option>
+            <Option>Sweetheart</Option>
+            <Option>I Still Believe</Option>
+            <Option>I Want to Know What Love Is</Option>
+            <Option>Love Story</Option>
+            <Option>Whenever You Call</Option>
+            <Option>Obsessed</Option>
+            <Correct>I Want to Know What Love Is</Correct>
+            <Correct>Sweetheart</Correct>
+        </5>
+        <6>
+            <Question>What movies did Mariah Carey make a cameo in?</Question>
+            <Option>The Butler</Option>
+            <Option>WiseGirls</Option>
+            <Option>Tennessee</Option>
+            <Option>State Property 2</Option>
+            <Option>The Bachelor</Option>
+            <Option>You Don’t Mess with the Zohan</Option>
+            <Option>Death of a Dynasty</Option>
+            <Option>Precious</Option>
+            <Correct>Death of a Dynasty</Correct>
+            <Correct>You Don’t Mess with the Zohan</Correct>
+        </6>
+        <7>
+            <Question>Which animated shows did Mariah Carey lend her voice to?</Question>
+            <Option>Family Guy</Option>
+            <Option>The Simpsons</Option>
+            <Option>The Cleveland Show</Option>
+            <Option>The Proud Family</Option>
+            <Option>American Dad!</Option>
+            <Option>King of the Hill</Option>
+            <Option>Futurama</Option>
+            <Option>American Dragon: Jake Long</Option>
+            <Correct>The Proud Family</Correct>
+            <Correct>American Dad!</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </MariahCarey>
+     
+     
+     
+     
+     
+     
     <artist>
         <1>
             <Question></Question>

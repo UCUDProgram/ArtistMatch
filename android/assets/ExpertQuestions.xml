@@ -469,6 +469,143 @@
             <Correct></Correct>
         </1>
     </TheBeatles>
+    <MariahCarey>
+        <1>
+            <Question>What Mariah Carey albums, released after 1998, are available on cassette?</Question>
+            <Option>Rainbow</Option>
+            <Option>The Emancipation of Mimi</Option>
+            <Option>Me. I Am Mariah… The Elusive Chanteuse</Option>
+            <Option>Greatest Hits</Option>
+            <Option>#1 to Infinity</Option>
+            <Option>Memoirs of an Imperfect Angel</Option>
+            <Option>The Remixes</Option>
+            <Option>The Essential Mariah Carey</Option>
+            <Option>Glitter</Option>
+            <Option>Merry Christmas II You</Option>
+            <Option>E = MC2</Option>
+            <Option>The Ballads</Option>
+            <Correct>Rainbow</Correct>
+            <Correct>Greatest Hits</Correct>
+            <Correct>Glitter</Correct>
+            <Correct>The Remixes</Correct>
+        </1>
+        <2>
+            <Question>What music videos did Mariah Carey Co-direct?</Question>
+            <Option>Up Out My Face</Option>
+            <Option>Obsessed</Option>
+            <Option>Honey</Option>
+            <Option>Infinity</Option>
+            <Option>My All</Option>
+            <Option>Thank God I Found You</Option>
+            <Option>Butterfly</Option>
+            <Option>Against All Odds</Option>
+            <Option>Fantasy</Option>
+            <Option>Breakdown</Option>
+            <Option>I’ll Be Lovin’ U Long Time</Option>
+            <Option>I Want to Know What Love is</Option>
+            <Correct>Honey</Correct>
+            <Correct>Up Out My Face</Correct>
+            <Correct>Butterfly</Correct>
+            <Correct>Breakdown</Correct>
+        </2>
+        <3>
+            <Question>What labels have released an album Mariah Carey contributed to?</Question>
+            <Option>Epic</Option>
+            <Option>Epitaph Records</Option>
+            <Option>Columbia</Option>
+            <Option>BMG</Option>
+            <Option>Capitol Records</Option>
+            <Option>Virgin</Option>
+            <Option>Empire</Option>
+            <Option>EMI</Option>
+            <Option>Island</Option>
+            <Option>Sony</Option>
+            <Option>Warner</Option>
+            <Option>Universal</Option>
+            <Correct>Epic</Correct>
+            <Correct>Columbia</Correct>
+            <Correct>Virgin</Correct>
+            <Correct>Island</Correct>
+        </3>
+        <4>
+            <Question>What cities in Japan did Mariah Carey make a stop at, during one of her first five world tours?</Question>
+            <Option>Nagasaki</Option>
+            <Option>Gwangju</Option>
+            <Option>Fukuoka</Option>
+            <Option>Shizuoka</Option>
+            <Option>Sendai</Option>
+            <Option>Osaka</Option>
+            <Option>Kyoto</Option>
+            <Option>Saitama</Option>
+            <Option>Nagoya</Option>
+            <Option>Okinawa</Option>
+            <Option>Beijing</Option>
+            <Option>Yokohama</Option>
+            <Correct>Saitama</Correct>
+            <Correct>Fukuoka</Correct>
+            <Correct>Osaka</Correct>
+            <Correct>Nagoya</Correct>
+        </4>
+        <5>
+            <Question>Which artists were celebrated with Mariah Carey in VH1 Divas 1998?</Question>
+            <Option>Donna Summer</Option>
+            <Option>Destiny’s Child</Option>
+            <Option>Gloria Estefan</Option>
+            <Option>The Supremes</Option>
+            <Option>Faith Hill</Option>
+            <Option>Celine Dion</Option>
+            <Option>RuPaul</Option>
+            <Option>Diana Ross</Option>
+            <Option>Aretha Franklin</Option>
+            <Option>Tina Turner</Option>
+            <Option>Shania Twain</Option>
+            <Option>Cher</Option>
+            <Correct>Gloria Estefan</Correct>
+            <Correct>Shania Twain</Correct>
+            <Correct>Aretha Franklin</Correct>
+            <Correct>Celine Dion</Correct>
+        </5>
+        <6>
+            <Question>Who hosted Saturday Night Live when Mariah Carey was the musical guest?</Question>
+            <Option>Rudolph Giuiliani</Option>
+            <Option>Patrick Swayze</Option>
+            <Option>Claire Danes</Option>
+            <Option>Jimmy Smits</Option>
+            <Option>Kiefer Sutherland</Option>
+            <Option>Christopher Walken</Option>
+            <Option>Jon Lovitz</Option>
+            <Option>George Steinbrenner</Option>
+            <Option>Linda Hamilton</Option>
+            <Option>Jonah Hill</Option>
+            <Option>Amy Adams</Option>
+            <Option>Macaulay Culkin</Option>
+            <Correct>Linda Hamilton</Correct>
+            <Correct>Claire Danes</Correct>
+            <Correct>Jonah Hill</Correct>
+            <Correct>Patrick Swayze</Correct>
+        </6>
+        
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </MariahCarey>
+    
     
     
     <artist>

@@ -449,7 +449,136 @@
         </1>
         
     </TheBeatles>
-    
+    <MariahCarey>
+        <1>
+            <Question>Which singles debut at number one on the Billboard Hot 100?</Question>
+            <Option>My All</Option>
+            <Option>Fantasy</Option>
+            <Option>I’ll Be There</Option>
+            <Option>Always by my Baby</Option>
+            <Option>Honey</Option>
+            <Option>Loverboy</Option>
+            <Option>One Sweet Day</Option>
+            <Option>Emotions</Option>
+            <Option>Hero</Option>
+            <Option>Heartbreaker</Option>
+            <Correct>Honey</Correct>
+            <Correct>Fantasy</Correct>
+            <Correct>One Sweet Day</Correct>
+        </1>
+        <2>
+            <Question>Which singles, from the daydream album, went platinum?</Question>
+            <Option>Open Arms</Option>
+            <Option>I Am Free</Option>
+            <Option>Fantasy</Option>
+            <Option>Long Ago</Option>
+            <Option>Forever</Option>
+            <Option>Always Be My Baby</Option>
+            <Option>Melt Away</Option>
+            <Option>Underneath the stars</Option>
+            <Option>One Sweet Day</Option>
+            <Option>When I Saw You</Option>
+            <Correct>Fantasy</Correct>
+            <Correct>Always Be My Baby</Correct>
+            <Correct>One Sweet Day</Correct>
+        </2>
+        <3>
+            <Question>Which Mariah Carey collaboration singles, went #1 in the US?</Question>
+            <Option>Cry Baby</Option>
+            <Option>Thank God I Found You</Option>
+            <Option>#Beautiful</Option>
+            <Option>Sweatheart</Option>
+            <Option>I’ll Be There</Option>
+            <Option>Say Somethin’</Option>
+            <Option>Loverboy</Option>
+            <Option>Heartbreaker</Option>
+            <Option>Breakdown</Option>
+            <Option>When You Believe</Option>
+            <Correct>I’ll Be There</Correct>
+            <Correct>Thank God I Found You</Correct>
+            <Correct>Heartbreaker</Correct>
+        </3>
+        <4>
+            <Question>What fragrances were endorsed by Mariah Carey?</Question>
+            <Option>M</Option>
+            <Option>True</Option>
+            <Option>Elixir</Option>
+            <Option>Luscious Pink</Option>
+            <Option>Fantasy</Option>
+            <Option>Just Me</Option>
+            <Option>Daydream</Option>
+            <Option>Forever</Option>
+            <Option>Gold</Option>
+            <Option>MC</Option>
+            <Correct>Forever</Correct>
+            <Correct>M</Correct>
+            <Correct>Luscious Pink</Correct>
+        </4>
+        <5>
+            <Question>What award shows did Mariah Carey win Artist/Entertainer of the Year at?</Question>
+            <Option>Brit Awards</Option>
+            <Option>VIBE Awards</Option>
+            <Option>Blockbuster Entertainment Awards</Option>
+            <Option>Teen People Awards</Option>
+            <Option>BET Awards</Option>
+            <Option>World Music Awards</Option>
+            <Option>ARIA Music Awards</Option>
+            <Option>International Achievement in Arts</Option>
+            <Option>Grammy’s</Option>
+            <Option>Soul Train Music Awards</Option>
+            <Correct>Teen People Awards</Correct>
+            <Correct>VIBE Awards</Correct>
+            <Correct>International Achievement in Arts</Correct>
+        </5>
+        <6>
+            <Question>What acting award shows were Mariah Carey nominated for her role in the film Precious?</Question>
+            <Option>Black Reel Award</Option>
+            <Option>Academy Award</Option>
+            <Option>Independent Spirit Awards</Option>
+            <Option>NAACP Image Award</Option>
+            <Option>MTV Movie Awards</Option>
+            <Option>Cannes Film Festival</Option>
+            <Option>Screen Actors Guild</Option>
+            <Option>BAFTA</Option>
+            <Option>Critics’ Choice Movie Awards</Option>
+            <Option>Golden Globes</Option>
+            <Correct>NAACP Image Award</Correct>
+            <Correct>Black Reel Award</Correct>
+            <Correct>Screen Actors Guild</Correct>
+        </6>
+        <7>
+            <Question>What were the professions of characters that Mariah Carey played in movies?</Question>
+            <Option>Producer</Option>
+            <Option>Waitress</Option>
+            <Option>Songwriter</Option>
+            <Option>Teacher</Option>
+            <Option>Dancer</Option>
+            <Option>Cop</Option>
+            <Option>Actress</Option>
+            <Option>Social Worker</Option>
+            <Option>DJ</Option>
+            <Option>Fighter</Option>
+            <Correct>Waitress</Correct>
+            <Correct>Dancer</Correct>
+            <Correct>Social Worker</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </MariahCarey>
     
     
     

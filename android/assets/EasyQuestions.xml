@@ -246,7 +246,88 @@
             <Correct>Big Time Rush</Correct>
         </10>
     </TheBeatles>
-    
+    <MariahCarey>
+        <1>
+            <Question>In the 1990’s, how many albums did Mariah Carey release?</Question>
+            <Option>5</Option>
+            <Option>8</Option>
+            <Option>6</Option>
+            <Option>7</Option>
+            <Correct>7</Correct>
+        </1>
+        <2>
+            <Question>Which Mariah Carey album was not released in the three year span of the mid to late 2000’s decade?</Question>
+            <Option>Memoirs of an Imperfect Angel</Option>
+            <Option>E=MC2</Option>
+            <Option>Merry Christmas II You</Option>
+            <Option>The Emancipation of Mimi</Option>
+            <Correct>The Emancipation of Mimi</Correct>
+        </2>
+        <3>
+            <Question>Which Mariah Carey album had a music video that featured actor Jerry O’Connell?</Question>
+            <Option>Butterfly</Option>
+            <Option>Glitter</Option>
+            <Option>Rainbow</Option>
+            <Option>Charmbracelet</Option>
+            <Correct>Rainbow</Correct>
+        </3>
+        <4>
+            <Question>Which Mariah Carey album is the best-selling album in Japan by a non-Asian Artist?</Question>
+            <Option>Rainbow</Option>
+            <Option>#1’s</Option>
+            <Option>Butterfly</Option>
+            <Option>Charmbracelet</Option>
+            <Correct>#1’s</Correct>
+        </4>
+        <5>
+            <Question>Which single from the Emancipation of Mimi soundtrack went platinum?</Question>
+            <Option>We Belong Together</Option>
+            <Option>Shake It Off</Option>
+            <Option>Don’t Forget about Us</Option>
+            <Option>It’s Like That</Option>
+            <Correct>We Belong Together</Correct>
+        </5>
+        <6>
+            <Question>Which single from the Glitter soundtrack was the only one to get certified by the RIAA?</Question>
+            <Option>Never Too Far</Option>
+            <Option>Don’t Stop</Option>
+            <Option>Reflections</Option>
+            <Option>Loverboy</Option>
+            <Correct>Loverboy</Correct>
+        </6>
+        <7>
+            <Question>Which song from the #1’s album went gold by RIAA certification?</Question>
+            <Option>When you Believe</Option>
+            <Option>Dance With My Father</Option>
+            <Option>Sweetheart</Option>
+            <Option>Whenever You Call</Option>
+            <Correct>When you Believe</Correct>
+        </7>
+        <8>
+            <Question>Which movie earned Mariah Carey the most Golden Raspberry nominations?</Question>
+            <Option>State Property 2</Option>
+            <Option>Glitter</Option>
+            <Option>Tennessee</Option>
+            <Option>WiseGirls</Option>
+            <Correct>Glitter</Correct>
+        </8>
+        <9>
+            <Question>Which film, that Mariah Carey appeared in, came out in the 1990’s?</Question>
+            <Option>Glitter</Option>
+            <Option>The Bachelor</Option>
+            <Option>WiseGirls</Option>
+            <Option>Death of a Dynasty</Option>
+            <Correct>The Bachelor</Correct>
+        </9>
+        <10>
+            <Question>What label did Mariah Carey sign with?</Question>
+            <Option>Virgin Records</Option>
+            <Option>BMG</Option>
+            <Option>Sony</Option>
+            <Option>Columbia</Option>
+            <Correct>Columbia</Correct>
+        </10>
+    </MariahCarey>
     
     
     
