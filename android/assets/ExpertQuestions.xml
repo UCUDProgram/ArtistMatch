@@ -894,6 +894,142 @@
             <Correct></Correct>
         </1>
     </WhitneyHouston>
+    <Beyonce>
+        <1>
+            <Question>Which award shows was Beyonce nominated for her acting role in the film Dreamgirls?</Question>
+            <Option>New York Film Critics Society</Option>
+            <Option>Screen Actors Guild Awards</Option>
+            <Option>Black Reel Awards</Option>
+            <Option>African-American Film Critics Association Awards</Option>
+            <Option>NAACP Image Awards</Option>
+            <Option>Cannes Film Festival</Option>
+            <Option>Golden Globe Awards</Option>
+            <Option>Los Angeles Film Critics Association Awards</Option>
+            <Option>BET Awards</Option>
+            <Option>MTV Movie Awards</Option>
+            <Option>Austin Film Critics Awards</Option>
+            <Option>Academy Awards</Option>
+            <Correct>NAACP Image Awards</Correct>
+            <Correct>Black Reel Awards</Correct>
+            <Correct>Golden Globe Awards</Correct>
+            <Correct>MTV Movie Awards</Correct>
+        </1>
+        <2
+            <Question>>Which movies did Beyonce act in and not contribute an original Song to the soundtrack?</Question>
+            <Option>Epic</Option>
+            <Option>Obsessed</Option>
+            <Option>Life is but a Dream</Option>
+            <Option>Dreamgirls</Option>
+            <Option>Wow! Wow! Wubbzy!: Wubb Idol</Option>
+            <Option>The Pink Panther</Option>
+            <Option>Roll Bounce</Option>
+            <Option>Austin Powers in Goldmember</Option>
+            <Option>Cadillac Records</Option>
+            <Option>Tyler Perry’s Daddy’s Little Girls</Option>
+            <Option>Carmen: A Hip Hopera</Option>
+            <Option>The Fighting Temptations</Option>
+            <Correct>Cadillac Records</Correct>
+            <Correct>The Pink Panther</Correct>
+            <Correct>Carmen: A Hip Hopera</Correct>
+            <Correct>Obsessed</Correct>
+        </2>
+        <3>
+            <Question>What L’Oreal Products has Beyonce made commercials for?</Question>
+            <Option>Garnier</Option>
+            <Option>True Match</Option>
+            <Option>Volumizing Shampoo</Option>
+            <Option>Paris Feria</Option>
+            <Option>Maybelline</Option>
+            <Option>Radiance Shampoo</Option>
+            <Option>Infallible</Option>
+            <Option>Revlon</Option>
+            <Option>Lancome</Option>
+            <Option>Vitamin Color Conditioner</Option>
+            <Option>Feria Hair Color</Option>
+            <Option>Technique</Option>
+            <Correct>Paris Feria</Correct>
+            <Correct>True Match</Correct>
+            <Correct>Feria Hair Color</Correct>
+            <Correct>Infallible</Correct>
+        </3>
+        <4>
+            <Question>What directors directed more than one Beyonce video from the 2000’s Decade?</Question>
+            <Option>Phillip Andelman</Option>
+            <Option>Jake Nava</Option>
+            <Option>Frank Gatson</Option>
+            <Option>Diane Martel</Option>
+            <Option>Anthony Mandler</Option>
+            <Option>Darren Grant</Option>
+            <Option>Ray Kay</Option>
+            <Option>Johan Renck</Option>
+            <Option>Melina Matsoukas</Option>
+            <Option>Matthew Robinson</Option>
+            <Option>Sophie Muller</Option>
+            <Option>Adria Petty</Option>
+            <Correct>Sophie Muller</Correct>
+            <Correct>Anthony Mandler</Correct>
+            <Correct>Jake Nava</Correct>
+            <Correct>Melina Matsoukas</Correct>
+        </4>
+        <5>
+            <Question>Which songs have Beyonce performed at the MTV Video Music Awards?</Question>
+            <Option>Best Thing I Never Had</Option>
+            <Option>Naughty Girl</Option>
+            <Option>Sweet Dreams</Option>
+            <Option>Irreplaceable</Option>
+            <Option>Baby Boy</Option>
+            <Option>Halo</Option>
+            <Option>Love on Top</Option>
+            <Option>Drunk in Love</Option>
+            <Option>Ring the Alarm</Option>
+            <Option>Run the Alarm</Option>
+            <Option>Deja Vu</Option>
+            <Option>If I Were a Boy</Option>
+            <Correct>Sweet Dreams</Correct>
+            <Correct>Baby Boy</Correct>
+            <Correct>Love on Top</Correct>
+            <Correct>Ring the Alarm</Correct>
+        </5>
+        <6>
+            <Question>Which is not a single from the album I Am… Sasha Fierce?</Question>
+            <Option>Video Phone</Option>
+            <Option>Disappear</Option>
+            <Option>Diva</Option>
+            <Option>Broken-hearted Girl</Option>
+            <Option>Satellites</Option>
+            <Option>Why Don’t You Love Me</Option>
+            <Option>Ego</Option>
+            <Option>Radio</Option>
+            <Option>If I Were a Boy</Option>
+            <Option>Halo</Option>
+            <Option>Ave Maria</Option>
+            <Option>Sweet Dreams</Option>
+            <Correct>Radio</Correct>
+            <Correct>Ave Maria</Correct>
+            <Correct>Disappear</Correct>
+            <Correct>Satellites</Correct>
+        </6>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </Beyonce>
+    
     
     <artist>
         <1>

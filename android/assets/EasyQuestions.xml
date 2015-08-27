@@ -491,7 +491,88 @@
             <Correct>LP</Correct>
         </10>
     </WhitneyHouston>
-    
+    <Beyonce>
+        <1>
+            <Question>What is the longest period of time between Beyonce albums?</Question>
+            <Option>3 and a half years</Option>
+            <Option>2 years</Option>
+            <Option>3 years</Option>
+            <Option>2 and a half years</Option>
+            <Correct>3 years</Correct>
+        </1>
+        <2>
+            <Question>Which format can you not get a Beyonce live album on?</Question>
+            <Option>CD</Option>
+            <Option>Blu-ray</Option>
+            <Option>DVD</Option>
+            <Option>Digital Download</Option>
+            <Correct>Blu-ray</Correct>
+        </2>
+        <3>
+            <Question>Which singer did Beyonce portray in the movie Cadillac Records?</Question>
+            <Option>Diana Ross</Option>
+            <Option>Peggy Lee</Option>
+            <Option>Billie Holliday</Option>
+            <Option>Etta James</Option>
+            <Correct>Etta James</Correct>
+        </3>
+        <4>
+            <Question>Which Jay-Z album did Beyonce appear on?</Question>
+            <Option>The Blueprint 2 The Gift & The Curse</Option>
+            <Option>American Gangster</Option>
+            <Option>The Blueprint</Option>
+            <Option>The Blueprint 3</Option>
+            <Correct>The Blueprint 2 The Gift & The Curse</Correct>
+        </4>
+        <5>
+            <Question>Which Beyonce album is not multi platinum, by RIAA standards?</Question>
+            <Option>I Am… Sasha Fierce</Option>
+            <Option>Beyonce</Option>
+            <Option>B’Day</Option>
+            <Option>4</Option>
+            <Correct>4</Correct>
+        </5>
+        <6>
+            <Question>What Super Bowl did Beyonce sing the national anthem at?</Question>
+            <Option>Super Bowl XXXIX</Option>
+            <Option>Super Bowl XXXVIII</Option>
+            <Option>Super Bowl XL</Option>
+            <Option>Super Bowl XXVII</Option>
+            <Correct>Super Bowl XXXVIII</Correct>
+        </6>
+        <7>
+            <Question>Which album did not have a duet with Jay-Z?</Question>
+            <Option>4</Option>
+            <Option>Dangerously in Love</Option>
+            <Option>B’Day</Option>
+            <Option>Beyonce</Option>
+            <Correct>4</Correct>
+        </7>
+        <8>
+            <Question>Which song from the 4 album was the only one to go RIAA platinum?</Question>
+            <Option>Love on Top</Option>
+            <Option>Party</Option>
+            <Option>Best Thing I Never Had</Option>
+            <Option>Run the World (Girls)</Option>
+            <Correct>Best Thing I Never Had</Correct>
+        </8>
+        <9>
+            <Question>Which Beyonce album has gone 4x platinum by RIAA certification?</Question>
+            <Option>I Am… Sasha Fierce</Option>
+            <Option>Beyonce</Option>
+            <Option>B’Day</Option>
+            <Option>Dangerously in Love</Option>
+            <Correct>Dangerously in Love</Correct>
+        </9>
+        <10>
+            <Question>Which Beyonce song went 4x platinum, by RIAA certification?</Question>
+            <Option>Single Ladies (Put a Ring on It)</Option>
+            <Option>Halo</Option>
+            <Option>Irreplaceable</Option>
+            <Option>Baby Boy</Option>
+            <Correct>Single Ladies (Put a Ring on It)</Correct>
+        </10>
+    </Beyonce>
     
     
     

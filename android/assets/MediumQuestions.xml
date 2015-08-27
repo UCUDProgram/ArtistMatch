@@ -641,7 +641,112 @@
             <Correct></Correct>
         </1>
     </WhitneyHouston>
-     
+     <Beyonce>
+        <1>
+            <Question>Which artists was Beyonce a featuring artist on their album?</Question>
+            <Option>Shakira</Option>
+            <Option>Mr. Vegas</Option>
+            <Option>Chimamanda Ngozi Adichie</Option>
+            <Option>Slim Thug</Option>
+            <Option>Nicki Minaj</Option>
+            <Option>Drake</Option>
+            <Option>Andre 3000</Option>
+            <Option>Mary J. Blige</Option>
+            <Correct>Mary J. Blige</Correct>
+            <Correct>Nicki Minaj</Correct>
+        </1>
+        <2>
+            <Question>Which movies did Beyonce act in and contributed to the retail soundtrack?</Question>
+            <Option>Wow! Wow! Wubbzy!: Wubb Idol</Option>
+            <Option>Epic</Option>
+            <Option>Carmen: A Hip Hopera</Option>
+            <Option>Dreamgirls</Option>
+            <Option>Life is But a Dream</Option>
+            <Option>The Fighting Temptations</Option>
+            <Option>The Pink Panther</Option>
+            <Option>Obsessed</Option>
+            <Correct>Dreamgirls</Correct>
+            <Correct>The Fighting Temptations</Correct>
+        </2>
+        <3>
+            <Question>What years was Beyonce a spokesperson for American Express?</Question>
+            <Option>2007</Option>
+            <Option>2011</Option>
+            <Option>2006</Option>
+            <Option>2009</Option>
+            <Option>2012</Option>
+            <Option>2005</Option>
+            <Option>2010</Option>
+            <Option>2008</Option>
+            <Correct>2008</Correct>
+            <Correct>2007</Correct>
+        </3>
+        <4>
+            <Question>What songs appeared on Beyonce and another artist’s album?</Question>
+            <Option>Put It in a Love Song</Option>
+            <Option>Amor Gitano</Option>
+            <Option>Lift Off</Option>
+            <Option>Telephone</Option>
+            <Option>The Closer I Get to You</Option>
+            <Option>‘03 Bonnie & Clyde</Option>
+            <Option>Beautiful Liar</Option>
+            <Option>Deja Vu</Option>
+            <Correct>Amor Gitano</Correct>
+            <Correct>The Closer I Get to You</Correct>
+        </4>
+        <5>
+            <Question>What fragrances did Beyonce do commercials for?</Question>
+            <Option>Princess</Option>
+            <Option>Essence</Option>
+            <Option>True Star</Option>
+            <Option>Beyond Paradise</Option>
+            <Option>Womanity</Option>
+            <Option>Eternity</Option>
+            <Option>Reveal</Option>
+            <Option>Diamonds</Option>
+            <Correct>Diamonds</Correct>
+            <Correct>True Star</Correct>
+        </5>
+        <6>
+            <Question>Which songs went triple platinum by RIAA standards?</Question>
+            <Option>Drunk in Love</Option>
+            <Option>Crazy in Love</Option>
+            <Option>Irreplaceable</Option>
+            <Option>Run the World (Girls)</Option>
+            <Option>Halo</Option>
+            <Option>If I Were a Boy</Option>
+            <Option>Beautiful Liar</Option>
+            <Option>Telephone</Option>
+            <Correct>Telephone</Correct>
+            <Correct>Drunk in Love</Correct>
+        </6>
+        <7>
+            <Question>What video games did Beyonce do commercials for?</Question>
+            <Option>Dance Dance Revolution</Option>
+            <Option>Rock Revolution</Option>
+            <Option>Rhythm Heaven</Option>
+            <Option>Imagine Rock Star</Option>
+            <Option>Band Hero</Option>
+            <Option>Style Savvy</Option>
+            <Option>Jam Sessions</Option>
+            <Option>Sing It</Option>
+            <Correct>Style Savvy</Correct>
+            <Correct>Rhythm Heaven</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </Beyonce>
      
      
      

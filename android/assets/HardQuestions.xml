@@ -839,6 +839,138 @@
             <Correct></Correct>
         </1>
     </WhitneyHouston>
+    <Beyonce>
+        <1>
+            <Question>Which award shows was Beyonce nominated for her singing role in the film Dreamgirls?</Question>
+            <Option>Billboard Awards</Option>
+            <Option>Grammy’s</Option>
+            <Option>Brit Awards</Option>
+            <Option>Satellite Awards</Option>
+            <Option>iHeartRadio Awards</Option>
+            <Option>Golden Globe Awards</Option>
+            <Option>MTV Video Music Awards</Option>
+            <Option>Broadcast Film Critics Association</Option>
+            <Option>BET Awards</Option>
+            <Option>Juno Awards</Option>
+            <Correct>Satellite Awards</Correct>
+            <Correct>Golden Globe Awards</Correct>
+            <Correct>Broadcast Film Critics Association</Correct>
+        </1>
+        <2>
+            <Question>Which award shows was Beyonce nominated for her singing & acting role in the film Dreamgirls?</Question>
+            <Option>Australian Academy of Cinema and Television Arts</Option>
+            <Option>Black Reel Awards</Option>
+            <Option>Academy Awards</Option>
+            <Option>Teen Choice Awards</Option>
+            <Option>BET Awards</Option>
+            <Option>Independent Spirit Awards</Option>
+            <Option>Satellite Awards</Option>
+            <Option>British Academy of Film and Television Arts</Option>
+            <Option>MTV Awards</Option>
+            <Option>Golden Globe Awards</Option>
+            <Correct>Satellite Awards</Correct>
+            <Correct>Golden Globe Awards</Correct>
+            <Correct>Black Reel Awards</Correct>
+        </2>
+        <3>
+            <Question>Which department stores can you get items from Beyonce’s fashion line from?</Question>
+            <Option>Sears</Option>
+            <Option>Burlington Coat Factory</Option>
+            <Option>Dilliard’s</Option>
+            <Option>Nordstrom’s</Option>
+            <Option>Marshall’s</Option>
+            <Option>Boscov’s</Option>
+            <Option>Macy’s</Option>
+            <Option>Lord & Taylor’s</Option>
+            <Option>J.C. Penny</Option>
+            <Option>Against All Odds</Option>
+            <Correct>Dilliard’s</Correct>
+            <Correct>Macy’s</Correct>
+            <Correct>Against All Odds</Correct>
+        </3>
+        <4>
+            <Question>What reality shows has Beyonce appeared on?</Question>
+            <Option>Keeping Up with the Kardashians</Option>
+            <Option>Dancing With The Stars</Option>
+            <Option>Skating with the Stars</Option>
+            <Option>X Factor</Option>
+            <Option>America’s Got Talent</Option>
+            <Option>The Voice</Option>
+            <Option>American Idol</Option>
+            <Option>Big Brother</Option>
+            <Option>America’s Next Top Model</Option>
+            <Option>Britain’s Next Top Model</Option>
+            <Correct>Britain’s Next Top Model</Correct>
+            <Correct>American Idol</Correct>
+            <Correct>X Factor</Correct>
+        </4>
+        <5>
+            <Question>What are the names of Beyonce Fragrances?</Question>
+            <Option>I. Am. Fierce</Option>
+            <Option>Heat</Option>
+            <Option>Beyonce</Option>
+            <Option>Heat Rush</Option>
+            <Option>Dereon</Option>
+            <Option>Pulse</Option>
+            <Option>‘Yonce</Option>
+            <Option>Beauty</Option>
+            <Option>Fierce</Option>
+            <Option>Sasha Fierce</Option>
+            <Correct>Heat Rush</Correct>
+            <Correct>Pulse</Correct>
+            <Correct>Heat</Correct>
+        </5>
+        <6>
+            <Question>What songs did Beyonce perform at Halftime of Super Bowl XLVII?</Question>
+            <Option>End of Time</Option>
+            <Option>Beautiful Liar</Option>
+            <Option>Deja Vu</Option>
+            <Option>Best Thing I Never Had</Option>
+            <Option>Love On Top</Option>
+            <Option>Run the World</Option>
+            <Option>Irreplaceable</Option>
+            <Option>Drunk in Love</Option>
+            <Option>Crazy in Love</Option>
+            <Option>Single Ladies</Option>
+            <Correct>End of Time</Correct>
+            <Correct>Love On Top</Correct>
+            <Correct>Crazy in Love</Correct>
+        </6>
+        <7>
+            <Question>Which is not a single from Beyonce’s album 4?</Question>
+            <Option>Run The World (Girls)</Option>
+            <Option>I Was Here</Option>
+            <Option>End of Time</Option>
+            <Option>Best Thing I Never Had</Option>
+            <Option>Love on Top</Option>
+            <Option>Countdown</Option>
+            <Option>1+1</Option>
+            <Option>I Care</Option>
+            <Option>Party</Option>
+            <Option>I Miss You</Option>
+            <Correct>I Miss You</Correct>
+            <Correct>I Was Here</Correct>
+            <Correct>1+1</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </Beyonce>
+    
+    
     
      <artist>
         <1>
