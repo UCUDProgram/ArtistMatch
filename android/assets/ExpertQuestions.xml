@@ -759,7 +759,141 @@
             <Correct></Correct>
         </1>
     </MichaelJackson>
-    
+    <WhitneyHouston>
+        <1>
+            <Question>Who directed a Whitney Houston Song in the 1980’s?</Question>
+            <Option>Randee St. Nicholas</Option>
+            <Option>Jeff Margolis</Option>
+            <Option>Mitchell Sinoway</Option>
+            <Option>Wayne Isham</Option>
+            <Option>Nick Brandt</Option>
+            <Option>Jim Yukich</Option>
+            <Option>Peter Israelson</Option>
+            <Option>Mick Jackson</Option>
+            <Option>Julien Temple</Option>
+            <Option>Brian Grant</Option>
+            <Option>Lionel Martin</Option>
+            <Option>Bob Best</Option>
+            <Correct>Brian Grant</Correct>
+            <Correct>Peter Israelson</Correct>
+            <Correct>Jeff Margolis</Correct>
+            <Correct>Wayne Isham</Correct>
+        </1>
+        <2>
+            <Question>What Whitney Houston songs reentered the US charts after Whitney Houston’s death?</Question>
+            <Option>Exhale (Shoop Shoop)</Option>
+            <Option>I’m Your Baby Tonight</Option>
+            <Option>Greatest Love of All</Option>
+            <Option>My Love Is Your Love</Option>
+            <Option>Saving All My Love for You</Option>
+            <Option>Count on Me</Option>
+            <Option>I Wanna Dance with Somebody (Who Loves Me)</Option>
+            <Option>It’s Not Right but It’s Okay</Option>
+            <Option>One Moment in Time</Option>
+            <Option>How Will I Know</Option>
+            <Option>I’m Every Woman</Option>
+            <Option>I Will Always Love You</Option>
+            <Correct>Greatest Love of All</Correct>
+            <Correct>I Will Always Love You</Correct>
+            <Correct>How Will I Know</Correct>
+            <Correct>I Wanna Dance with Somebody (Who Loves Me)</Correct>
+        </2>
+        <3>
+            <Question>What singles went #1 in only one country other than the US?</Question>
+            <Option>It’s Not Right but It’s Okay</Option>
+            <Option>Exhale (Shoop Shoop)</Option>
+            <Option>I’m Every Woman</Option>
+            <Option>Could I Have This Kiss Forever</Option>
+            <Option>Count on Me</Option>
+            <Option>I Have Nothing</Option>
+            <Option>Didn’t We Almost Have It All</Option>
+            <Option>How Will I Know</Option>
+            <Option>When You Believe</Option>
+            <Option>Greatest Love of All</Option>
+            <Option>Saving All My Love for You</Option>
+            <Option>One Moment in Time</Option>
+            <Correct>Exhale (Shoop Shoop)</Correct>
+            <Correct>Saving All My Love for You</Correct>
+            <Correct>How Will I Know</Correct>
+            <Correct>I Have Nothing</Correct>
+        </3>
+        <4>
+            <Question>What are the names of directors that directed more than one Whitney Houston music video?</Question>
+            <Option>Phil Joanou</Option>
+            <Option>Wayne Isham</Option>
+            <Option>Mick Jackson</Option>
+            <Option>Peter Israelson</Option>
+            <Option>Paul Hunter</Option>
+            <Option>Nick Brandt</Option>
+            <Option>Brian Grant</Option>
+            <Option>Jim Yukich</Option>
+            <Option>Julien Temple</Option>
+            <Option>David LaChapelle</Option>
+            <Option>Kevin Bray</Option>
+            <Option>Forest Whitaker</Option>
+            <Correct>Kevin Bray</Correct>
+            <Correct>Brian Grant</Correct>
+            <Correct>Wayne Isham</Correct>
+            <Correct>Peter Israelson</Correct>
+        </4>
+        <5>
+            <Question>What Whitney Houston albums have gone 4x or 5x platinum in a country other than the US?</Question>
+            <Option>The Preacher’s Wife Soundtrack</Option>
+            <Option>Just Whitney</Option>
+            <Option>Whitney Houston</Option>
+            <Option>The Essential Whitney Houston</Option>
+            <Option>Waiting to Exhale Soundtrack</Option>
+            <Option>Love Whitney</Option>
+            <Option>The Bodyguard Soundtrack</Option>
+            <Option>I’m Your Baby Tonight</Option>
+            <Option>Whitney</Option>
+            <Option>Whitney: The Greatest Hits</Option>
+            <Option>I Look to You</Option>
+            <Option>My Love is Your Love</Option>
+            <Correct>The Bodyguard Soundtrack</Correct>
+            <Correct>Whitney: The Greatest Hits</Correct>
+            <Correct>Whitney Houston</Correct>
+            <Correct>My Love is Your Love</Correct>
+        </5>
+        <6>
+            <Question>What artists performed with Whitney Houston on VH1 Divas?</Question>
+            <Option>Patti LaBelle</Option>
+            <Option>Mariah Carey</Option>
+            <Option>Jewel</Option>
+            <Option>Gladys Knight</Option>
+            <Option>Chaka Khan</Option>
+            <Option>Elton John</Option>
+            <Option>Celine Dion</Option>
+            <Option>LeAnn Rimes</Option>
+            <Option>Aretha Franklin</Option>
+            <Option>Diana Ross</Option>
+            <Option>Stevie Wonder</Option>
+            <Option>Marc Anthony</Option>
+            <Correct>Chaka Khan</Correct>
+            <Correct>Stevie Wonder</Correct>
+            <Correct>LeAnn Rimes</Correct>
+            <Correct>Jewel</Correct>
+        </6>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </WhitneyHouston>
     
     <artist>
         <1>

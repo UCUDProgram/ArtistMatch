@@ -409,6 +409,89 @@
             <Correct>Pepsi</Correct>
         </10>
     </MichaelJackson>
+    <WhitneyHouston>
+        <1>
+            <Question>Which Whitney Houston album went 4x platinum in the US?</Question>
+            <Option>Whitney Houston</Option>
+            <Option>I’m Your Baby Tonight</Option>
+            <Option>I Look to You</Option>
+            <Option>Just Whitney</Option>
+            <Correct>I’m Your Baby Tonight</Correct>
+        </1>
+        <2>
+            <Question>Which song from the My Love is Your Love album did not go platinum?</Question>
+            <Option>When You Believe</Option>
+            <Option>It’s Not Right but It’s Okay</Option>
+            <Option>Heartbreak Hotel</Option>
+            <Option>My Love is Your Love</Option>
+            <Correct>When You Believe</Correct>
+        </2>
+        <3>
+            <Question>How many times platinum did the Bodyguard soundtrack go platinum in the US?</Question>
+            <Option>20</Option>
+            <Option>19</Option>
+            <Option>15</Option>
+            <Option>17</Option>
+            <Correct>17</Correct>
+        </3>
+        <4>
+            <Question>Where does the Bodyguard soundtrack rank all-time for soundtrack sales?</Question>
+            <Option>5</Option>
+            <Option>1</Option>
+            <Option>3</Option>
+            <Option>4</Option>
+            <Correct>1</Correct>
+        </4>
+        <5>
+            <Question>Where does the Bodyguard soundtrack rank all-time in sales in the Nielson SoundScan era?</Question>
+            <Option>18</Option>
+            <Option>25</Option>
+            <Option>6</Option>
+            <Option>10</Option>
+            <Correct>6</Correct>
+        </5>
+        <6>
+            <Question>What Rodgers & Hammerstein inspired work was Whitney Houston an Executive Producer for the remake?</Question>
+            <Option>South Pacific</Option>
+            <Option>The Sound of Music</Option>
+            <Option>Oklahoma!</Option>
+            <Option>Cinderella</Option>
+            <Correct>Cinderella</Correct>
+        </6>
+        <7>
+            <Question>What Kenny Ortega film was Whitney Houston a Co-Executive Producer for?</Question>
+            <Option>High School Musical</Option>
+            <Option>Michael Jackson’s This is It</Option>
+            <Option>Cheetah Girls 2</Option>
+            <Option>Hocus Pocus</Option>
+            <Correct>Cheetah Girls 2</Correct>
+        </7>
+        <8>
+            <Question>What Super Bowl did Whitney Houston perform the Star Spangled Banner at?</Question>
+            <Option>XXVII</Option>
+            <Option>XXV</Option>
+            <Option>XXVI</Option>
+            <Option>XXIV</Option>
+            <Correct>XXV</Correct>
+        </8>
+        <9>
+            <Question>What label released Whitney Houston music?</Question>
+            <Option>Laface</Option>
+            <Option>Sony Music</Option>
+            <Option>Arista</Option>
+            <Option>Motown</Option>
+            <Correct>Arista</Correct>
+        </9>
+        <10>
+            <Question>What format could you get Whitney Houston music on?</Question>
+            <Option>45 rpm record</Option>
+            <Option>Mini Disc</Option>
+            <Option>LP</Option>
+            <Option>8 Track</Option>
+            <Correct>LP</Correct>
+        </10>
+    </WhitneyHouston>
+    
     
     
     

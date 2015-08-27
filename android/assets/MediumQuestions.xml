@@ -535,7 +535,112 @@
         
         
     </MichaelJackson> 
-     
+     <WhitneyHouston>
+        <1>
+            <Question>Which singles from the Whitney Houston album went platinum?</Question>
+            <Option>I Wanna Dance with Somebody (Who Loves Me)</Option>
+            <Option>How Will I Know</Option>
+            <Option>Saving All My Love for You</Option>
+            <Option>Someone for Me</Option>
+            <Option>Greatest Love of All</Option>
+            <Option>You Give Good Love</Option>
+            <Option>Thinking About You</Option>
+            <Option>All at Once</Option>
+            <Correct>Saving All My Love for You</Correct>
+            <Correct>Greatest Love of All</Correct>
+        </1>
+        <2>
+            <Question>Who directed Whitney Houston music videos from the My Love is Your Love album?</Question>
+            <Option>F. Gary Gray</Option>
+            <Option>Kevin Bray</Option>
+            <Option>Mary Lambert</Option>
+            <Option>Julia Knowles</Option>
+            <Option>Phil Joanou</Option>
+            <Option>Paul Hunter</Option>
+            <Option>Frances Lawrence</Option>
+            <Option>David LaChapelle</Option>
+            <Correct>Kevin Bray</Correct>
+            <Correct>Phil Joanou</Correct>
+        </2>
+        <3>
+            <Question>Excluding the Bodyguard soundtrack, which Whitney Houston starred movie soundtrack song went platinum?</Question>
+            <Option>It Hurts Like Hell</Option>
+            <Option>Step by Step</Option>
+            <Option>I Believe in You and Me</Option>
+            <Option>Who Would Imagine a King</Option>
+            <Option>Why Does it Hurt So Bad</Option>
+            <Option>Exhale (Shoop Shoop)</Option>
+            <Option>My Heart is Calling</Option>
+            <Option>Count on Me</Option>
+            <Correct>I Believe in You and Me</Correct>
+            <Correct>Exhale (Shoop Shoop)</Correct>
+        </3>
+        <4>
+            <Question>What Garry Marshall Movies was Whitney Houston a producer?</Question>
+            <Option>Runaway Bride</Option>
+            <Option>Princess Diaries</Option>
+            <Option>The Cheetah Girls</Option>
+            <Option>Raising Helen</Option>
+            <Option>Princess Diaries 2</Option>
+            <Option>Georgia Rule</Option>
+            <Option>Valentine’s Day</Option>
+            <Option>New Year’s Eve</Option>
+            <Correct>Princess Diaries 2</Correct>
+            <Correct>Princess Diaries</Correct>
+        </4>
+        <5>
+            <Question>Which Whitney Houston songs won an American Music Awards Video Award?</Question>
+            <Option>It’s Not Right but It’s Okay</Option>
+            <Option>I Wanna Dance with Somebody</Option>
+            <Option>My Love is Your Love</Option>
+            <Option>When You Believe</Option>
+            <Option>Celebrate</Option>
+            <Option>Saving All My Love for You</Option>
+            <Option>Greatest Love of All</Option>
+            <Option>I Will Always Love You</Option>
+            <Correct>Greatest Love of All</Correct>
+            <Correct>Saving All My Love for You</Correct>
+        </5>
+        <6>
+            <Question>What labels released posthumous Whitney Houston Album?</Question>
+            <Option>Jive</Option>
+            <Option>Sony Music</Option>
+            <Option>Arista</Option>
+            <Option>Columbia</Option>
+            <Option>RCA</Option>
+            <Option>Capitol Records</Option>
+            <Option>BMG</Option>
+            <Option>Sony Legacy</Option>
+            <Correct>Sony Music</Correct>
+            <Correct>RCA</Correct>
+        </6>
+        <7>
+            <Question>What soft drinks has Whitney Houston endorsed?</Question>
+            <Option>Mountain Dew</Option>
+            <Option>Sprite</Option>
+            <Option>7-UP</Option>
+            <Option>RC Cola</Option>
+            <Option>Canada Dry</Option>
+            <Option>Root Beer</Option>
+            <Option>Diet Coke</Option>
+            <Option>Coca-Cola</Option>
+            <Correct>Diet Coke</Correct>
+            <Correct>Canada Dry</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </WhitneyHouston>
      
      
      

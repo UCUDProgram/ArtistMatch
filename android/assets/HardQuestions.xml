@@ -709,7 +709,136 @@
             <Correct></Correct>
         </1>
     </MichaelJackson>
-    
+    <WhitneyHouston>
+        <1>
+            <Question>Which songs from the My Love is Your Love album went platinum?</Question>
+            <Option>You’ll Never Stand Alone</Option>
+            <Option>When You Believe</Option>
+            <Option>I Bow Out</Option>
+            <Option>Heartbreak Hotel</Option>
+            <Option>I Was Made to Love Him</Option>
+            <Option>I Learned from the Best</Option>
+            <Option>It’s Not Right but It’s Okay</Option>
+            <Option>It I Told You That</Option>
+            <Option>My Love is Your Love</Option>
+            <Option>Until You Come Back</Option>
+            <Correct>My Love is Your Love</Correct>
+            <Correct>Heartbreak Hotel</Correct>
+            <Correct>It’s Not Right but It’s Okay</Correct>
+        </1>
+        <2>
+            <Question>What are the names of songs that Whitney Houston did a duet with Jermaine Jackson?</Question>
+            <Option>Celebrate New Life</Option>
+            <Option>Eternal Love</Option>
+            <Option>If You Say My Eyes are Beautiful</Option>
+            <Option>Sweetest Sweetest</Option>
+            <Option>Fifty Ways (To Fall in Love)</Option>
+            <Option>Shock Me</Option>
+            <Option>Memories</Option>
+            <Option>Are You the Woman</Option>
+            <Option>Hammer and Nails</Option>
+            <Option>Take Good Care of My Heart</Option>
+            <Correct>If You Say My Eyes are Beautiful</Correct>
+            <Correct>Take Good Care of My Heart</Correct>
+            <Correct>Shock Me</Correct>
+        </2>
+        <3>
+            <Question>What film and music legends did Whitney Houston pay tribute to in the video for I’m Your Baby Tonight?</Question>
+            <Option>Ella Fitzgerald</Option>
+            <Option>Marlene Dietrich</Option>
+            <Option>Billie Holliday</Option>
+            <Option>Dione Warwick</Option>
+            <Option>Judy Garland</Option>
+            <Option>The Supremes</Option>
+            <Option>Marilyn Monroe</Option>
+            <Option>Diana Summer</Option>
+            <Option>Audrey Hepburn</Option>
+            <Option>Elizabeth Taylor</Option>
+            <Correct>The Supremes</Correct>
+            <Correct>Marlene Dietrich</Correct>
+            <Correct>Audrey Hepburn</Correct>
+        </3>
+        <4>
+            <Question>What Whitney Houston albums went #1 in at least three countries other than the US and 5x platinum in a non-US country?</Question>
+            <Option>The Ultimate Collection</Option>
+            <Option>Whitney Houston</Option>
+            <Option>Whitney: The Greatest Hits</Option>
+            <Option>I Look to You</Option>
+            <Option>Whitney</Option>
+            <Option>I’m Your Baby Tonight</Option>
+            <Option>Waiting to Exhale Soundtrack</Option>
+            <Option>The Bodyguard Soundtrack</Option>
+            <Option>The Preacher’s Wife Soundtrack</Option>
+            <Option>My Love is Your Love</Option>
+            <Correct>The Bodyguard Soundtrack</Correct>
+            <Correct>Whitney Houston</Correct>
+            <Correct>Whitney</Correct>
+        </4>
+        <5>
+            <Question>What award shows does Whitney Houston’s winning percentage is 50% or greater, with at least 15 nominations?</Question>
+            <Option>People’s Choice Awards</Option>
+            <Option>Emmy Awards</Option>
+            <Option>Kids’ Choice Awards</Option>
+            <Option>Grammy’s</Option>
+            <Option>American Music Awards</Option>
+            <Option>BET Awards</Option>
+            <Option>NAACP Image Awards</Option>
+            <Option>Billboard</Option>
+            <Option>Soul Train Music Awards</Option>
+            <Option>MTV Awards</Option>
+            <Correct>NAACP Image Awards</Correct>
+            <Correct>American Music Awards</Correct>
+            <Correct>Soul Train Music Awards</Correct>
+        </5>
+        <6>
+            <Question>What years did Whitney Houston appear at Divas Live?</Question>
+            <Option>2001</Option>
+            <Option>1997</Option>
+            <Option>2002</Option>
+            <Option>2004</Option>
+            <Option>1996</Option>
+            <Option>1999</Option>
+            <Option>1995</Option>
+            <Option>2000</Option>
+            <Option>2003</Option>
+            <Option>1998</Option>
+            <Correct>2003</Correct>
+            <Correct>1999</Correct>
+            <Correct>2002</Correct>
+        </6>
+        <7>
+            <Question>What TV shows did Whitney Houston appear on as Herself?</Question>
+            <Option>Silver Spoons</Option>
+            <Option>The Jeffersons</Option>
+            <Option>Boston Legal</Option>
+            <Option>Guiding Light</Option>
+            <Option>Boston Public</Option>
+            <Option>All in the Family</Option>
+            <Option>General Hospital</Option>
+            <Option>Days of our Lives</Option>
+            <Option>227</Option>
+            <Option>As the World Turns</Option>
+            <Correct>Silver Spoons</Correct>
+            <Correct>Boston Public</Correct>
+            <Correct>As the World Turns</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </WhitneyHouston>
     
      <artist>
         <1>
