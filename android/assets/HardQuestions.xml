@@ -969,7 +969,136 @@
             <Correct></Correct>
         </1>
     </Beyonce>
-    
+    <Eminem>
+        <1>
+            <Question>Which is not an Eminem influenced song of the US version of the shadyXV album?</Question>
+            <Option>Die Alone</Option>
+            <Option>Fine Line</Option>
+            <Option>Till It's Gone</Option>
+            <Option>Psychopathic Killer</Option>
+            <Option>You Don't Know</Option>
+            <Option>Down</Option>
+            <Option>Vegas</Option>
+            <Option>Right for Me</Option>
+            <Option>The Setup</Option>
+            <Option>Bane</Option>
+            <Correct>The Setup</Correct>
+            <Correct>Down</Correct>
+            <Correct>Till It's Gone</Correct>
+        </1>
+        <2>
+            <Question>Which Eminem songs have gone at least 3x Platinum by RIAA certification?</Question>
+            <Option>Rap God</Option>
+            <Option>Lose Yourself</Option>
+            <Option>Just Lose It</Option>
+            <Option>Without Me</Option>
+            <Option>The Monster</Option>
+            <Option>Headlights</Option>
+            <Option>Stan</Option>
+            <Option>Berzerk</Option>
+            <Option>Crack a Bottle</Option>
+            <Option>We Made You</Option>
+            <Correct>The Monster</Correct>
+            <Correct>Lose Yourself</Correct>
+            <Correct>We Made You</Correct>
+        </2>
+        <3>
+            <Question>What singles, with Eminem as the featured artist, had a peak position in the top 10?</Question>
+            <Option>Smack That</Option>
+            <Option>Throw That</Option>
+            <Option>That’s All She Wrote</Option>
+            <Option>Forget about Dre</Option>
+            <Option>I Need a Doctor</Option>
+            <Option>Calm Down</Option>
+            <Option>Drop the World</Option>
+            <Option>My Life</Option>
+            <Option>Roman’s Revenge</Option>
+            <Option>Forever</Option>
+            <Correct>I Need a Doctor</Correct>
+            <Correct>Smack That</Correct>
+            <Correct>Forever</Correct>
+        </3>
+        <4>
+            <Question>What directors directed a music video with Eminem and another artist?</Question>
+            <Option>Plates Animation</Option>
+            <Option>Paul Rosenberg</Option>
+            <Option>Joseph Kahn</Option>
+            <Option>Chris Robinson</Option>
+            <Option>Jeff Grippe</Option>
+            <Option>Anthony Mandler</Option>
+            <Option>Syndrome</Option>
+            <Option>Ian Inaba</Option>
+            <Option>Eminem</Option>
+            <Option>Quig</Option>
+            <Correct>Syndrome</Correct>
+            <Correct>Plates Animation</Correct>
+            <Correct>Chris Robinson</Correct>
+        </4>
+        <5>
+            <Question>What soundtracks did Eminem appear on as a featured artist?</Question>
+            <Option>Enemy of the State</Option>
+            <Option>Friday after Next Friday</Option>
+            <Option>Romeo Must Die</Option>
+            <Option>Bad Boys II</Option>
+            <Option>Wild Wild West</Option>
+            <Option>Exit Wounds</Option>
+            <Option>Next Friday</Option>
+            <Option>50 Cent: The New Breed</Option>
+            <Option>Cradle 2 the Grave</Option>
+            <Option>Nutty Professor</Option>
+            <Correct>Cradle 2 the Grave</Correct>
+            <Correct>Wild Wild West</Correct>
+            <Correct>Next Friday</Correct>
+        </5>
+        <6>
+            <Question>What award shows does Eminem have a winning percentage greater than 50% with at least 15 nominations?</Question>
+            <Option>American Music Awards</Option>
+            <Option>MTV Video Music Awards</Option>
+            <Option>Brit Awards</Option>
+            <Option>Teen Choice Awards</Option>
+            <Option>Grammy’s</Option>
+            <Option>BET Awards</Option>
+            <Option>MTV Europe Music Awards</Option>
+            <Option>Soul Train Music Awards</Option>
+            <Option>People’s Choice Awards</Option>
+            <Option>Billboard Music Awards</Option>
+            <Correct>Teen Choice Awards</Correct>
+            <Correct>Billboard Music Awards</Correct>
+            <Correct>MTV Europe Music Awards</Correct>
+        </6>
+        <7>
+            <Question>What artists were on the Anger Management DVD with Eminem?</Question>
+            <Option>Ice Cube</Option>
+            <Option>D12</Option>
+            <Option>M.O.P.</Option>
+            <Option>Snoop Dogg</Option>
+            <Option>Obie-Trice</Option>
+            <Option>Dido</Option>
+            <Option>Xzibit</Option>
+            <Option>Dina Rae</Option>
+            <Option>Dr. Dre</Option>
+            <Option>G-Unit</Option>
+            <Correct>Dina Rae</Correct>
+            <Correct>D12</Correct>
+            <Correct>Obie-Trice</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </Eminem>
     
     
      <artist>

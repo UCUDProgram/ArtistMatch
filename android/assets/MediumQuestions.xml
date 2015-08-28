@@ -747,7 +747,112 @@
             <Correct></Correct>
         </1>
     </Beyonce>
-     
+     <Eminem>
+        <1>
+            <Question>Which is not an Eminem solo Album?</Question>
+            <Option>D12 World</Option>
+            <Option>Recovery</Option>
+            <Option>Curtain Call</Option>
+            <Option>Encore</Option>
+            <Option>The Marshall Mathers LP</Option>
+            <Option>Relapse</Option>
+            <Option>Bad Meets Evil: Hell the Sequel</Option>
+            <Option>The Eminem Show</Option>
+            <Correct>D12 World</Correct>
+            <Correct>Bad Meets Evil: Hell the Sequel</Correct>
+        </1>
+        <2>
+            <Question>Which song is not on The Eminem Show album?</Question>
+            <Option>One Day at a Time</Option>
+            <Option>Hallie's Song</Option>
+            <Option>Lose Yourself</Option>
+            <Option>Business</Option>
+            <Option>Sing for the Moment</Option>
+            <Option>Cleaning Out My Closet</Option>
+            <Option>Stan</Option>
+            <Option>Superman</Option>
+            <Correct>Lose Yourself</Correct>
+            <Correct>Stan</Correct>
+        </2>
+        <3>
+            <Question>Which song is not from Eminem’s Straight from the Lab Mixtape?</Question>
+            <Option>Love You More</Option>
+            <Option>Monkey See, Monkey Do</Option>
+            <Option>Hailie's Revenge</Option>
+            <Option>The Kids</Option>
+            <Option>We Are Americans</Option>
+            <Option>Bully</Option>
+            <Option>Explosion</Option>
+            <Option>Come On In</Option>
+            <Correct>Explosion</Correct>
+            <Correct>The Kids</Correct>
+        </3>
+        <4>
+            <Question>Which Eminem Albums have gone RIAA certified Diamond?</Question>
+            <Option>Relapse</Option>
+            <Option>The Marshall Mathers LP</Option>
+            <Option>Infinite</Option>
+            <Option>The Slim Shady LP</Option>
+            <Option>Recovery</Option>
+            <Option>Encore</Option>
+            <Option>The Eminem Show</Option>
+            <Option>The Marshall Mathers LP 2</Option>
+            <Correct>The Marshall Mathers LP</Correct>
+            <Correct>The Eminem Show</Correct>
+        </4>
+        <5>
+            <Question>Which Eminem songs have gone diamond by RIAA certification?</Question>
+            <Option>Survival</Option>
+            <Option>Lose Yourself</Option>
+            <Option>The Real Slim Shady</Option>
+            <Option>Not Afraid</Option>
+            <Option>Cleanin’ Out My Closet</Option>
+            <Option>Love the Way you Lie</Option>
+            <Option>No Love</Option>
+            <Option>Guilty Conscience</Option>
+            <Correct>Love the Way you Lie</Correct>
+            <Correct>Not Afraid</Correct>
+        </5>
+        <6>
+            <Question>What categories did the song Lose Yourself win at the Grammy’s?</Question>
+            <Option>R&B performance of the Year</Option>
+            <Option>R&B Song of the Year</Option>
+            <Option>Rap Song of the Year</Option>
+            <Option>Song of the Year</Option>
+            <Option>Rap Performance by a Duo or Group</Option>
+            <Option>Male Rap Solo Performance</Option>
+            <Option>Record of the Year</Option>
+            <Option>Single of the Year</Option>
+            <Correct>Male Rap Solo Performance</Correct>
+            <Correct>Rap Song of the Year</Correct>
+        </6>
+        <7>
+            <Question>What award shows/festivals did Eminem win for acting?</Question>
+            <Option>Michigan Film Festival</Option>
+            <Option>People’s Choice</Option>
+            <Option>Critics Choice Movie Awards</Option>
+            <Option>MTV Movie Awards</Option>
+            <Option>Detroit Film Awards</Option>
+            <Option>Teen Choice Awards</Option>
+            <Option>British Academy Film Awards</Option>
+            <Option>Screen Actors Guild Awards</Option>
+            <Correct>MTV Movie Awards</Correct>
+            <Correct>Teen Choice Awards</Correct>
+        </7>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </Eminem>
      
      
     <artist>

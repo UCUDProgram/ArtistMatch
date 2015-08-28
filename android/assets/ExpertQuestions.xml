@@ -1029,6 +1029,142 @@
             <Correct></Correct>
         </1>
     </Beyonce>
+    <Eminem>
+        <1>
+            <Question>Which songs on the Eminem Presents: The Re-up album did Eminem not contribute to?</Question>
+            <Option>Murder</Option>
+            <Option>Public Enemy #1</Option>
+            <Option>Everything is Shady</Option>
+            <Option>Shake That</Option>
+            <Option>Ski Mask Way</Option>
+            <Option>Whatever You Want</Option>
+            <Option>No Apologies</Option>
+            <Option>Pistol Pistol</Option>
+            <Option>We Ride for Shady</Option>
+            <Option>Smack That</Option>
+            <Option>Trapped</Option>
+            <Option>By My Side</Option>
+            <Correct>By My Side</Correct>
+            <Correct>We Ride for Shady</Correct>
+            <Correct>Everything is Shady</Correct>
+            <Correct>Whatever You Want</Correct>
+        </1>
+        <2>
+            <Question>Which Eminem singles have gone #1 in the US?</Question>
+            <Option>Lose Yourself</Option>
+            <Option>When I’m Gone</Option>
+            <Option>The Real Slim Shady</Option>
+            <Option>Love the Way You Lie</Option>
+            <Option>Berzerk</Option>
+            <Option>Just Lose It</Option>
+            <Option>Not Afraid</Option>
+            <Option>We Made You</Option>
+            <Option>Cleanin’ Out My Closet</Option>
+            <Option>Without Me</Option>
+            <Option>Shake That</Option>
+            <Option>Crack a Bottle</Option>
+            <Correct>Love the Way You Lie</Correct>
+            <Correct>Not Afraid</Correct>
+            <Correct>Lose Yourself</Correct>
+            <Correct>Crack a Bottle</Correct>
+        </2>
+        <3>
+            <Question>Which Eminem singles were top 10 hits and went platinum in the US?</Question>
+            <Option>When I’m Gone</Option>
+            <Option>Rap God</Option>
+            <Option>Just Lose It</Option>
+            <Option>Berzerk</Option>
+            <Option>Cleanin’ Out My Closet</Option>
+            <Option>The Monster</Option>
+            <Option>Not Afraid</Option>
+            <Option>The Real Slim Shady</Option>
+            <Option>Shake That</Option>
+            <Option>Lose Yourself</Option>
+            <Option>Without Me</Option>
+            <Option>Crack a Bottle</Option>
+            <Correct>Rap God</Correct>
+            <Correct>Berzerk</Correct>
+            <Correct>Not Afraid</Correct>
+            <Correct>Lose Yourself</Correct>
+        </3>
+        <4>
+            <Question>Which Eminem Songs were nominated for Video of the Year at exactly one awards show and lost?</Question>
+            <Option>Without Me</Option>
+            <Option>My Name Is</Option>
+            <Option>Love the Way You Lie</Option>
+            <Option>The Real Slim Shady</Option>
+            <Option>We Made You</Option>
+            <Option>Stan</Option>
+            <Option>No Love</Option>
+            <Option>Lose Yourself</Option>
+            <Option>Not Afraid</Option>
+            <Option>The Way I Am</Option>
+            <Option>Cleanin’ Out My Closet</Option>
+            <Option>Guilty Conscience</Option>
+            <Correct>We Made You</Correct>
+            <Correct>Love the Way You Lie</Correct>
+            <Correct>Without Me</Correct>
+            <Correct>Not Afraid</Correct>
+        </4>
+        <5>
+            <Question>Which Eminem albums went # 1 in exactly seven countries other than the US?</Question>
+            <Option>8 Mile Soundtrack</Option>
+            <Option>Encore</Option>
+            <Option>Straight from the Lab</Option>
+            <Option>The Eminem Show</Option>
+            <Option>The Slim Shady LP</Option>
+            <Option>Curtain Call: The Hits</Option>
+            <Option>The Marshall Mathers LP</Option>
+            <Option>Relapse</Option>
+            <Option>Eminem Presents: The Re-up</Option>
+            <Option>Infinite</Option>
+            <Option>Marshall Mathers LP 2</Option>
+            <Option>Shady XV</Option>
+            <Correct>Marshall Mathers LP 2</Correct>
+            <Correct>The Eminem Show</Correct>
+            <Correct>Encore</Correct>
+            <Correct>Relapse</Correct>
+        </5>
+        <6>
+            <Question>Which Eminem albums are not available in cassette format?</Question>
+            <Option>Relapse</Option>
+            <Option>The Slim Shady LP</Option>
+            <Option>8 Mile Soundtrack</Option>
+            <Option>The Eminem Show</Option>
+            <Option>Eminem Presents: The Re-up</Option>
+            <Option>Encore</Option>
+            <Option>Curtain Call: The Hits</Option>
+            <Option>Infinite</Option>
+            <Option>The Marshall Mathers LP 2</Option>
+            <Option>The Marshall Mathers LP</Option>
+            <Option>Straight from the Lab</Option>
+            <Option>Recovery</Option>
+            <Correct>Eminem Presents: The Re-up</Correct>
+            <Correct>The Marshall Mathers LP 2</Correct>
+            <Correct>Relapse</Correct>
+            <Correct>Recovery</Correct>
+        </6>
+        <1>
+            <Question></Question>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Option></Option>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+            <Correct></Correct>
+        </1>
+    </Eminem>
+    
     
     
     <artist>

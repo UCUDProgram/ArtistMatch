@@ -573,7 +573,88 @@
             <Correct>Single Ladies (Put a Ring on It)</Correct>
         </10>
     </Beyonce>
-    
+    <Eminem>
+        <1>
+            <Question>Which Eminem album was released in the 1990’s?</Question>
+            <Option>The Eminem Show</Option>
+            <Option>Encore</Option>
+            <Option>The Marshall Mathers LP</Option>
+            <Option>The Slim Shady LP</Option>
+            <Correct>The Slim Shady LP</Correct>
+        </1>
+        <2>
+            <Question>Which is an Eminem song that was not released in the 1990's?</Question>
+            <Option>The Real Slim Shady</Option>
+            <Option>Role Model</Option>
+            <Option>My Name is</Option>
+            <Option>Guilty Conscience</Option>
+            <Correct>The Real Slim Shady</Correct>
+        </2>
+        <3>
+            <Question>What format was an Eminem album released on?</Question>
+            <Option>Digital Audio Tape</Option>
+            <Option>8-Track</Option>
+            <Option>Mini Disc</Option>
+            <Option>Vinyl</Option>
+            <Correct>Vinyl</Correct>
+        </3>
+        <4>
+            <Question>Which Eminem album was not released in the 2000’s Decade?</Question>
+            <Option>The Marshall Mathers LP</Option>
+            <Option>Relapse</Option>
+            <Option>Recovery</Option>
+            <Option>The Eminem Show</Option>
+            <Correct>Recovery</Correct>
+        </4>
+        <5>
+            <Question>What dead video format was an Eminem video album released on?</Question>
+            <Option>VHS</Option>
+            <Option>Betamax</Option>
+            <Option>HD DVD</Option>
+            <Option>Laserdisc</Option>
+            <Correct>VHS</Correct>
+        </5>
+        <6>
+            <Question>Which is a MixTape Album of Eminem?</Question>
+            <Option>Curtain Call-The Hits</Option>
+            <Option>Straight from the Lab</Option>
+            <Option>Shady XV</Option>
+            <Option>Eminem Presents The Re-Up</Option>
+            <Correct>Straight from the Lab</Correct>
+        </6>
+        <7>
+            <Question>Which song was not on Eminem’s Marshall Mathers LP2 album?</Question>
+            <Option>Guts Over Fear</Option>
+            <Option>Beautiful Pain</Option>
+            <Option>So Far...</Option>
+            <Option>Headlights</Option>
+            <Correct>Guts Over Fear</Correct>
+        </7>
+        <8>
+            <Question>What actor was not in the Movie 8 Mile with Eminem?</Question>
+            <Option>Miz-Korona</Option>
+            <Option>Swift</Option>
+            <Option>Kyla Womack</Option>
+            <Option>Mekhi Phifer</Option>
+            <Correct>Swift</Correct>
+        </8>
+        <9>
+            <Question>Which is not the title of a book, written by Eminem?</Question>
+            <Option>Detroit Strong</Option>
+            <Option>The Way I Am</Option>
+            <Option>Angry Blonde</Option>
+            <Option>Whatever You Say I Am</Option>
+            <Correct>Detroit Strong</Correct>
+        </9>
+        <10>
+            <Question>Which Eminem album has gone at least 5x Platinum by RIAA certification?</Question>
+            <Option>Recovery</Option>
+            <Option>The Eminem Show</Option>
+            <Option>Encore</Option>
+            <Option>The Slim Shady LP</Option>
+            <Correct>The Slim Shady LP</Correct>
+        </10>
+    </Eminem>
     
     
     <artist>
