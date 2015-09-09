@@ -89,11 +89,17 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
 		
-		System.out.println("The height of the font for the options text and the question is " + font.getLineHeight() );
+		
+	Gdx.app.log("AssetPath", Gdx.files.internal("assets/Taylor/SoccerBall.png").file().getAbsolutePath());	
 		
 		
+//	System.out.println("The height of the font for the options text and the question is " + font.getLineHeight() );
 //	System.out.println("The height dimensions of the box is " + (possAnswers.get(0).image.getHeight() * possAnswers.get(0).boxScale) );
 	
+		
+	
+		
+		
 		shape = new ShapeRenderer();
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();

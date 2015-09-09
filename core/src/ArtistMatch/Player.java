@@ -1,5 +1,6 @@
 package ArtistMatch;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 
 class Player{
@@ -17,7 +18,9 @@ class Player{
 		playerScale = .25f;
 		diffSett = 0;
 	}
-	
+	/*
+	 * Constructor for the player class that passes the xlocation & difficulty in
+	 */
 	public Player (float xLoc, int diff){
 		xPlayerLoc = xLoc;
 		yPlayerLoc = 100;
@@ -25,11 +28,13 @@ class Player{
 		diffSett = diff;
 		playerScale = setPlayerScale();
 	}
-	
+	/*
+	 * Constructor for the player class that passes the x location, y location & difficulty in
+	 */
 	public Player (float xLoc, float yLoc, int diff){
 		xPlayerLoc = xLoc;
 		yPlayerLoc = yLoc;
-		playerImage = new Texture("YouDee.png");
+		playerImage = new Texture(Gdx.files.internal("YouDee.png"));
 		diffSett = diff;
 		playerScale = setPlayerScale();
 	}
@@ -45,7 +50,16 @@ class Player{
 		playerScale = setPlayerScale();
 	}
 	
-	
+	/*
+	 * Constructor for the player class that passes starting xLocation, y location, image and Difficulty in
+	 */
+	public Player (float xLoc, float yLoc, Texture playImage, int diff){
+		xPlayerLoc = xLoc;
+		yPlayerLoc = yLoc;
+		playerImage = playImage;
+		diffSett = diff;
+		playerScale = setPlayerScale();
+	}
 
 	public float getxPlayerLoc() {
 		return xPlayerLoc;
