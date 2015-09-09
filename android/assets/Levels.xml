@@ -10,8 +10,6 @@
         <artist>Michael Jackson</artist>
         <artist>Whitney Houston</artist>
         <artist>Mariah Carey</artist>
-        <artist>Tupac Shakur</artist>
-        <artist>The Notorious B.I.G.</artist>
         <artist>Beyonce</artist>
         <artist>Eminem</artist>
         <artist>Carrie Underwood</artist>
@@ -20,6 +18,9 @@
     <!-- Commenting out Tupac & Biggie
     <artist>TupacShakur</artist>
         <artist>The Notorious B.I.G.</artist>
+        <artist>Tupac Shakur</artist>
+        <artist>The Notorious B.I.G.</artist>
+        
      -->
     
 </root>
