@@ -204,11 +204,11 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		Element quesNum = artist.getChildByName(Integer.toString(game.getQuestion()));
 		Array<Element> answerE = quesNum.getChildrenByName("Option");
 		int count = answerE.size;
-		answers = new String[count];
+//		answers = new String[count];
 		for (int i = 0; i <answerE.size; i++){
 //			Modify to add to the two lists
 //			Delete the reference to the answers array
-			answers[i]=answerE.get(i).getText();
+//			answers[i]=answerE.get(i).getText();
 			
 			options.add(answerE.get(i).getText());
 			optionsList.add(answerE.get(i).getText());
@@ -238,20 +238,93 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	/*
 	 * Function to set the Image of the Ball
 	 */
-	
-/* DELETE THIS COMMENT ONCE IMPLEMENTED	
- * Think about creating an xml file that will store the images String
- * The image strings should be two types added, general and artist Specific
- */	
-	
 	public Texture setBallImage(){
-		List<String> balls = new ArrayList<String>();
+		List<String> ballSelection = new ArrayList<String>();
+		
+//		Adds the universal ball images to the List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element selection = root.getChildByName("Universal");
+		Array<Element> boxArray = selection.getChildrenByName("ball");
+		for (int i = 0; i < boxArray.size; i++)
+			ballSelection.add(boxArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
 		
 //		Use of xml file readers to add strings to the balls List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element selection = root.getChildByName("artist");
+		Element artist = selection.getChildByName(formatName(game.getArtist()));
+		Array<Element> boxArray = artist.getChildrenByName("ball");
+		for (int i = 0; i < boxArray.size; i++)
+			ballSelection.add(boxArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
 		
+//		Random number generator to choose a random image as the ball image
+		int randomBall = (int) Math.random() * ballSelection.size();
+		return new Texture(ballSelection.get(randomBall)) ;
+	}
+
+	public Texture setBoxImage(){
+		List<String> boxSelection = new ArrayList<String>();
 		
-		int randomBall = (int) Math.random() * balls.size();
-		return new Texture(balls.get(randomBall));
+//		Adds the universal box images to the List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element selection = root.getChildByName("Universal");
+		Array<Element> boxArray = selection.getChildrenByName("box");
+		for (int i = 0; i < boxArray.size; i++)
+			boxSelection.add(boxArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
+		
+//		Use of xml file readers to add strings to the balls List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element ball = root.getChildByName("artist");
+		Element artist = ball.getChildByName(formatName(game.getArtist()));
+		Array<Element> boxArray = artist.getChildrenByName("box");
+		for (int i = 0; i < boxArray.size; i++)
+			boxSelection.add(boxArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
+		
+//		Random number generator to choose a random image as the box image
+		int randomBall = (int) Math.random() * boxSelection.size();
+		return new Texture(boxSelection.get(randomBall)) ;
+	}
+	
+	/*
+	 * Function to set the Image of the Player
+	 */
+	public Texture setPlayerImage(){
+		List<String> playerSelection = new ArrayList<String>();
+		
+//		Adds the universal ball images to the List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element selection = root.getChildByName("Universal");
+		Array<Element> boxArray = selection.getChildrenByName("player");
+		for (int i = 0; i < boxArray.size; i++)
+			playerSelection.add(boxArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
+		
+//		Use of xml file readers to add strings to the balls List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element ball = root.getChildByName("artist");
+		Element artist = ball.getChildByName(formatName(game.getArtist()));
+		Array<Element> boxArray = artist.getChildrenByName("player");
+		for (int i = 0; i < boxArray.size; i++)
+			playerSelection.add(boxArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
+//		Random number generator to choose a random image as the player image
+		int randomBall = (int) Math.random() * playerSelection.size();
+		return new Texture(playerSelection.get(randomBall));
 	}
 	
 	
@@ -405,25 +478,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	}
 	
 	
-	/*
-	 * Function to set the Image of the Box
-	 */
-	
-/* DELETE THIS COMMENT ONCE IMPLEMENTED	
- * Think about creating an xml file that will store the images String
- * The image strings should be two types added, general and artist Specific
- */	
-	
-	public Texture setBoxImage(){
-		List<String> box = new ArrayList<String>();
-		
-//		Use of xml file readers to add strings to the balls List
-		
-		
-		int randomBall = (int) Math.random() * box.size();
-		return new Texture(box.get(randomBall));
-	}
-	
 	public void setBoxes(){
 		char[] displayAnswer = {'A','B','C','D','E','F','G','H','I','J','K','L'};
 		int numcount = 1;
@@ -439,27 +493,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	/*
 	 * FUNCTIONS TO INITIATE THE PLAYER
 	 */
-	
-	/*
-	 * Function to set the Image of the Player
-	 */
-	
-/* DELETE THIS COMMENT ONCE IMPLEMENTED	
- * Think about creating an xml file that will store the images String
- * The image strings should be two types added, general and artist Specific
- */	
-	
-	public Texture setPlayerImage(){
-		List<String> player = new ArrayList<String>();
-		
-//		Use of xml file readers to add strings to the balls List
-		
-		
-		int randomBall = (int) Math.random() * player.size();
-		return new Texture(player.get(randomBall));
-	}
-	
-	
 	
 	/*
 //	 * Sets the Player's X Location, which is the starting location for the player
@@ -569,8 +602,13 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			
 //			Score score = new Score(game, right, incorrectGuesses,duration, moveDistance);
 			
+			Score score = new Score(game,correctA.size(), incorrectGuesses, duration(startTime, endTime),moveDistance);
+			score.create();
 			
 			
+//			game.current = new Score(game,correctA.size(), incorrectGuesses, duration(startTime, endTime),moveDistance);
+//			((Score) current).create();
+//			game.setting = current;
 			game.switchScreens(4);
 		}
 		batch.end();

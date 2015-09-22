@@ -19,6 +19,8 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 	private BitmapFont font,font1;
 	private float screenHeight, screenWidth;
 	private Texture background;
+
+	private Texture testBack;
 	
 	public TitleScreen(ArtistMatch game){
 		this.game = game;
@@ -31,6 +33,9 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
 		Gdx.input.setInputProcessor(this);
+		
+		
+		testBack = new Texture("SoccerBall.png");
 	}
 
 	@Override
@@ -44,8 +49,11 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 		font.draw(batch, "The Title Screen Works", 0, 100);
 		font1.setColor(Color.WHITE);
 		font1.setScale(4,4);
+
+		batch.draw(testBack, 300, 200, testBack.getWidth(), testBack.getHeight() );
+
 		font1.draw(batch, "A", 300, 300);
-		
+
 		batch.end();
 	}
 

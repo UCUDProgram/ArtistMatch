@@ -11,16 +11,16 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 public class Score implements Screen, InputProcessor, ApplicationListener{
 	private ArtistMatch game;
 	private SpriteBatch batch;
-	private int incorrect, correct,time, moveDist;
+	private int incorrect, correct,time;
 	private boolean displayScore, initialEnter,enterScore;
 	private char [] letters,initLetter;
 	private int letIndex1,letIndex2,letIndex3;
 	private int timeBonus, incorrectPenalty, correctBonus, movePenalty;
 	private BitmapFont font, font1;
-	private float screenWidth,screenHeight;
+	private float screenWidth,screenHeight,moveDist;
 	private Stage stage;
 	
-	public Score(ArtistMatch game, int right, int wrong, int time, int move){
+	public Score(ArtistMatch game, int right, int wrong, int time, float move){
 		this.game = game;
 		this.correct = right;
 		this.incorrect = wrong;
@@ -98,7 +98,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 * Sets the Move Score
 	 */
 	public int setMoveScore(){
-		return (moveDist / setMoveDistBasis() ) * movePenalty;
+		return (int) (moveDist / setMoveDistBasis() ) * movePenalty;
 	}
 	
 	/*
@@ -297,7 +297,6 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 			}
 			
 		}
-		
 		
 		return false;
 	}

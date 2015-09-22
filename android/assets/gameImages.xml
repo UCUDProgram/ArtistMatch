@@ -1,31 +1,54 @@
 <root>
-    <ball>
-    	<Universal>
-    	    <ball> </ball>
-    	    <ball> </ball>
-    	</Universal>
+    <Universal>
+       <ball></ball>
+       <box></box>
+       <player></player>
+    </Universal>
+    <artist>
         <TaylorSwift>
             <ball> </ball>
-            
-        </TaylorSwift>
-        
-        
-        
-    </ball>
-    
-    <player>
-        <TaylorSwift>
-            <Player> </Player>
-            
-        </TaylorSwift>
-        
-    </player>
-    
-    <box>
-        <TaylorSwift>
             <box> </box>
-        </TaylorSwift>
-        
-    </box>
-    
+            <player> </player>
+        </TaylorSwift>        
+        <TheBeatles>
+            <ball> </ball>
+            <box>Beatles-AppleRecord-Box.png</box>
+            <box>Beatles-Drum-Box.png</box>
+            <box>Beatles-Guitar-Box.png</box>
+            <box>Beatles-TicketRide-Box.png</box>
+            <box>Beatles-WhiteAlbum-Box.png</box>
+            <box>Beatles-YellowSubmarine-Box.png</box>
+            <player> </player>
+        </TheBeatles>
+		<MichaelJackson>
+		    <ball> </ball>
+            <box> </box>
+            <player> </player>
+		</MichaelJackson>
+    	<WhitneyHouston>
+    	    <ball> </ball>
+            <box> </box>
+            <player> </player>
+    	</WhitneyHouston>
+    	<MariahCarey>
+    	    <ball> </ball>
+            <box> </box>
+            <player> </player>
+    	</MariahCarey>
+    	<CarrieUnderwood>
+    	    <ball> </ball>
+            <box> </box>
+            <player> </player>
+    	</CarrieUnderwood>
+    	<Eminem>
+    	    <ball> </ball>
+            <box> </box>
+            <player> </player>
+    	</Eminem>
+    	<Beyonce>
+    	    <ball> </ball>
+            <box> </box>
+            <player> </player>
+    	</Beyonce>
+    </artist>	
 </root>
