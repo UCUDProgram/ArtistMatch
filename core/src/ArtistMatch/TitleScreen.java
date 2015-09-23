@@ -50,7 +50,7 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 		font1.setColor(Color.WHITE);
 		font1.setScale(4,4);
 
-		batch.draw(testBack, 300, 200, testBack.getWidth(), testBack.getHeight() );
+//		batch.draw(testBack, 300, 200, testBack.getWidth(), testBack.getHeight() );
 
 		font1.draw(batch, "A", 300, 300);
 

@@ -41,7 +41,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private String [] answers;
 	
 	private String ques,cAnswer,xmlFile;
-	private Texture background, ballImage;
+	private Texture background, ballImage, boxImage,playerImage;
 	private long startTime, endTime;
 	private int angle,ballCount,incorrectGuesses,correctGuess;
 	private BitmapFont font,font1, font2;
@@ -71,8 +71,11 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeVariables();
 		initializeBoolean();
 		initializeText();
-		Player = new Player(setPlayerXStart(), setYMax() , game.getDifficulty());
 //		ballImage = setBallImage();
+//		playerImage = setPlayerImage();
+//		boxImage = setBoxImage();
+		Player = new Player(setPlayerXStart(), setYMax() , game.getDifficulty());
+
 		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		
 		selectedA = new ArrayList<String>();
@@ -481,7 +484,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	public void setBoxes(){
 		char[] displayAnswer = {'A','B','C','D','E','F','G','H','I','J','K','L'};
 		int numcount = 1;
-		for(int i=0; i< answers.length; i++){			
+		int boxTotal = optionsList.size();
+		for(int i=0; i< boxTotal; i++){			
 			possAnswers.add(new Box(setBoxOptionString(), setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
 
 			
