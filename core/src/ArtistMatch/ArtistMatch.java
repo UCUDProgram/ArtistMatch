@@ -12,9 +12,15 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class ArtistMatch extends Game {
 
 	private float[] screenSize;
-	private Screen main, aGame,tScreen,instruct,subMenu,lSelect,setting,score, current;
+	private Screen main,aGame,tScreen,instruct,subMenu,lSelect,setting,score,current;
 	private String artist;
-	private int totalScore,question,difficulty;
+	private int question,difficulty;
+	private int totalScore;
+	
+// Used by the score class
+	private int right, wrong, time;
+	private float movement;
+	
 	
 	public ArtistMatch(){
 	}
@@ -87,12 +93,12 @@ public class ArtistMatch extends Game {
 			setting = current;
 		}
 		
-		// Score Screen
-//		if(next==8){
-//			current = new Score(this);
-//			((Score) current).create();
-//			score = current;
-//		}
+//		 Score Screen
+		if(next==8){
+			current = new Score(this);
+			((Score) current).create();
+			score = current;
+		}
 		
 		setScreen(current);
 	}
@@ -144,6 +150,44 @@ public class ArtistMatch extends Game {
 	public void setDifficulty(int difficulty) {
 		this.difficulty = difficulty;
 	}
+
+	
+// Functions to set the scoring variables
+
+	public int getRight() {
+		return right;
+	}
+
+	public void setRight(int right) {
+		this.right = right;
+	}
+
+	public int getWrong() {
+		return wrong;
+	}
+
+	public void setWrong(int wrong) {
+		this.wrong = wrong;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+	public float getMovement() {
+		return movement;
+	}
+
+	public void setMovement(float movement) {
+		this.movement = movement;
+	}
+	
+	
+	
 	
 	
 	

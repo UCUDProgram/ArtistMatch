@@ -38,7 +38,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	//Delete answers array and replace with 2 List<String> Structures
 	//1st List has all the options
 	//2nd List is to be used to randomize the options
-	private String [] answers;
+//	private String [] answers;
 	
 	private String ques,cAnswer,xmlFile;
 	private Texture background, ballImage, boxImage,playerImage;
@@ -206,7 +206,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		Element artist = root.getChildByName(formatName(game.getArtist()));
 		Element quesNum = artist.getChildByName(Integer.toString(game.getQuestion()));
 		Array<Element> answerE = quesNum.getChildrenByName("Option");
-		int count = answerE.size;
+//		int count = answerE.size;
 //		answers = new String[count];
 		for (int i = 0; i <answerE.size; i++){
 //			Modify to add to the two lists
@@ -543,6 +543,15 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	}
 	
 	
+	public void initializeScoringVariables(){
+		game.setMovement(moveDistance);
+		game.setRight(correctGuess);
+		game.setWrong(incorrectGuesses);
+		game.setTime(duration(startTime,endTime));
+	}
+	
+	
+	
 	@Override
 	public void render(float delta) {
 		// TODO Auto-generated method stub
@@ -602,18 +611,16 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
  */
 			int duration = duration(startTime,endTime);
 			
-			
-			
 //			Score score = new Score(game, right, incorrectGuesses,duration, moveDistance);
-			
-			Score score = new Score(game,correctA.size(), incorrectGuesses, duration(startTime, endTime),moveDistance);
-			score.create();
-			
-			
+//			Score score = new Score(game,correctA.size(), incorrectGuesses, duration(startTime, endTime),moveDistance);
+//			score.create();
 //			game.current = new Score(game,correctA.size(), incorrectGuesses, duration(startTime, endTime),moveDistance);
 //			((Score) current).create();
 //			game.setting = current;
-			game.switchScreens(4);
+			
+			initializeScoringVariables();
+			
+			game.switchScreens(8);
 		}
 		batch.end();
 		
