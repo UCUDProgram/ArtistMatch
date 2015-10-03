@@ -1,54 +1,131 @@
 <root>
     <Universal>
-       <ball></ball>
-       <box></box>
+       <screenBack></screenBack>
+       <select>8Track.png</select>
+       <select>Boombox.png</select>
+       <select>Cassette.png</select>
+       <select>CD.png</select>
+       <select>Gramophone.png</select>
+       <select>Jukebox.png</select>
+       <select>MP3Player.png</select>
+       <select>Vinyl.png</select>
+       <background></background>
+       <ball>CD-Ball.png</ball>
+       <ball>Microphone-Ball.png</ball>
+       <ball>Vinyl-Ball.png</ball>
+       <ball>WholeNote-Ball.png</ball>
+       <box>Amp-Box.png</box>
+       <box>EighthNote-Box.png</box>
+       <box>HalfNote-Box.png</box>
+       <box>QuarterNote-Box.png</box>
+       <box>SixteenthNote-Box.png</box>
        <player></player>
     </Universal>
     <artist>
         <TaylorSwift>
-            <ball> </ball>
-            <box> </box>
-            <player> </player>
+            <background></background>
+            <ball>Taylor-Swift-13-Ball.png</ball>
+            <ball>Taylor-Swift-15-Ball.png</ball>
+            <ball>Taylor-Swift-1989-Ball.png</ball>
+            <ball>Taylor-Swift-2)1-Ball.png</ball>
+            <ball>Taylor-Swift-22-Ball.png</ball>
+            <ball>Taylor-Swift-Change-Ball.png</ball>
+            <ball>Taylor-Swift-GuitarPick-Ball.png</ball>
+            <ball>Taylor-Swift-Heart-Ball.png</ball>
+            <box>Taylor-Swift-Banjo-Box.png</box>
+            <box>Taylor-Swift-BeautifulEyes-Box.png</box>
+            <box>Taylor-Swift-Change-Box.png</box>
+            <box>Taylor-Swift-Guitar-Box.png</box>
+            <box>Taylor-Swift-LoveStory-Box.png</box>
+            <box>Taylor-Swift-Piano-Box.png</box>
+            <box>Taylor-Swift-RedAlbum-Box.png</box>
+            <box>Taylor-Swift-SafeSound-Box.png</box>
+            <box>Taylor-Swift-ShakeItOff-Box.png</box>
+            <box>Taylor-Swift-TeardropsOnMyGuitar-Box.png</box>
+            <box>Taylor-Swift-WhiteHorse-Box.png</box>
+            <player></player>
         </TaylorSwift>        
         <TheBeatles>
-            <ball> </ball>
-            <box>Beatles-AppleRecord-Box.png</box>
-            <box>Beatles-Drum-Box.png</box>
-            <box>Beatles-Guitar-Box.png</box>
-            <box>Beatles-TicketRide-Box.png</box>
-            <box>Beatles-WhiteAlbum-Box.png</box>
-            <box>Beatles-YellowSubmarine-Box.png</box>
-            <player> </player>
+           	<background></background>
+            <ball>Beatles-Beatle-Ball.png</ball>
+            <ball>Beatles-GuitarPick-Ball.png</ball>
+            <ball>Beatles-Heart-Ball.png</ball>
+            <ball>Beatles-Rain-Ball.png</ball>
+            <box>Beatles/Beatles-AppleRecord-Box.png</box>
+            <box>Beatles/Beatles-Drum-Box.png</box>
+            <box>Beatles/Beatles-Guitar-Box.png</box>
+            <box>Beatles/Beatles-TicketRide-Box.png</box>
+            <box>Beatles/Beatles-WhiteAlbum-Box.png</box>
+            <box>Beatles/Beatles-YellowSubmarine-Box.png</box>
+            <player></player>
         </TheBeatles>
 		<MichaelJackson>
-		    <ball> </ball>
-            <box> </box>
-            <player> </player>
+		    <background></background>
+		    <ball></ball>
+            <box>Michael-Jackson-Bubbles-Box.png</box>
+            <box>Michael-Jackson-MIBII-Box.png</box>
+            <box>Michael-Jackson-MoonWalk-Box.png</box>
+            <box>Michael-Jackson-Paris-Box.png</box>
+            <box>Michael-Jackson-Prince-Box.png</box>
+            <box>Michael-Jackson-Scarecrow-Box.png</box>
+            <player></player>
 		</MichaelJackson>
     	<WhitneyHouston>
-    	    <ball> </ball>
-            <box> </box>
-            <player> </player>
+    	    <background></background>
+    	    <ball></ball>
+            <box>Whitney-Houston-BobbyBrown-Box.png</box>
+            <box>Whitney-Houston-Sparkle-Box.png</box>
+            <box>Whitney-Houston-StarSpangledBanner-Box.png</box>
+            <player></player>
     	</WhitneyHouston>
     	<MariahCarey>
-    	    <ball> </ball>
-            <box> </box>
-            <player> </player>
+    	    <background></background>
+    	    <ball>Mariah-Carey-Infinity-Ball.png</ball>
+            <box>Mariah-Carey-Charmbracelet-Box.png</box>
+            <box>Mariah-Carey-Emotions-Box.png</box>
+            <box>Mariah-Carey-Heartbreaker-Box.png</box>
+            <box>Mariah-Carey-OpenArms-Box.png</box>
+            <box>Mariah-Carey-Rooftop-Box.png</box>
+            <box>Mariah-Carey-VisionOfLove-Box.png</box>
+            <player></player>
     	</MariahCarey>
     	<CarrieUnderwood>
-    	    <ball> </ball>
-            <box> </box>
-            <player> </player>
+    	    <background></background>
+    	    <ball>Carrie-Underwood-Puck-Ball.png</ball>
+            <box>Carrie-Underwood-CarnivalRideAlbum-Box.png</box>
+            <box>Carrie-Underwood-JesusTakeWheel-Box.png</box>
+            <box>Carrie-Underwood-SomeHeartsAlbum-Box.png</box>
+            <box>Carrie-Underwood-SoulSurfer-Box.png</box>
+            <box>Carrie-Underwood-TwoBlackCadillacs-Box.png</box>
+            <player></player>
     	</CarrieUnderwood>
     	<Eminem>
-    	    <ball> </ball>
-            <box> </box>
-            <player> </player>
+    	    <background></background>
+    	    <ball>Eminem-3AM-Ball.png</ball>
+    	    <ball>Eminem-Infinity-Ball.png</ball>
+    	    <ball>Eminem-Monster-Ball.png</ball>
+    	    <box>Eminem-1DayAtATime-Box.png</box>
+            <box>Eminem-8Mile-Box.png</box>
+            <box>Eminem-Airplanes-Box.png</box>
+            <box>Eminem-CurtainCall-Box.png</box>
+            <box>Eminem-DropWorld-Box.png</box>
+            <box>Eminem-Elevator-Box.png</box>
+            <box>Eminem-Headlights-Box.png</box>
+            <player></player>
     	</Eminem>
     	<Beyonce>
-    	    <ball> </ball>
-            <box> </box>
-            <player> </player>
+    	    <background></background>
+    	    <ball>Beyonce-Halo-Ball.png</ball>
+    	    <ball>Beyonce-Ring-Ball.png</ball>
+            <box>Beyonce-BabyBoy-Box.png</box>
+            <box>Beyonce-BeeHive-Box.png</box>
+            <box>Beyonce-BirthdayAlbum-Box.png</box>
+            <box>Beyonce-BlueIvy-Box.png</box>
+            <box>Beyonce-DrunkInLove-Box.png</box>
+            <box>Beyonce-RunWorld-Box.png</box>
+            <box>Beyonce-Telephone-Box.png</box>
+            <box>Beyonce-Tidal-Box.png</box>
+            <player></player>
     	</Beyonce>
     </artist>	
 </root>
