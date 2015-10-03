@@ -4,6 +4,7 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,7 +18,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	private char [] letters,initLetter;
 	private int letIndex1,letIndex2,letIndex3;
 	private int timeBonus, incorrectPenalty, correctBonus, movePenalty;
-	private BitmapFont font, font1;
+	private BitmapFont font, font1, font2, font3;
 	private float screenWidth,screenHeight,moveDist;
 	private Stage stage;
 	
@@ -49,7 +50,15 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		
 		font = new BitmapFont();
 		font1 = new BitmapFont();
-		font1.setScale((screenWidth * 3) / 10, screenHeight);
+		font2 = new BitmapFont();
+		font3 = new BitmapFont();
+		
+		font1.setColor(Color.GREEN);
+		font2.setColor(Color.RED);
+		
+		font3.setScale((screenWidth * 3) / 10, screenHeight);
+		
+		
 		Gdx.input.setInputProcessor(this);
 //		Gdx.input.setInputProcessor(stage);
 	}
@@ -200,10 +209,10 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 * Gives the player feedback on their score
 	 */
 	public void drawScoreTotals(){
-		font.draw(batch, "Your correct score is " + setCorrectScore(), 100, screenHeight -100);
-		font.draw(batch, "Your Time score is " + setTimeScore(), 100, screenHeight -150);
-		font.draw(batch, "Your Incorrect score is " + setIncorrectScore(), 100, screenHeight -200);
-		font.draw(batch, "Your Movement core is " + setMoveScore(), 100, screenHeight -250);
+		font1.draw(batch, "Your correct score is " + setCorrectScore(), 100, screenHeight -100);
+		font1.draw(batch, "Your Time score is " + setTimeScore(), 100, screenHeight -150);
+		font2.draw(batch, "Your Incorrect score is " + setIncorrectScore(), 100, screenHeight -200);
+		font2.draw(batch, "Your Movement core is " + setMoveScore(), 100, screenHeight -250);
 		font.draw(batch, "Your Total score is " + setTotalScore(), 100, screenHeight -300);
 		font.draw(batch, "Click to Continue", 10, screenHeight -20);
 	}
@@ -211,9 +220,9 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 * Draws the three components to enter initials on the Screen
 	 */
 	public void drawHiScore(){
-		font1.draw(batch, Character.toString(initLetter[0]), 0, 0);
-		font1.draw(batch, Character.toString(initLetter[1]),(float) ((screenWidth * 3) / 10),(float) 0);
-		font1.draw(batch, Character.toString(initLetter[2]), (screenWidth * 6) / 10, 0);
+		font3.draw(batch, Character.toString(initLetter[0]), 0, 0);
+		font3.draw(batch, Character.toString(initLetter[1]),(float) ((screenWidth * 3) / 10),(float) 0);
+		font3.draw(batch, Character.toString(initLetter[2]), (screenWidth * 6) / 10, 0);
 	}
 	
 	public void clearScoreVariables(){

@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -71,10 +72,15 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeVariables();
 		initializeBoolean();
 		initializeText();
+		
+		
 //		ballImage = setBallImage();
 //		playerImage = setPlayerImage();
 //		boxImage = setBoxImage();
-		Player = new Player(setPlayerXStart(), setYMax() , game.getDifficulty());
+//		backgroundImage = setBackgroundImage();
+		
+		
+		Player = new Player(setPlayerXStart(), setYMax(), game.getDifficulty());
 
 		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		
@@ -91,18 +97,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		boxTester = new Box(game.getDifficulty());
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
-		
-		
-	Gdx.app.log("AssetPath", Gdx.files.internal("assets/Taylor/SoccerBall.png").file().getAbsolutePath());	
-		
-		
-//	System.out.println("The height of the font for the options text and the question is " + font.getLineHeight() );
-//	System.out.println("The height dimensions of the box is " + (possAnswers.get(0).image.getHeight() * possAnswers.get(0).boxScale) );
-	
-		
-	
-		
-		
+				
 		shape = new ShapeRenderer();
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
@@ -238,6 +233,40 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 	}
 	
+	
+	/*
+	 * Function to set the Image of the Ball
+	 */
+	public Texture setBackgroundImage(){
+		List<String> backgroundSelection = new ArrayList<String>();
+		
+//		Adds the universal ball images to the List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element selection = root.getChildByName("Universal");
+		Array<Element> backgroundArray = selection.getChildrenByName("background");
+		for (int i = 0; i < backgroundArray.size; i++)
+			backgroundSelection.add(backgroundArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
+		
+//		Use of xml file readers to add strings to the balls List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element selection = root.getChildByName("artist");
+		Element artist = selection.getChildByName(formatName(game.getArtist()));
+		Array<Element> backgroundSelectArray = artist.getChildrenByName("background");
+		for (int i = 0; i < backgroundSelectArray.size; i++)
+			backgroundSelection.add(backgroundSelectArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
+		
+//		Random number generator to choose a random image as the ball image
+		int randomBackground = (int) Math.random() * backgroundSelection.size();
+		FileHandle backgroundImage = Gdx.files.internal(backgroundSelection.get(randomBackground));
+		return new Texture(backgroundImage) ;
+	}
+	
 	/*
 	 * Function to set the Image of the Ball
 	 */
@@ -247,9 +276,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 //		Adds the universal ball images to the List
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element selection = root.getChildByName("Universal");
-		Array<Element> boxArray = selection.getChildrenByName("ball");
-		for (int i = 0; i < boxArray.size; i++)
-			ballSelection.add(boxArray.get(i).getText());
+		Array<Element> ballArray = selection.getChildrenByName("ball");
+		for (int i = 0; i < ballArray.size; i++)
+			ballSelection.add(ballArray.get(i).getText());
 		}
 		catch(IOException e){
 		}
@@ -258,16 +287,17 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element selection = root.getChildByName("artist");
 		Element artist = selection.getChildByName(formatName(game.getArtist()));
-		Array<Element> boxArray = artist.getChildrenByName("ball");
-		for (int i = 0; i < boxArray.size; i++)
-			ballSelection.add(boxArray.get(i).getText());
+		Array<Element> ballSelectArray = artist.getChildrenByName("ball");
+		for (int i = 0; i < ballSelectArray.size; i++)
+			ballSelection.add(ballSelectArray.get(i).getText());
 		}
 		catch(IOException e){
 		}
 		
 //		Random number generator to choose a random image as the ball image
 		int randomBall = (int) Math.random() * ballSelection.size();
-		return new Texture(ballSelection.get(randomBall)) ;
+		FileHandle ballImage = Gdx.files.internal(ballSelection.get(randomBall));
+		return new Texture(ballImage) ;
 	}
 
 	public Texture setBoxImage(){
@@ -287,16 +317,17 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element ball = root.getChildByName("artist");
 		Element artist = ball.getChildByName(formatName(game.getArtist()));
-		Array<Element> boxArray = artist.getChildrenByName("box");
-		for (int i = 0; i < boxArray.size; i++)
-			boxSelection.add(boxArray.get(i).getText());
+		Array<Element> boxSelectArray = artist.getChildrenByName("box");
+		for (int i = 0; i < boxSelectArray.size; i++)
+			boxSelection.add(boxSelectArray.get(i).getText());
 		}
 		catch(IOException e){
 		}
 		
 //		Random number generator to choose a random image as the box image
-		int randomBall = (int) Math.random() * boxSelection.size();
-		return new Texture(boxSelection.get(randomBall)) ;
+		int randomBox = (int) Math.random() * boxSelection.size();
+		FileHandle boxImage = Gdx.files.internal(boxSelection.get(randomBox));
+		return new Texture(boxImage) ;
 	}
 	
 	/*
@@ -308,9 +339,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 //		Adds the universal ball images to the List
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element selection = root.getChildByName("Universal");
-		Array<Element> boxArray = selection.getChildrenByName("player");
-		for (int i = 0; i < boxArray.size; i++)
-			playerSelection.add(boxArray.get(i).getText());
+		Array<Element> playerArray = selection.getChildrenByName("player");
+		for (int i = 0; i < playerArray.size; i++)
+			playerSelection.add(playerArray.get(i).getText());
 		}
 		catch(IOException e){
 		}
@@ -319,15 +350,16 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element ball = root.getChildByName("artist");
 		Element artist = ball.getChildByName(formatName(game.getArtist()));
-		Array<Element> boxArray = artist.getChildrenByName("player");
-		for (int i = 0; i < boxArray.size; i++)
-			playerSelection.add(boxArray.get(i).getText());
+		Array<Element> playerSelectArray = artist.getChildrenByName("player");
+		for (int i = 0; i < playerSelectArray.size; i++)
+			playerSelection.add(playerSelectArray.get(i).getText());
 		}
 		catch(IOException e){
 		}
 //		Random number generator to choose a random image as the player image
-		int randomBall = (int) Math.random() * playerSelection.size();
-		return new Texture(playerSelection.get(randomBall));
+		int randomPlayer = (int) Math.random() * playerSelection.size();
+		FileHandle playerImage = Gdx.files.internal(playerSelection.get(randomPlayer));
+		return new Texture(playerImage);
 	}
 	
 	
@@ -543,6 +575,10 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	}
 	
 	
+	
+	/*
+	 * Update the Game scoring variables with the variables that the scoring class will need
+	 */
 	public void initializeScoringVariables(){
 		game.setMovement(moveDistance);
 		game.setRight(correctGuess);

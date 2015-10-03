@@ -1,5 +1,8 @@
 package ArtistMatch;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+
 //import ArtistMatch.ArtistGame.Ball;
 
 import com.badlogic.gdx.graphics.Texture;
@@ -18,7 +21,11 @@ class Ball{
 		xLoc = xLocation;
 		yLoc = yLocation;
 		ballAngle = bAngle;
-		ballImage = new Texture("SoccerBall.png");
+		String test = "SoccerBall.png";
+		FileHandle handle = Gdx.files.internal(test);
+		ballImage = new Texture(handle);
+
+//		ballImage = new Texture("SoccerBall.png");
 		activeBall = active;
 		gameDiff = diff;
 		ballScale = ballS();

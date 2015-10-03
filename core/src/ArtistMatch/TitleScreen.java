@@ -27,6 +27,7 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 	}
 	
 	public void create(){
+		background = new Texture("ArtistMatch Background.png");
 		batch = new SpriteBatch();
 		font = new BitmapFont();
 		font1 = new BitmapFont();

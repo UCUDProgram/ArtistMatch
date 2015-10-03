@@ -1,11 +1,13 @@
 package ArtistMatch;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 
 class Box{
 	private String aString;
 	private char displaySelection;
-	private Texture image;
+	private Texture boxImage;
 	private float boxXStart, boxYStart,drawXLoc,drawYLoc, boxScale;
 	boolean drawable;
 	private int gameDiff;
@@ -22,9 +24,31 @@ class Box{
 		drawYLoc = dYloc;
 		gameDiff = diff;
 		boxScale = setBoxScale();
-		image = new Texture("YouDee.png");
+//		FileHandle handle = Gdx.files.internal("assets/Taylor/SoccerBall.png");
+//		image = new Texture(handle);
+		boxImage = new Texture("YouDee.png");
 		drawable = true;
 	}
+	
+	/*
+	 * Constructor for the Box class where the X & Y Coordinate, and images
+	 */
+	public Box(String aStr, float xBoxLoc,float yBoxLoc, char dis,float dXloc, float dYloc, int diff, Texture BoxImage){
+		aString = aStr;
+		boxXStart = xBoxLoc;
+		boxYStart = yBoxLoc;
+		displaySelection = dis;
+		drawXLoc = dXloc;
+		drawYLoc = dYloc;
+		gameDiff = diff;
+		boxScale = setBoxScale();
+//		FileHandle handle = Gdx.files.internal("assets/Taylor/SoccerBall.png");
+//		image = new Texture(handle);
+		boxImage = BoxImage;
+		drawable = true;
+	}
+	
+	
 	
 	/*
 	 * Constructor for Box
@@ -39,7 +63,7 @@ class Box{
 		drawYLoc = 0;
 		gameDiff = diff;
 		boxScale = setBoxScale();
-		image = new Texture("YouDee.png");
+		boxImage = new Texture("YouDee.png");
 		drawable = false;
 	}
 	
@@ -57,7 +81,7 @@ class Box{
 	}
 
 	public Texture getImage() {
-		return image;
+		return boxImage;
 	}
 
 	public float getBoxXStart() {

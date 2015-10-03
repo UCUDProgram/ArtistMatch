@@ -6,8 +6,10 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -33,6 +35,8 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 	private BitmapFont font;
 	private String[] Levels;
 	private float screenHeight, screenWidth, scaleX, scaleY;
+	private Texture background;
+	private Texture[] musImages;
 	private Skin skin;
 	private Stage stage;
 	private Table table;
@@ -42,6 +46,8 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		this.game = game;
 	}
 	 public void create(){
+		 	background = new Texture("ArtistMatch Background.png");
+		 	initializeMusicImages();
 		 	skin = new Skin (Gdx.files.internal("uiskin.json"));
 			table = new Table(skin);
 			stage = new Stage();
@@ -68,6 +74,22 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
 		batch.end();
 		stage.draw();
+	}
+	
+	public void initializeMusicImages(){
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element source = root.getChildByName("Universal");
+		Array<Element> images = source.getChildrenByName("select");
+		int count = images.size;
+		musImages = new Texture[count];
+		for (int i = 0; i <images.size; i++){
+			String imgLoc = images.get(i).getText();
+			FileHandle musicImage = Gdx.files.internal(imgLoc);
+			musImages[i] = new Texture(musicImage);
+		}
+		}
+		catch(IOException e){
+		}
 	}
 	
 	public void initializeButtonsArray(){
