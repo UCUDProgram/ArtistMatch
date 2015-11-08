@@ -1,130 +1,171 @@
 <root>
     <Universal>
-       <screenBack></screenBack>
-       <select>8Track.png</select>
-       <select>Boombox.png</select>
-       <select>Cassette.png</select>
-       <select>CD.png</select>
-       <select>Gramophone.png</select>
-       <select>Jukebox.png</select>
-       <select>MP3Player.png</select>
-       <select>Vinyl.png</select>
-       <background></background>
-       <ball>CD-Ball.png</ball>
-       <ball>Microphone-Ball.png</ball>
-       <ball>Vinyl-Ball.png</ball>
-       <ball>WholeNote-Ball.png</ball>
-       <box>Amp-Box.png</box>
-       <box>EighthNote-Box.png</box>
-       <box>HalfNote-Box.png</box>
-       <box>QuarterNote-Box.png</box>
-       <box>SixteenthNote-Box.png</box>
+       <screenBack>assets/Universal/ArtistMatch Background.png</screenBack>
+       <select>assets/Universal/8Track.png</select>
+       <select>assets/Universal/Boombox.png</select>
+       <select>assets/Universal/Cassette.png</select>
+       <select>assets/Universal/CD.png</select>
+       <select>assets/Universal/Gramophone.png</select>
+       <select>assets/Universal/Jukebox.png</select>
+       <select>assets/Universal/MP3Player.png</select>
+       <select>assets/Universal/Vinyl.png</select>
+       <background>assets/Universal/Certification-Rows-Background.png</background>
+       <background>assets/Universal/GoldCertification-Background.png</background>
+       <background>assets/Universal/PlatinumCertification-Background.png</background>
+       <background>assets/Universal/SilverCertification-Background.png</background>
+       <ball>assets/Universal/CD-Ball.png</ball>
+       <ball>assets/Universal/Microphone-Ball.png</ball>
+       <ball>assets/Universal/Vinyl-Ball.png</ball>
+       <ball>assets/Universal/WholeNote-Ball.png</ball>
+       <box>assets/Universal/Amp-Box.png</box>
+       <box>assets/Universal/EighthNote-Box.png</box>
+       <box>assets/Universal/HalfNote-Box.png</box>
+       <box>assets/Universal/QuarterNote-Box.png</box>
+       <box>assets/Universal/SixteenthNote-Box.png</box>
        <player></player>
     </Universal>
     <artist>
         <TaylorSwift>
-            <background></background>
-            <ball>Taylor-Swift-13-Ball.png</ball>
-            <ball>Taylor-Swift-15-Ball.png</ball>
-            <ball>Taylor-Swift-1989-Ball.png</ball>
-            <ball>Taylor-Swift-2)1-Ball.png</ball>
-            <ball>Taylor-Swift-22-Ball.png</ball>
-            <ball>Taylor-Swift-Change-Ball.png</ball>
-            <ball>Taylor-Swift-GuitarPick-Ball.png</ball>
-            <ball>Taylor-Swift-Heart-Ball.png</ball>
-            <box>Taylor-Swift-Banjo-Box.png</box>
-            <box>Taylor-Swift-BeautifulEyes-Box.png</box>
-            <box>Taylor-Swift-Change-Box.png</box>
-            <box>Taylor-Swift-Guitar-Box.png</box>
-            <box>Taylor-Swift-LoveStory-Box.png</box>
-            <box>Taylor-Swift-Piano-Box.png</box>
-            <box>Taylor-Swift-RedAlbum-Box.png</box>
-            <box>Taylor-Swift-SafeSound-Box.png</box>
-            <box>Taylor-Swift-ShakeItOff-Box.png</box>
-            <box>Taylor-Swift-TeardropsOnMyGuitar-Box.png</box>
-            <box>Taylor-Swift-WhiteHorse-Box.png</box>
+            <background>assets/Taylor/TaylorSwift-AlbumCertification-Background.png</background>
+            <background>assets/Taylor/TaylorSwift-BeautifulEyesAlbum-Background.png</background>
+            <background>assets/Taylor/TaylorSwift-HolidayAlbum-Background.png</background>
+            <background>assets/Taylor/TaylorSwift-PlatinumAlbums-Background.png</background>
+            <background>assets/Taylor/TaylorSwift-Soundtrack:PromoCertifications.Background.png</background>
+            <background>assets/Taylor/TaylorSwift-SpeakNow&RedAlbumPlatinumSongs-Background.png</background>
+            <background>assets/Taylor/TaylorSwift-TaylorSwiftAlbum&FearlessAlbumPlatinumSongs-Background.png</background>
+            <ball>assets/Taylor/Taylor-Swift-13-Ball.png</ball>
+            <ball>assets/Taylor/Taylor-Swift-15-Ball.png</ball>
+            <ball>assets/Taylor/Taylor-Swift-1989-Ball.png</ball>
+            <ball>assets/Taylor/Taylor-Swift-2)1-Ball.png</ball>
+            <ball>assets/Taylor/Taylor-Swift-22-Ball.png</ball>
+            <ball>assets/Taylor/Taylor-Swift-Change-Ball.png</ball>
+            <ball>assets/Taylor/Taylor-Swift-GuitarPick-Ball.png</ball>
+            <ball>assets/Taylor/Taylor-Swift-Heart-Ball.png</ball>
+            <box>assets/Taylor/Taylor-Swift-Banjo-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-BeautifulEyes-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-Change-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-Guitar-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-LoveStory-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-Piano-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-RedAlbum-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-SafeSound-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-ShakeItOff-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-TeardropsOnMyGuitar-Box.png</box>
+            <box>assets/Taylor/Taylor-Swift-WhiteHorse-Box.png</box>
             <player></player>
         </TaylorSwift>        
         <TheBeatles>
            	<background></background>
-            <ball>Beatles-Beatle-Ball.png</ball>
-            <ball>Beatles-GuitarPick-Ball.png</ball>
-            <ball>Beatles-Heart-Ball.png</ball>
-            <ball>Beatles-Rain-Ball.png</ball>
-            <box>Beatles/Beatles-AppleRecord-Box.png</box>
-            <box>Beatles/Beatles-Drum-Box.png</box>
-            <box>Beatles/Beatles-Guitar-Box.png</box>
-            <box>Beatles/Beatles-TicketRide-Box.png</box>
-            <box>Beatles/Beatles-WhiteAlbum-Box.png</box>
-            <box>Beatles/Beatles-YellowSubmarine-Box.png</box>
+            <ball>assets/Beatles/Beatles-Beatle-Ball.png</ball>
+            <ball>assets/Beatles/Beatles-GuitarPick-Ball.png</ball>
+            <ball>assets/Beatles/Beatles-Heart-Ball.png</ball>
+            <ball>assets/Beatles/Beatles-Rain-Ball.png</ball>
+            <box>assets/Beatles/Beatles/Beatles-AppleRecord-Box.png</box>
+            <box>assets/Beatles/Beatles/Beatles-Drum-Box.png</box>
+            <box>assets/Beatles/Beatles/Beatles-Guitar-Box.png</box>
+            <box>assets/Beatles/Beatles/Beatles-TicketRide-Box.png</box>
+            <box>assets/Beatles/Beatles/Beatles-WhiteAlbum-Box.png</box>
+            <box>assets/Beatles/Beatles/Beatles-YellowSubmarine-Box.png</box>
             <player></player>
         </TheBeatles>
 		<MichaelJackson>
-		    <background></background>
+		   <background>assets/Michael/MichaelJackson-BadAlbum-Background.png</background>
+		   <background>assets/Michael/MichaelJackson-OfftheWallAlbum-Background.png</background>
+		   <background>assets/Michael/MichaelJackson-SilverUKSingles-Background.png</background>
+		   <background>assets/Michael/MichaelJackson-ThrillerAlbum-Background.png</background>
+		   <background>assets/Michael/MichaelJackson-US:UKGoldSingles-Background.png</background>
+		   <background>assets/Michael/MichaelJackson-US:UKPlatinumSingles-Background.png</background>
+		   <background>assets/Michael/MichaelJackson-CompilationAlbums-Background.png</background>
+		   <background>assets/Michael/MichaelJackson-StudioAlbums-Background.png</background>
 		    <ball></ball>
-            <box>Michael-Jackson-Bubbles-Box.png</box>
-            <box>Michael-Jackson-MIBII-Box.png</box>
-            <box>Michael-Jackson-MoonWalk-Box.png</box>
-            <box>Michael-Jackson-Paris-Box.png</box>
-            <box>Michael-Jackson-Prince-Box.png</box>
-            <box>Michael-Jackson-Scarecrow-Box.png</box>
+            <box>assets/Michael/Michael-Jackson-Bubbles-Box.png</box>
+            <box>assets/Michael/Michael-Jackson-MIBII-Box.png</box>
+            <box>assets/Michael/Michael-Jackson-MoonWalk-Box.png</box>
+            <box>assets/Michael/Michael-Jackson-Paris-Box.png</box>
+            <box>assets/Michael/Michael-Jackson-Prince-Box.png</box>
+            <box>assets/Michael/Michael-Jackson-Scarecrow-Box.png</box>
             <player></player>
 		</MichaelJackson>
     	<WhitneyHouston>
-    	    <background></background>
+    	    <background>assets/Whitney/WhitneyHouston-I'mYourBabyTonightAlbum-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-ILooktoYouAlbum-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-JustWhitneyAlbum-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-MyLoveIsYourLoveAlbum-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-NonSoundtrackGoldSingles-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-PlatinumAlbums-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-SoundtrackCert-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-WhitneyAlbum-Background.png</background>
+    	    <background>assets/Whitney/WhitneyHouston-WhitneyHoustonAlbum-Background.png</background>
     	    <ball></ball>
-            <box>Whitney-Houston-BobbyBrown-Box.png</box>
-            <box>Whitney-Houston-Sparkle-Box.png</box>
-            <box>Whitney-Houston-StarSpangledBanner-Box.png</box>
+            <box>assets/Whitney/Whitney-Houston-BobbyBrown-Box.png</box>
+            <box>assets/Whitney/Whitney-Houston-Sparkle-Box.png</box>
+            <box>assets/Whitney/Whitney-Houston-StarSpangledBanner-Box.png</box>
             <player></player>
     	</WhitneyHouston>
     	<MariahCarey>
-    	    <background></background>
-    	    <ball>Mariah-Carey-Infinity-Ball.png</ball>
-            <box>Mariah-Carey-Charmbracelet-Box.png</box>
-            <box>Mariah-Carey-Emotions-Box.png</box>
-            <box>Mariah-Carey-Heartbreaker-Box.png</box>
-            <box>Mariah-Carey-OpenArms-Box.png</box>
-            <box>Mariah-Carey-Rooftop-Box.png</box>
-            <box>Mariah-Carey-VisionOfLove-Box.png</box>
+    	    <background>assets/Mariah/MariahCarey-1990sGoldSingles-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-ButterflyAlbum-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-DaydreamAlbum-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-EmotionsAlbum-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-GlitterSoundtrack-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-MariahCareyAlbum-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-MerryChristmasAlbum-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-MusicBoxAlbum-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-PlatinumAlbums-Background.png</background>
+    	    <background>assets/Mariah/MariahCarey-1990'sGoldSingles-Background.png</background>
+    	    <ball>assets/Mariah/Mariah-Carey-Infinity-Ball.png</ball>
+            <box>assets/Mariah/Mariah-Carey-Charmbracelet-Box.png</box>
+            <box>assets/Mariah/Mariah-Carey-Emotions-Box.png</box>
+            <box>assets/Mariah/Mariah-Carey-Heartbreaker-Box.png</box>
+            <box>assets/Mariah/Mariah-Carey-OpenArms-Box.png</box>
+            <box>assets/Mariah/Mariah-Carey-Rooftop-Box.png</box>
+            <box>assets/Mariah/Mariah-Carey-VisionOfLove-Box.png</box>
             <player></player>
     	</MariahCarey>
     	<CarrieUnderwood>
-    	    <background></background>
-    	    <ball>Carrie-Underwood-Puck-Ball.png</ball>
-            <box>Carrie-Underwood-CarnivalRideAlbum-Box.png</box>
-            <box>Carrie-Underwood-JesusTakeWheel-Box.png</box>
-            <box>Carrie-Underwood-SomeHeartsAlbum-Box.png</box>
-            <box>Carrie-Underwood-SoulSurfer-Box.png</box>
-            <box>Carrie-Underwood-TwoBlackCadillacs-Box.png</box>
+    	    <background>assets/Carrie/CarrieUnderwood-PlatinumAlbums-Background.png</background>
+    	    <background>assets/Carrie/CarrieUnderwood-1&2AlbumsPlatinumSingles-Background.png</background>
+    	    <background>assets/Carrie/CarrieUnderwood-3&4AlbumsPlatinumSingles-Background.png</background>
+    	    <ball>assets/Carrie/Carrie-Underwood-Puck-Ball.png</ball>
+            <box>assets/Carrie/Carrie-Underwood-CarnivalRideAlbum-Box.png</box>
+            <box>assets/Carrie/Carrie-Underwood-JesusTakeWheel-Box.png</box>
+            <box>assets/Carrie/Carrie-Underwood-SomeHeartsAlbum-Box.png</box>
+            <box>assets/Carrie/Carrie-Underwood-SoulSurfer-Box.png</box>
+            <box>assets/Carrie/Carrie-Underwood-TwoBlackCadillacs-Box.png</box>
             <player></player>
     	</CarrieUnderwood>
     	<Eminem>
-    	    <background></background>
-    	    <ball>Eminem-3AM-Ball.png</ball>
-    	    <ball>Eminem-Infinity-Ball.png</ball>
-    	    <ball>Eminem-Monster-Ball.png</ball>
-    	    <box>Eminem-1DayAtATime-Box.png</box>
-            <box>Eminem-8Mile-Box.png</box>
-            <box>Eminem-Airplanes-Box.png</box>
-            <box>Eminem-CurtainCall-Box.png</box>
-            <box>Eminem-DropWorld-Box.png</box>
-            <box>Eminem-Elevator-Box.png</box>
-            <box>Eminem-Headlights-Box.png</box>
+    	    <background>assets/Eminem/Eminem-NonLeadCertification-Background.png</background>
+    	    <background>assets/Eminem/Eminem-PlatinumAlbums-Background.png</background>
+    	    <background>assets/Eminem/Eminem-PlatinumSinglesfrom1st6MajorLabelAlbums-Background.png</background>
+    	    <ball>assets/Eminem/Eminem-3AM-Ball.png</ball>
+    	    <ball>assets/Eminem/Eminem-Infinity-Ball.png</ball>
+    	    <ball>assets/Eminem/Eminem-Monster-Ball.png</ball>
+    	    <box>assets/Eminem/Eminem-1DayAtATime-Box.png</box>
+            <box>assets/Eminem/Eminem-8Mile-Box.png</box>
+            <box>assets/Eminem/Eminem-Airplanes-Box.png</box>
+            <box>assets/Eminem/Eminem-CurtainCall-Box.png</box>
+            <box>assets/Eminem/Eminem-DropWorld-Box.png</box>
+            <box>assets/Eminem/Eminem-Elevator-Box.png</box>
+            <box>assets/Eminem/Eminem-Headlights-Box.png</box>
             <player></player>
     	</Eminem>
     	<Beyonce>
-    	    <background></background>
-    	    <ball>Beyonce-Halo-Ball.png</ball>
-    	    <ball>Beyonce-Ring-Ball.png</ball>
-            <box>Beyonce-BabyBoy-Box.png</box>
-            <box>Beyonce-BeeHive-Box.png</box>
-            <box>Beyonce-BirthdayAlbum-Box.png</box>
-            <box>Beyonce-BlueIvy-Box.png</box>
-            <box>Beyonce-DrunkInLove-Box.png</box>
-            <box>Beyonce-RunWorld-Box.png</box>
-            <box>Beyonce-Telephone-Box.png</box>
-            <box>Beyonce-Tidal-Box.png</box>
+    	    <background>assets/Beyonce/Beyonce-4Album-Background.png</background>
+    	    <background>assets/Beyonce/Beyonce-B-DayAlbum-Background.png</background>
+    	    <background>assets/Beyonce/Beyonce-GoldSingles-Background.png</background>
+    	    <background>assets/Beyonce/Beyonce-1st5AlbumsPlatinumSingles-Background.png</background>
+    	    <background>assets/Beyonce/Beyonce-PlatinumAlbums-Background.png</background>
+    	    <ball>assets/Beyonce/Beyonce-Halo-Ball.png</ball>
+    	    <ball>assets/Beyonce/Beyonce-Ring-Ball.png</ball>
+            <box>assets/Beyonce/Beyonce-BabyBoy-Box.png</box>
+            <box>assets/Beyonce/Beyonce-BeeHive-Box.png</box>
+            <box>assets/Beyonce/Beyonce-BirthdayAlbum-Box.png</box>
+            <box>assets/Beyonce/Beyonce-BlueIvy-Box.png</box>
+            <box>assets/Beyonce/Beyonce-DrunkInLove-Box.png</box>
+            <box>assets/Beyonce/Beyonce-RunWorld-Box.png</box>
+            <box>assets/Beyonce/Beyonce-Telephone-Box.png</box>
+            <box>assets/Beyonce/Beyonce-Tidal-Box.png</box>
             <player></player>
     	</Beyonce>
     </artist>	

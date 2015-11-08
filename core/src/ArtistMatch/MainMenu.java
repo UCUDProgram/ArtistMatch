@@ -47,7 +47,7 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 	}
 	 public void create(){
 		 	background = new Texture("ArtistMatch Background.png");
-		 	initializeMusicImages();
+//		 	initializeMusicImages();
 		 	skin = new Skin (Gdx.files.internal("uiskin.json"));
 			table = new Table(skin);
 			stage = new Stage();
