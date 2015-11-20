@@ -35,7 +35,7 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 	private BitmapFont font;
 	private String[] Levels;
 	private float screenHeight, screenWidth, scaleX, scaleY;
-	private Texture background;
+	private Texture background, gameTitle;
 	private Texture[] musImages;
 	private Skin skin;
 	private Stage stage;
@@ -48,6 +48,8 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 	 public void create(){
 		 	background = new Texture("ArtistMatch Background.png");
 //		 	initializeMusicImages();
+		 	FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
+			gameTitle = new Texture(title);
 		 	skin = new Skin (Gdx.files.internal("uiskin.json"));
 			table = new Table(skin);
 			stage = new Stage();
@@ -72,6 +74,7 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
 		batch.draw(background, 0, 0, screenWidth, screenHeight);
+		batch.draw(gameTitle, 0,( 6 * (screenHeight / 7) ), screenWidth, (screenHeight / 7)  );
 		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
 		batch.end();
 		stage.draw();
