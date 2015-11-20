@@ -61,6 +61,36 @@ class Player{
 		playerScale = setPlayerScale();
 	}
 
+	/*
+	 * Updates the player's X Location, based on the player moving left or right
+	 boolean of true is moving to the right
+	 boolean of false is movement to left
+	 later on a second input will be added to determine the distance
+	 	This distance will be based on the difficulty and how movement will impact
+	 */
+	public void updateXPos(boolean shift){
+		if (shift)
+			xPlayerLoc +=10;
+		else
+			xPlayerLoc -=10;
+	}
+	
+	/*
+	 * Sets the player's Scale, which is the height the player will appear
+	 * Uses the game difficulty to determine the scale
+	 */
+	public float setPlayerScale(){
+		if (diffSett ==0)
+			return .25f;
+		else if (diffSett ==0)
+			return .2f;
+		else if (diffSett ==0)
+			return .15f;
+		else
+			return .1f;
+	}
+	
+//	Getters & Setters for the Player Class
 	public float getxPlayerLoc() {
 		return xPlayerLoc;
 	}
@@ -83,33 +113,5 @@ class Player{
 
 	public float getPlayerScale() {
 		return playerScale;
-	}
-	
-	/*
-	 * Updates the player's X Location, based on the player moving left or right
-	 boolean of true is moving to the right
-	 boolean of false is movement to left
-	 later on a second input will be added to determine the distance
-	 	This distance will be based on the difficulty and how movement will impact
-	 */
-	public void updateXPos(boolean shift){
-		if (shift)
-			xPlayerLoc +=10;
-		else
-			xPlayerLoc -=10;
-	}
-	
-	/*
-	 * Sets the player's Scale, which is the height the player will appear
-	 */
-	public float setPlayerScale(){
-		if (diffSett ==0)
-			return .25f;
-		else if (diffSett ==0)
-			return .2f;
-		else if (diffSett ==0)
-			return .15f;
-		else
-			return .1f;
 	}
 }

@@ -13,6 +13,7 @@ class Ball{
 	private Texture ballImage;
 	private boolean activeBall;
 	private double ballSpeed;
+	
 	/*
 	 * Constructor for the ball class
 	 * 
@@ -34,7 +35,7 @@ class Ball{
 	
 	/*
 	 * Constructor for the ball class
-	 * 
+	 * Takes in an x position, y position, angle, active boolean, Ball Image & Difficulty
 	 */
 	public Ball(float xLocation, float yLocation, int bAngle,boolean active,Texture ballIm, int diff){
 		xLoc = xLocation;
@@ -48,7 +49,7 @@ class Ball{
 	}
 	
 	/*
-	 * Converts the angle to pi radians
+	 * Converts the angle from degrees to pi radians
 	 */
 	public double convertToRadians(int degree){
 		return (double) (degree / 57.3 );
@@ -68,6 +69,8 @@ class Ball{
 		yLoc += (Math.sin(convertToRadians(ballAngle))* ballSpeed);
 	}
 	
+	
+//	Getters & setters for Ball class
 	public float getxLoc() {
 		return xLoc;
 	}

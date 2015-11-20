@@ -24,14 +24,17 @@ class Box{
 		drawYLoc = dYloc;
 		gameDiff = diff;
 		boxScale = setBoxScale();
-//		FileHandle handle = Gdx.files.internal("assets/Taylor/SoccerBall.png");
-//		image = new Texture(handle);
+		
+//		FileHandle handle = Gdx.files.internal("Taylor/Taylor-Swift-Change-Box.png");
+//		boxImage = new Texture(handle);
+		
 		boxImage = new Texture("YouDee.png");
 		drawable = true;
 	}
 	
 	/*
-	 * Constructor for the Box class where the X & Y Coordinate, and images
+	 * Constructor for the Box class 
+	 * The X & Y Coordinate, box string, display char, difficulty, Box Image & box draw x&y locations
 	 */
 	public Box(String aStr, float xBoxLoc,float yBoxLoc, char dis,float dXloc, float dYloc, int diff, Texture BoxImage){
 		aString = aStr;
@@ -67,11 +70,22 @@ class Box{
 		drawable = false;
 	}
 	
-//	public Texture setBoxImage(){
-//		
-//	}
+	/*
+	 * Sets the Box's Scale, which is the size that the box will be drawn on the screen
+	 */
+	public float setBoxScale(){
+		if (gameDiff ==0)
+			return .25f;
+		else if (gameDiff ==0)
+			return .2f;
+		else if (gameDiff ==0)
+			return .18f;
+		else
+			return .12f;
+	}
 	
 	
+//	Getters & Setters for Box Class
 	public String getaString() {
 		return aString;
 	}
@@ -112,18 +126,6 @@ class Box{
 		this.drawable = drawable;
 	}
 	
-	/*
-	 * Sets the Box's Scale, which is the size that the box will be drawn on the screen
-	 */
-	public float setBoxScale(){
-		if (gameDiff ==0)
-			return .25f;
-		else if (gameDiff ==0)
-			return .2f;
-		else if (gameDiff ==0)
-			return .18f;
-		else
-			return .12f;
-	}
+	
 	
 }

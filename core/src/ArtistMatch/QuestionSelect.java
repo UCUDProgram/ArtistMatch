@@ -1,9 +1,5 @@
 package ArtistMatch;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -24,78 +20,67 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.XmlReader;
 import com.badlogic.gdx.utils.XmlReader.Element;
 
-public class LevelSelect implements Screen, InputProcessor, ApplicationListener {
+import java.util.List;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class QuestionSelect implements Screen, InputProcessor, ApplicationListener{
+
 	private ArtistMatch game;
 	private SpriteBatch batch;
 	private BitmapFont font;
-	private String[] artists;
-	private float screenHeight, screenWidth, scaleX, scaleY;
+	private float screenHeight, screenWidth,scaleX,scaleY;
 	private Skin skin;
-	private Stage stage;
 	private Table table,table1,table2;
+	private Stage stage;
 	private Texture background;
-	int artistCount;
 	
-	/*
-	 * NEED TO REDO/REWORK 
-	 * A FUNCTION THAT PARSES THE ARTIST'S NAME INTO A BETTER FORMAT (INCLUDING SPACES AND OTHER CHARACTERS)
-	 */
-	
-	public LevelSelect(ArtistMatch game){
+	public QuestionSelect(ArtistMatch game){
 		this.game = game;
 	}
-	
-//	@Override
-	public void create() {
+
+	public void create(){
+		batch = new SpriteBatch();
+		font = new BitmapFont();
+		stage = new Stage();
 		skin = new Skin (Gdx.files.internal("uiskin.json"));
+		screenHeight = Gdx.graphics.getHeight(); 
+		screenWidth = Gdx.graphics.getWidth();
+		background = setBackgroundImage();
+		scaleX = screenWidth/640;
+		scaleY = screenHeight/480;
 		table = new Table(skin);
 		table1 = new Table(skin);
 		table2 = new Table(skin);
-		stage = new Stage();
-		screenHeight = Gdx.graphics.getHeight(); 
-		screenWidth = Gdx.graphics.getWidth();
-		
-		scaleX = screenWidth/640;
-		scaleY = screenHeight/480;
-		background = setBackgroundImage();
-		
-		initializeButtonsArray();
-//		artistCount = artists.size();
 		addLeftButtons();
 		addRightButtons();
 		addBackButton();
-		
 		table.setFillParent(true);
 		table.left();
 		stage.addActor(table);
-		
 		table1.setFillParent(true);
 		table1.right();
 		stage.addActor(table1);
-		
 		table2.setFillParent(true);
 		table2.bottom();
 		stage.addActor(table2);
-		
-		batch = new SpriteBatch();
-		font = new BitmapFont();
 		Gdx.input.setInputProcessor(this);
 		Gdx.input.setInputProcessor(stage);
-		
 	}
-
+		
 	@Override
 	public void render(float delta) {
-		// TODO Auto-generated method stub
 		batch.begin();
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.draw(background, 0, 0, screenWidth, screenHeight);
 		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
+		font.setColor(Color.WHITE);
+		font.setScale(1,1);
 		batch.end();
 		stage.draw();
 	}
-
+	
 	/*
 	 * Formats the artist's name to proper formatting, including spacing
 	 * Used in the xml files, which gets the question, options & Correct answer(s)
@@ -133,6 +118,18 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		}
 		catch(IOException e){
 		}
+		
+//		Use of xml file readers to add strings to the balls List
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element selection = root.getChildByName("artist");
+		Element artist = selection.getChildByName(formatName(game.getArtist()));
+		Array<Element> backgroundSelectArray = artist.getChildrenByName("background");
+		for (int i = 0; i < backgroundSelectArray.size; i++)
+			backgroundSelection.add(backgroundSelectArray.get(i).getText());
+		}
+		catch(IOException e){
+		}
+		
 //		Random number generator to choose a random image as the ball image
 		int randomBackground = (int) Math.random() * backgroundSelection.size();
 		FileHandle backgroundImage = Gdx.files.internal(backgroundSelection.get(randomBackground));
@@ -140,69 +137,47 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	}
 	
 	/*
-	 * Initialize the Buttons Used in the array
-	 */
-	public void initializeButtonsArray(){
-		try{Element root = new XmlReader().parse(Gdx.files.internal("Levels.xml"));
-		Element level = root.getChildByName("LevelSelect");
-		Array<Element> answerE = level.getChildrenByName("artist");
-		int count = answerE.size;
-		artists = new String[count];
-		for (int i = 0; i <answerE.size; i++){
-			artists[i]=answerE.get(i).getText();
-		}
-		}
-		catch(IOException e){
-		}
-	}
-	
-	/*
-	 * NEED TO MODIFY TO INCLUDE THE FORMAT STRING FOR THE BUTTON DISPLAY
-	 * AND KEEP THE XML FILE NAME FOR LEVEL NAME
-	 */
-	
-	/*
-	 * Adds the first half of buttons to the artist buttons to the screen
+	 * Adds the first half of the buttons, representing question #, to the screen
 	 */
 	public void addLeftButtons(){
-		for(int i = 0;i< (artists.length / 2) ;i++){
-		final TextButton button = new TextButton(artists[i],skin);
-		button.setName(artists[i]);
+		for(int i = 1;i<= 5;i++){
+		final TextButton button = new TextButton("Question " + Integer.toString(i),skin);
+		button.setName(Integer.toString(i));
 		table.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
 		table.row();
 		button.addListener(new ClickListener(){
 //			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.setArtist(button.getName());
-				game.switchScreens(4);
-				System.out.println(game.getArtist());
+				game.setQuestion(Integer.parseInt(button.getName() ) );
+				System.out.println(game.getQuestion());
+				game.switchScreens(5);
 			}
 		});
 		}
 	}
 	
 	/*
-	 * Adds the second half of buttons to the artist buttons to the screen
+	 * Adds the second half of the buttons, representing question #, to the screen
 	 */
 	public void addRightButtons(){
-		for(int i = (artists.length / 2)  ;i< artists.length ;i++){
-		final TextButton button = new TextButton(artists[i],skin);
-		button.setName(artists[i]);
+		for(int i = 6;i<= 10;i++){
+		final TextButton button = new TextButton("Question " + Integer.toString(i),skin);
+		button.setName(Integer.toString(i));
 		table1.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
 		table1.row();
 		button.addListener(new ClickListener(){
 //			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.setArtist(button.getName());
-				game.switchScreens(4);
-				System.out.println(game.getArtist());
+				game.setQuestion(Integer.parseInt(button.getName() ) );
+				System.out.println(game.getQuestion());
+				game.switchScreens(5);
 			}
 		});
 		}
 	}
 	
 	/*
-	 * Adds the back button to the screen
+	 * Adds the back button, representing return to artist select screen, to the screen
 	 */
 	public void addBackButton(){
 		final TextButton button = new TextButton("Previous Screen",skin);
@@ -212,15 +187,52 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		button.addListener(new ClickListener(){
 //			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.switchScreens(2);
+				game.switchScreens(3);
+				System.out.println(game.getQuestion());
 			}
 		});
 	}
 	
-	
+	@Override
+	public void resize(int width, int height) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void hide() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	@Override
 	public void render() {
-		// TODO Auto-generated method stub	
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -269,45 +281,5 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 	public boolean scrolled(int amount) {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	
-
-	@Override
-	public void resize(int width, int height) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void show() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void hide() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void pause() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void resume() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void dispose() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
+	}	
 }

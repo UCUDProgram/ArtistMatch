@@ -79,7 +79,9 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		batch.end();
 	}
 	
-	
+/*
+ * Initialize the Score variables
+ */
 	public void initializeScoreVariables(){
 		correct = game.getRight();
 		incorrect = game.getWrong();
@@ -212,7 +214,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		font1.draw(batch, "Your correct score is " + setCorrectScore(), 100, screenHeight -100);
 		font1.draw(batch, "Your Time score is " + setTimeScore(), 100, screenHeight -150);
 		font2.draw(batch, "Your Incorrect score is " + setIncorrectScore(), 100, screenHeight -200);
-		font2.draw(batch, "Your Movement core is " + setMoveScore(), 100, screenHeight -250);
+		font2.draw(batch, "Your Movement score is " + setMoveScore(), 100, screenHeight -250);
 		font.draw(batch, "Your Total score is " + setTotalScore(), 100, screenHeight -300);
 		font.draw(batch, "Click to Continue", 10, screenHeight -20);
 	}

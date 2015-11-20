@@ -68,21 +68,10 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
 		Gdx.input.setInputProcessor(this);		
-		background = new Texture("ShooterBackground.png");
+		
 		initializeVariables();
 		initializeBoolean();
 		initializeText();
-		
-		
-//		ballImage = setBallImage();
-//		playerImage = setPlayerImage();
-//		boxImage = setBoxImage();
-//		backgroundImage = setBackgroundImage();
-		
-		
-		Player = new Player(setPlayerXStart(), setYMax(), game.getDifficulty());
-
-		validBall = new Ball(0,0,angle,false,game.getDifficulty());
 		
 		selectedA = new ArrayList<String>();
 		correctA = new ArrayList<String>();
@@ -93,6 +82,21 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeQuestion();
 		initializeSelectionArray();
 		initializeAnswer();	
+		
+		
+//		ballImage = setBallImage();
+//		playerImage = setPlayerImage();
+//		boxImage = setBoxImage();
+//		backgroundImage = setBackgroundImage();
+		
+		
+		background = new Texture("ShooterBackground.png");
+		
+		Player = new Player(setPlayerXStart(), setYMax(), game.getDifficulty());
+		validBall = new Ball(0,0,angle,false,game.getDifficulty());
+		
+//		Add box, player, & ball creator methods
+		
 		
 		boxTester = new Box(game.getDifficulty());
 		possAnswers = new ArrayList<Box>();
@@ -105,7 +109,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	/*
 	 * Formats the artist's name to proper formatting, including spacing
-	 * Any update to the Levels.xml file needs to be updated here, as well
+	 * Used in the xml files, which gets the question, options & Correct answer(s)
+	 * Any update to the Levels.xml file, with artists having more than 1 word,needs to be updated here, as well
 	 */
 	public String formatName(String artName){
 		if (game.getArtist().equals("Michael Jackson"))
@@ -166,6 +171,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	/*
 	 * Sets the XML File that will be used to get the question, options and correct answers
+	 * Based on game difficulty
 	 */
 	public String setXMLFile(){
 		if(game.getDifficulty() == 0)
@@ -235,12 +241,12 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	
 	
 	/*
-	 * Function to set the Image of the Ball
+	 * Function to set the Image of the Background
 	 */
 	public Texture setBackgroundImage(){
 		List<String> backgroundSelection = new ArrayList<String>();
 		
-//		Adds the universal ball images to the List
+//		Adds the universal background images to the List
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element selection = root.getChildByName("Universal");
 		Array<Element> backgroundArray = selection.getChildrenByName("background");
@@ -300,6 +306,10 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		return new Texture(ballImage) ;
 	}
 
+	
+	/*
+	 * Function to set the Image of the Box
+	 */
 	public Texture setBoxImage(){
 		List<String> boxSelection = new ArrayList<String>();
 		
@@ -336,7 +346,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	public Texture setPlayerImage(){
 		List<String> playerSelection = new ArrayList<String>();
 		
-//		Adds the universal ball images to the List
+//		Adds the universal player images to the List
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element selection = root.getChildByName("Universal");
 		Array<Element> playerArray = selection.getChildrenByName("player");
@@ -346,7 +356,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		catch(IOException e){
 		}
 		
-//		Use of xml file readers to add strings to the balls List
+//		Use of xml file readers to add strings to the player List
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
 		Element ball = root.getChildByName("artist");
 		Element artist = ball.getChildByName(formatName(game.getArtist()));
@@ -641,6 +651,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 			guessCounter = false;
 			}
 			
+			
+//			System.out.println("The start time is " + startTime);
+//			System.out.println("The end time is " + endTime);
 			
 /*
  * Next lines are for end of level and passing certain parameters to the score class

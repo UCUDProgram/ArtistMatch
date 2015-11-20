@@ -71,6 +71,7 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
+		batch.draw(background, 0, 0, screenWidth, screenHeight);
 		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
 		batch.end();
 		stage.draw();

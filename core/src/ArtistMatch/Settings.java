@@ -2,11 +2,13 @@ package ArtistMatch;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Buttons;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -30,6 +32,7 @@ public class Settings implements Screen, InputProcessor, ApplicationListener{
 	private String selection;
 	private float screenHeight, screenWidth, scaleX, scaleY;
 	private final static String[] difficulty = {"Easy","Medium","Hard", "Expert"};
+	private Texture background;
 	
 	public Settings(ArtistMatch game){
 		this.game = game;
@@ -37,6 +40,8 @@ public class Settings implements Screen, InputProcessor, ApplicationListener{
 
 	@Override
 	public void create() {
+		FileHandle file = Gdx.files.internal("Universal/ArtistMatch Background.png");
+		background = new Texture(file);
 		skin = new Skin (Gdx.files.internal("uiskin.json"));
 		table = new Table(skin);
 		stage = new Stage();
@@ -60,7 +65,8 @@ public class Settings implements Screen, InputProcessor, ApplicationListener{
 		batch.begin();
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		font.setColor(Color.WHITE);
+		batch.draw(background, 0, 0, screenWidth, screenHeight);
+		font.setColor(Color.BLACK);
 		selection = difficulty[game.getDifficulty()];
 		font.draw(batch, "The current difficulty is " + selection, screenWidth / 10, 100);
 		batch.end();
@@ -70,6 +76,7 @@ public class Settings implements Screen, InputProcessor, ApplicationListener{
 	
 	/*
 	 * Add Buttons to the Screen
+	 * Easy Difficulty, Medium Difficulty, Hard Difficulty, Expert Difficulty & Back Button
 	 */
 	public void addButtons(){
 		final TextButton easybutton = new TextButton(difficulty[0],skin);

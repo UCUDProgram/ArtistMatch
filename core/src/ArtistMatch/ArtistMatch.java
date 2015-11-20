@@ -12,10 +12,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class ArtistMatch extends Game {
 
 	private float[] screenSize;
-	private Screen main,aGame,tScreen,instruct,subMenu,lSelect,setting,score,current;
+	private Screen main,aGame,tScreen,instruct,quesMenu,lSelect,setting,score,current;
 	private String artist;
-	private int question,difficulty;
-	private int totalScore;
+	private int question,difficulty,totalScore ;
 	
 // Used by the score class
 	private int right, wrong, time;
@@ -34,7 +33,6 @@ public class ArtistMatch extends Game {
 		screenSize[3]=0;
 //		difficulty = 0;
 		switchScreens(1);
-		
 	}
 
 	@Override
@@ -65,11 +63,11 @@ public class ArtistMatch extends Game {
 			lSelect = current;
 		}
 		
-		// Submenu Screen
+		// Question Select Screen
 		if(next==4){
-			current = new SubMenu(this);
-			((SubMenu) current).create();
-			subMenu = current;
+			current = new QuestionSelect(this);
+			((QuestionSelect) current).create();
+			quesMenu = current;
 		}
 		
 		// Game Screen
@@ -103,6 +101,7 @@ public class ArtistMatch extends Game {
 		setScreen(current);
 	}
 	
+//	Getters & Setters for the Artist Match Game Class
 	public float[] getScreenSize() {
 		return screenSize;
 	}
@@ -185,13 +184,4 @@ public class ArtistMatch extends Game {
 	public void setMovement(float movement) {
 		this.movement = movement;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
