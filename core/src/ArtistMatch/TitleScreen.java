@@ -1,8 +1,6 @@
 package ArtistMatch;
 
-
-import java.awt.Font;
-
+import java.io.IOException;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -12,15 +10,20 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.XmlReader;
+import com.badlogic.gdx.utils.XmlReader.Element;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 	private ArtistMatch game;
 	private SpriteBatch batch;
-	private BitmapFont font,font1;
+	private BitmapFont font;
 	private float screenHeight, screenWidth;
 	private Texture background,gameTitle;
-
+	private Texture[] musImages;
+	
+	
 	public TitleScreen(ArtistMatch game){
 		this.game = game;
 	}
@@ -30,9 +33,10 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 		background = new Texture(file);
 		FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
 		gameTitle = new Texture(title);
+	 	initializeMusicImages();
 		batch = new SpriteBatch();
 		font = new BitmapFont();
-		font1 = new BitmapFont();
+		font.setColor(Color.BLACK);
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
 		Gdx.input.setInputProcessor(this);
@@ -43,18 +47,54 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 		batch.begin();
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		
-//		font.setColor(Color.WHITE);
-//		font.setScale(1,1);
-//		font.draw(batch, "The Title Screen Works", 0, 100);
-//		font1.setColor(Color.WHITE);
-//		font1.setScale(4,4);
-//		font1.draw(batch, "A", 300, 300);
 		batch.draw(background, 0, 0, screenWidth, screenHeight);
 		batch.draw(gameTitle, 0,( 6 * (screenHeight / 7) ), screenWidth, (screenHeight / 7)  );
+		font.drawWrapped(batch, "Touch to Proceed to Main Menu", (screenWidth / 3), (3 * (screenHeight / 7) ), (screenWidth / 3) );
+		drawMusicImages();
 		batch.end();
 	}
 
+	/*
+	 * Gets the images, for the Title Screen, and stores them in an array
+	 */
+	public void initializeMusicImages(){
+		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
+		Element source = root.getChildByName("Universal");
+		Array<Element> images = source.getChildrenByName("select");
+		int count = images.size;
+		musImages = new Texture[count];
+		for (int i = 0; i <images.size; i++){
+			String imgLoc = images.get(i).getText();
+			FileHandle musicImage = Gdx.files.internal(imgLoc);
+			musImages[i] = new Texture(musicImage);
+		}
+		}
+		catch(IOException e){
+		}
+	}
+	
+	/*
+	 * Draws each element in the Image Array, at a specific Position on the screen
+	 */
+	public void drawMusicImages(){
+		for(int i =0; i < musImages.length;i++){
+			if( (i>= 0) && (i <3) ){
+				batch.draw(musImages[i], (i *(screenWidth / 3) ), (4* (screenHeight / 7) ), (screenWidth / 3),(2* (screenHeight / 7) ) ) ;
+			}
+			if (i == 3){
+				batch.draw(musImages[i], 0, (2* (screenHeight / 7) ), (screenWidth / 3),(2* (screenHeight / 7) ) ) ;
+			}
+			if (i == 4){
+				batch.draw(musImages[i], (2 * (screenWidth / 3) ), (2* (screenHeight / 7) ), (screenWidth / 3),(2* (screenHeight / 7) ) ) ;
+			}
+			if( (i>= 5) && (i <8) ){
+				int ind = i-2;
+				int index = ind %3 ; 
+				batch.draw(musImages[i], ( index * (screenWidth / 3) ), 0, (screenWidth / 3),(2* (screenHeight / 7) ) ) ;
+			}
+		}
+	}
+	
 	@Override
 	public void resize(int width, int height) {
 		// TODO Auto-generated method stub

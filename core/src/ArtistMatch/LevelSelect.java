@@ -27,13 +27,12 @@ import com.badlogic.gdx.utils.XmlReader.Element;
 public class LevelSelect implements Screen, InputProcessor, ApplicationListener {
 	private ArtistMatch game;
 	private SpriteBatch batch;
-	private BitmapFont font;
 	private String[] artists;
 	private float screenHeight, screenWidth, scaleX, scaleY;
 	private Skin skin;
 	private Stage stage;
 	private Table table,table1,table2;
-	private Texture background;
+	private Texture background,gameTitle;
 	int artistCount;
 	
 	/*
@@ -54,34 +53,27 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		stage = new Stage();
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
-		
+		FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
+		gameTitle = new Texture(title);
 		scaleX = screenWidth/640;
 		scaleY = screenHeight/480;
 		background = setBackgroundImage();
-		
 		initializeButtonsArray();
-//		artistCount = artists.size();
 		addLeftButtons();
 		addRightButtons();
 		addBackButton();
-		
 		table.setFillParent(true);
 		table.left();
 		stage.addActor(table);
-		
 		table1.setFillParent(true);
 		table1.right();
 		stage.addActor(table1);
-		
 		table2.setFillParent(true);
 		table2.bottom();
 		stage.addActor(table2);
-		
 		batch = new SpriteBatch();
-		font = new BitmapFont();
 		Gdx.input.setInputProcessor(this);
 		Gdx.input.setInputProcessor(stage);
-		
 	}
 
 	@Override
@@ -91,6 +83,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.draw(background, 0, 0, screenWidth, screenHeight);
+		batch.draw(gameTitle, 0,( 6 * (screenHeight / 7) ), screenWidth, (screenHeight / 7)  );
 		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
 		batch.end();
 		stage.draw();
@@ -134,7 +127,7 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		catch(IOException e){
 		}
 //		Random number generator to choose a random image as the ball image
-		int randomBackground = (int) Math.random() * backgroundSelection.size();
+		int randomBackground = (int) (Math.random() * backgroundSelection.size() );
 		FileHandle backgroundImage = Gdx.files.internal(backgroundSelection.get(randomBackground));
 		return new Texture(backgroundImage) ;
 	}
@@ -155,11 +148,6 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		catch(IOException e){
 		}
 	}
-	
-	/*
-	 * NEED TO MODIFY TO INCLUDE THE FORMAT STRING FOR THE BUTTON DISPLAY
-	 * AND KEEP THE XML FILE NAME FOR LEVEL NAME
-	 */
 	
 	/*
 	 * Adds the first half of buttons to the artist buttons to the screen
@@ -271,8 +259,6 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		return false;
 	}
 
-	
-
 	@Override
 	public void resize(int width, int height) {
 		// TODO Auto-generated method stub
@@ -308,6 +294,4 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 		// TODO Auto-generated method stub
 		
 	}
-
-
 }

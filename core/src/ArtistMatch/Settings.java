@@ -32,7 +32,7 @@ public class Settings implements Screen, InputProcessor, ApplicationListener{
 	private String selection;
 	private float screenHeight, screenWidth, scaleX, scaleY;
 	private final static String[] difficulty = {"Easy","Medium","Hard", "Expert"};
-	private Texture background;
+	private Texture background,gameTitle;
 	
 	public Settings(ArtistMatch game){
 		this.game = game;
@@ -42,6 +42,8 @@ public class Settings implements Screen, InputProcessor, ApplicationListener{
 	public void create() {
 		FileHandle file = Gdx.files.internal("Universal/ArtistMatch Background.png");
 		background = new Texture(file);
+		FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
+		gameTitle = new Texture(title);
 		skin = new Skin (Gdx.files.internal("uiskin.json"));
 		table = new Table(skin);
 		stage = new Stage();
@@ -66,6 +68,7 @@ public class Settings implements Screen, InputProcessor, ApplicationListener{
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.draw(background, 0, 0, screenWidth, screenHeight);
+		batch.draw(gameTitle, 0,( 6 * (screenHeight / 7) ), screenWidth, (screenHeight / 7)  );
 		font.setColor(Color.BLACK);
 		selection = difficulty[game.getDifficulty()];
 		font.draw(batch, "The current difficulty is " + selection, screenWidth / 10, 100);

@@ -1,7 +1,6 @@
 package ArtistMatch;
 
 import java.io.IOException;
-
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -32,22 +31,18 @@ import com.badlogic.gdx.utils.XmlReader.Element;
 public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 	private ArtistMatch game;
 	private SpriteBatch batch;
-	private BitmapFont font;
 	private String[] Levels;
 	private float screenHeight, screenWidth, scaleX, scaleY;
 	private Texture background, gameTitle;
-	private Texture[] musImages;
 	private Skin skin;
 	private Stage stage;
 	private Table table;
-	private Window window;
 	
 	public MainMenu(ArtistMatch game){
 		this.game = game;
 	}
 	 public void create(){
 		 	background = new Texture("ArtistMatch Background.png");
-//		 	initializeMusicImages();
 		 	FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
 			gameTitle = new Texture(title);
 		 	skin = new Skin (Gdx.files.internal("uiskin.json"));
@@ -63,7 +58,6 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 			table.center();
 			stage.addActor(table);
 			batch = new SpriteBatch();
-			font = new BitmapFont();
 			Gdx.input.setInputProcessor(this);
 			Gdx.input.setInputProcessor(stage);
 	 }
@@ -80,22 +74,9 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		stage.draw();
 	}
 	
-	public void initializeMusicImages(){
-		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
-		Element source = root.getChildByName("Universal");
-		Array<Element> images = source.getChildrenByName("select");
-		int count = images.size;
-		musImages = new Texture[count];
-		for (int i = 0; i <images.size; i++){
-			String imgLoc = images.get(i).getText();
-			FileHandle musicImage = Gdx.files.internal(imgLoc);
-			musImages[i] = new Texture(musicImage);
-		}
-		}
-		catch(IOException e){
-		}
-	}
-	
+	/*
+	 * Adds the Levels Buttons to the Screen	
+	 */
 	public void initializeButtonsArray(){
 		try{Element root = new XmlReader().parse(Gdx.files.internal("Levels.xml"));
 		Element level = root.getChildByName("MainMenu");
@@ -135,17 +116,6 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 				}
 		});	
 		
-		final TextButton creditbutton = new TextButton(array[2],skin);
-		creditbutton.setName(array[2]);
-		table.add(creditbutton).width(creditbutton.getWidth()*scaleX).height(creditbutton.getHeight()*scaleY);
-		table.row();
-		creditbutton.addListener(new ClickListener(){
-			public void clicked(InputEvent event, float x, float y){
-//				Checks to make sure that the submenu screen is working
-					game.switchScreens(4);
-				}
-		});	
-		
 		final TextButton settingbutton = new TextButton(array[3],skin);
 		settingbutton.setName(array[3]);
 		table.add(settingbutton).width(settingbutton.getWidth()*scaleX).height(settingbutton.getHeight()*scaleY);
@@ -156,6 +126,20 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 				}
 		});	
 
+		
+		
+		
+		
+//		final TextButton creditbutton = new TextButton(array[2],skin);
+//		creditbutton.setName(array[2]);
+//		table.add(creditbutton).width(creditbutton.getWidth()*scaleX).height(creditbutton.getHeight()*scaleY);
+//		table.row();
+//		creditbutton.addListener(new ClickListener(){
+//			public void clicked(InputEvent event, float x, float y){
+////				Checks to make sure that the submenu screen is working
+//					game.switchScreens(4);
+//				}
+//		});
 	}
 	
 	

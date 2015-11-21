@@ -28,12 +28,11 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 
 	private ArtistMatch game;
 	private SpriteBatch batch;
-	private BitmapFont font;
 	private float screenHeight, screenWidth,scaleX,scaleY;
 	private Skin skin;
 	private Table table,table1,table2;
 	private Stage stage;
-	private Texture background;
+	private Texture background,gameTitle;
 	
 	public QuestionSelect(ArtistMatch game){
 		this.game = game;
@@ -41,7 +40,8 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 
 	public void create(){
 		batch = new SpriteBatch();
-		font = new BitmapFont();
+		FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
+		gameTitle = new Texture(title);
 		stage = new Stage();
 		skin = new Skin (Gdx.files.internal("uiskin.json"));
 		screenHeight = Gdx.graphics.getHeight(); 
@@ -74,9 +74,8 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.draw(background, 0, 0, screenWidth, screenHeight);
+		batch.draw(gameTitle, 0,( 6 * (screenHeight / 7) ), screenWidth, (screenHeight / 7)  );
 		stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
-		font.setColor(Color.WHITE);
-		font.setScale(1,1);
 		batch.end();
 		stage.draw();
 	}
@@ -131,7 +130,7 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 		}
 		
 //		Random number generator to choose a random image as the ball image
-		int randomBackground = (int) Math.random() * backgroundSelection.size();
+		int randomBackground = (int) (Math.random() * backgroundSelection.size() );
 		FileHandle backgroundImage = Gdx.files.internal(backgroundSelection.get(randomBackground));
 		return new Texture(backgroundImage) ;
 	}

@@ -14,13 +14,17 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	private ArtistMatch game;
 	private SpriteBatch batch;
 	private int incorrect, correct,time;
+	private BitmapFont font, font1, font2, font3;
+	private float screenWidth,screenHeight,moveDist;
+	
+	
+	
+	private Stage stage;
 	private boolean displayScore, initialEnter,enterScore;
 	private char [] letters,initLetter;
 	private int letIndex1,letIndex2,letIndex3;
 	private int timeBonus, incorrectPenalty, correctBonus, movePenalty;
-	private BitmapFont font, font1, font2, font3;
-	private float screenWidth,screenHeight,moveDist;
-	private Stage stage;
+	
 	
 	public Score(ArtistMatch game){
 		this.game = game;
@@ -28,7 +32,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	
 	public void create(){
 		batch = new SpriteBatch();
-		stage = new Stage();
+		
 		initializeScoreVariables();
 		initializeScoreMult();
 		displayScore = true;
@@ -36,8 +40,14 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		enterScore = false;
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
+		font = new BitmapFont();
+		font1 = new BitmapFont();
+		font2 = new BitmapFont();
+		font1.setColor(Color.GREEN);
+		font2.setColor(Color.RED);
 		
 		
+		stage = new Stage();
 		char [] letters = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 		letIndex1 = letters.length / 2;
 		letIndex2 = letters.length / 2;
@@ -46,16 +56,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		initLetter[0] = letters[letIndex1];
 		initLetter[1] = letters[letIndex2];
 		initLetter[2] = letters[letIndex3];
-		
-		
-		font = new BitmapFont();
-		font1 = new BitmapFont();
-		font2 = new BitmapFont();
 		font3 = new BitmapFont();
-		
-		font1.setColor(Color.GREEN);
-		font2.setColor(Color.RED);
-		
 		font3.setScale((screenWidth * 3) / 10, screenHeight);
 		
 		
@@ -79,9 +80,9 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		batch.end();
 	}
 	
-/*
- * Initialize the Score variables
- */
+	/*
+	 * Initialize the Score variables
+	 */
 	public void initializeScoreVariables(){
 		correct = game.getRight();
 		incorrect = game.getWrong();
@@ -94,9 +95,36 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 * Sets the Time Score
 	 */
 	public int setTimeScore(){
-		return time * timeBonus;
+		return (int) (setTimeBasis() * timeBonus);
 	}
 
+	
+	
+	public double setTimeBasis(){
+		int max = setTimeMax();
+		if (time <= max){
+			return (double) ((time / max)) ;
+		} else {
+			if(time / max > 2)
+				return -5;
+			else
+				return (double) (-1) * ( (double) (time / max) );
+		}
+	}
+	
+	
+	public int setTimeMax(){
+		if (game.getDifficulty() == 0)
+			return 15;
+		else if (game.getDifficulty() == 1)
+			return 30;
+		else if (game.getDifficulty() == 2)
+			return 37;
+		else
+			return 60;
+	}
+	
+	
 	/*
 	 * Sets the Incorrect Answer Score
 	 */
@@ -212,7 +240,12 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 */
 	public void drawScoreTotals(){
 		font1.draw(batch, "Your correct score is " + setCorrectScore(), 100, screenHeight -100);
-		font1.draw(batch, "Your Time score is " + setTimeScore(), 100, screenHeight -150);
+		
+		if (setTimeScore() > 0)
+			font1.draw(batch, "Your Time score is " + setTimeScore(), 100, screenHeight -150);
+		else
+			font2.draw(batch, "Your Time score is " + setTimeScore(), 100, screenHeight -150);
+		
 		font2.draw(batch, "Your Incorrect score is " + setIncorrectScore(), 100, screenHeight -200);
 		font2.draw(batch, "Your Movement score is " + setMoveScore(), 100, screenHeight -250);
 		font.draw(batch, "Your Total score is " + setTotalScore(), 100, screenHeight -300);
