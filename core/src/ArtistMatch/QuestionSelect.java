@@ -33,6 +33,8 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 	private Table table,table1,table2;
 	private Stage stage;
 	private Texture background,gameTitle;
+	private String xmlFile;
+	private int quesTot;
 	
 	public QuestionSelect(ArtistMatch game){
 		this.game = game;
@@ -47,6 +49,8 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
 		background = setBackgroundImage();
+		xmlFile = setXMLFile();
+		quesTot = questionCount();
 		scaleX = screenWidth/640;
 		scaleY = screenHeight/480;
 		table = new Table(skin);
@@ -136,10 +140,41 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 	}
 	
 	/*
+	 * Sets the XML File that will be used to get the question, options and correct answers
+	 * Based on game difficulty
+	 */
+	public String setXMLFile(){
+		if(game.getDifficulty() == 0)
+			return "EasyQuestions.xml";
+		if(game.getDifficulty() == 1)
+			return "MediumQuestions.xml";
+		if(game.getDifficulty() == 2)
+			return "HardQuestions.xml";
+		else
+			return "ExpertQuestions.xml";
+	}
+	
+	/*
+	 * Returns the number of questions, the player can choose from 
+	 */
+	public int questionCount(){
+		int lCount = 0;
+		try{Element root = new XmlReader().parse(Gdx.files.internal(xmlFile));
+		Element artist = root.getChildByName(formatName(game.getArtist()));
+		lCount = artist.getChildCount();
+		}
+		catch(IOException e){
+		}
+		System.out.println("The number of questions with this artist is " + lCount);
+		
+		return lCount;
+	}
+	
+	/*
 	 * Adds the first half of the buttons, representing question #, to the screen
 	 */
 	public void addLeftButtons(){
-		for(int i = 1;i<= 5;i++){
+		for(int i = 1;i<= (quesTot / 2);i++){
 		final TextButton button = new TextButton("Question " + Integer.toString(i),skin);
 		button.setName(Integer.toString(i));
 		table.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);
@@ -159,7 +194,7 @@ public class QuestionSelect implements Screen, InputProcessor, ApplicationListen
 	 * Adds the second half of the buttons, representing question #, to the screen
 	 */
 	public void addRightButtons(){
-		for(int i = 6;i<= 10;i++){
+		for(int i = ( (quesTot / 2) + 1);i<= quesTot;i++){
 		final TextButton button = new TextButton("Question " + Integer.toString(i),skin);
 		button.setName(Integer.toString(i));
 		table1.add(button).width(button.getWidth()*scaleX).height(button.getHeight()*scaleY);

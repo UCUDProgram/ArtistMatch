@@ -193,7 +193,6 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		Element quesNum = artist.getChildByName(Integer.toString(game.getQuestion()));
 		Element question = quesNum.getChildByName("Question");
 		ques = question.getText();
-		
 		}
 		catch(IOException e){
 		}
