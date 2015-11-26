@@ -95,6 +95,10 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 * Sets the Time Score
 	 */
 	public int setTimeScore(){
+		double tscore = setTimeBasis();
+		double timeScore = 0;
+		if (tscore <= 1)
+			
 		return (int) (setTimeBasis() * timeBonus);
 	}
 
@@ -102,14 +106,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	
 	public double setTimeBasis(){
 		int max = setTimeMax();
-		if (time <= max){
 			return (double) ((time / max)) ;
-		} else {
-			if(time / max > 2)
-				return -5;
-			else
-				return (double) (-1) * ( (double) (time / max) );
-		}
 	}
 	
 	
