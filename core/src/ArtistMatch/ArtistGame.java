@@ -726,10 +726,12 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	public void updatePlayerXPos(){
 		if(goRight&&Player.getxPlayerLoc()<=(screenWidth - (Player.getPlayerImage().getWidth()* Player.getPlayerScale() ) ) ){
 			Player.updateXPos(true);
+			Player.setPlayerImage(true);
 			
 		}
 		if(goLeft&&Player.getxPlayerLoc() >=( (Player.getPlayerImage().getWidth() / 2) * Player.getPlayerScale() ) ){
 			Player.updateXPos(false);
+			Player.setPlayerImage(false);
 		}
 	}
 	

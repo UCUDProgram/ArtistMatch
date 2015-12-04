@@ -16,7 +16,7 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	private int incorrect, correct,time;
 	private BitmapFont font, font1, font2, font3;
 	private float screenWidth,screenHeight,moveDist;
-	
+	private double timeScore, correctScore, incorrectScore, moveScore, totalScore;
 	
 	
 	private Stage stage;
@@ -32,9 +32,8 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	
 	public void create(){
 		batch = new SpriteBatch();
-		
 		initializeScoreVariables();
-		initializeScoreMult();
+		initializeScoreValues();
 		displayScore = true;
 		initialEnter = false;
 		enterScore = false;
@@ -71,11 +70,13 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);		
 		
-//		if(displayScore){
+		if(displayScore){
 			drawScoreTotals();
-//		} if(initialEnter){
+		} else{
+//			(initialEnter){
 //			drawHiScore();
-//		}
+			font1.draw(batch, "The Entering initials Screen is working ", 100, screenHeight -100);
+		}
 		
 		batch.end();
 	}
@@ -90,26 +91,103 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		moveDist = game.getMovement();
 	}
 	
+	/*
+	 * Initializes the multiple variables
+	 */
+	public void initializeScoreValues(){
+		timeScore = setTimeScore();
+		incorrectScore = setIncorrectScore();
+		correctScore = setCorrectScore();
+		moveScore = setMoveScore();
+		totalScore = setTotalScore();
+	}
 	
+//											THESE FUNCTIONS DEAL WITH THE TIME SCORE IN THE GAME
 	/*
 	 * Sets the Time Score
 	 */
-	public int setTimeScore(){
-		double tscore = setTimeBasis();
+	public double setTimeScore(){
+		double tscore = timeBasis();
 		double timeScore = 0;
-		if (tscore <= 1)
-			
-		return (int) (setTimeBasis() * timeBonus);
+		if (tscore > 1)
+			tscore = 1;
+		double tScore = (timeSpeedScoreBase() - ( ( 1- tscore) * timeSpeedScoreBase() ) ) * timeMult(); 
+		timeScore += tScore;
+		timeScore += unUsedTimeBonus();
+		timeScore -= setTimePenalty();
+		return timeScore;
 	}
 
+	/*
+	 * Sets the unused time bonus for the player
+	 * Any unused time positively affects the player's time score
+	 */
+	public double unUsedTimeBonus(){
+		if (time < setTimeMax()){
+			int unused = setTimeMax() - time;
+			return unused * unusedTimeBasis();
+		} else
+			return 0;
+	}
 	
+	/*
+	 * Helper function for the unused time bonus
+	 * Difficulty determines each second's score value 
+	 */
+	public int unusedTimeBasis(){
+		if (game.getDifficulty() == 0)
+			return 30;
+		else if (game.getDifficulty() == 1)
+			return 40;
+		else if (game.getDifficulty() == 2)
+			return 45;
+		else
+			return 55;
+	}
 	
-	public double setTimeBasis(){
+	/*
+	 * Determines the time score multiplier, when finishing the game below the recommended time
+	 */
+	public double timeMult(){
+		if (game.getDifficulty() == 0)
+			return 1.25;
+		else if (game.getDifficulty() == 1)
+			return 1.75;
+		else if (game.getDifficulty() == 2)
+			return 2.5;
+		else
+			return 4.5;
+	}
+	
+	/*
+	 * Returns the ratio, referring to the time to correctly answer the question
+	 * A double below 1 indicates that the player answered the question in a time below the max number of time for the level
+	 * A double above 1 indicates that the player answered the question in a time above the max number of time for the level 
+	 */
+	public double timeBasis(){
 		int max = setTimeMax();
 			return (double) ((time / max)) ;
 	}
 	
 	
+	/*
+	 * Sets the time Speed Base Value
+	 * Used to determine the base for answering the question fast
+	 */
+	public double timeSpeedScoreBase(){
+		if (game.getDifficulty() == 0)
+			return 50;
+		else if (game.getDifficulty() == 1)
+			return 60;
+		else if (game.getDifficulty() == 2)
+			return 75;
+		else
+			return 95;
+	}
+
+	/*
+	 * Sets the Max time that the player needs to answer the question
+	 */
 	public int setTimeMax(){
 		if (game.getDifficulty() == 0)
 			return 15;
@@ -121,33 +199,153 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 			return 60;
 	}
 	
+	/*
+	 * Sets the Time penalty with answering this question
+	 * Any Time above the Max time will negatively impact the player's Time Score
+	 */
+	public double setTimePenalty(){
+		int extraTime = time - setTimeMax();
+		if (extraTime <= 0)
+			return 0;
+		else{
+			return (timePenalty(extraTime) * setPenaltyMult() ) ;
+		}
+	}
 	
+	/*
+	 * Sets the value of the time penalty
+	 * Passes in a parameter, representing the number of extra time needed to answer the question(in seconds)  
+	 */
+	public int timePenalty(int overTime){
+		int tPen = 0;
+		int first10Pen = setTenSecPenBase();
+		if(overTime <= 10){
+			for(int i = 0;i < overTime; i++){
+				tPen += first10Pen; 
+			}
+			return tPen;
+		} else{
+			for(int i =0; i<10; i++)
+				tPen += first10Pen;
+			int fifteenSecPen = set15SecPenBase();
+			int thirtySecPen = set30SecPenBase();
+			int fifteen = overTime / 15;
+			int thirty = overTime / 30;
+			
+			tPen += (fifteenSecPen * fifteen);
+			tPen += (thirtySecPen * thirty);
+			return tPen;
+		}
+	}
+	
+	/*
+	 * Sets the Base for the first 10 seconds of extra time, to penalize the player
+	 */
+	public int setTenSecPenBase(){
+		if (game.getDifficulty() == 0)
+			return 5;
+		else if(game.getDifficulty() == 1)
+			return 20;
+		else if (game.getDifficulty() == 2)
+			return 30;
+		else
+			return 40;
+	}
+	
+	/*
+	 * Sets the Base for every 15 seconds of extra time, to penalize the player
+	 */
+	public int set15SecPenBase(){
+		if (game.getDifficulty() == 0)
+			return 20;
+		else if(game.getDifficulty() == 1)
+			return 30;
+		else if (game.getDifficulty() == 2)
+			return 50;
+		else
+			return 70;
+	}
+	
+	/*
+	 * Sets the Base for every 30 seconds of extra time, to penalize the player
+	 */
+	public int set30SecPenBase(){
+		if (game.getDifficulty() == 0)
+			return 35;
+		else if(game.getDifficulty() == 1)
+			return 50;
+		else if (game.getDifficulty() == 2)
+			return 75;
+		else
+			return 100;
+	}
+	
+	/*
+	 * Sets the multiplier to penalize the player's score
+	 */
+	public double setPenaltyMult(){
+		if (game.getDifficulty() == 0)
+			return 1.0;
+		else if(game.getDifficulty() == 1)
+			return 1.50;
+		else if (game.getDifficulty() == 2)
+			return 2.75;
+		else
+			return 5.5;
+	}
+	
+//											THESE FUNCTIONS DEAL WITH THE INCORRECT ANSWER SCORE IN THE GAME
 	/*
 	 * Sets the Incorrect Answer Score
 	 */
-	public int setIncorrectScore(){
-		return incorrect * incorrectPenalty;
+	public double setIncorrectScore(){
+		return incorrect * setWrongPenalty();
 	}
 	
+	/*
+	 * Sets the Wrong Answer multiplier
+	 */
+	public int setWrongPenalty(){
+		if (game.getDifficulty() ==0)
+			return 30;
+		if (game.getDifficulty() ==1)
+			return 40;
+		if (game.getDifficulty() ==2)
+			return 50;
+		else
+			return 75;
+	}
+	
+	
+//											THESE FUNCTIONS DEAL WITH THE CORRECT ANSWER SCORE IN THE GAME
 	/*
 	 * Sets the Correct Answer Score
 	 */
-	public int setCorrectScore(){
-		return correct * correctBonus;
+	public double setCorrectScore(){
+		return correct * setCorrectBonus();
 	}
 	
 	/*
-	 * Sets the Total Score
+	 * Sets the Correct Answer multiplier
 	 */
-	public int setTotalScore(){
-		return ( (setTimeScore() + setCorrectScore()) - setIncorrectScore() - setMoveScore() );
+	public int setCorrectBonus(){
+		if (game.getDifficulty() ==0)
+			return 80;
+		if (game.getDifficulty() ==1)
+			return 70;
+		if (game.getDifficulty() ==2)
+			return 60;
+		else
+			return 45;
 	}
 	
+//											THESE FUNCTIONS DEAL WITH THE MOVEMENT SCORE IN THE GAME
 	/*
 	 * Sets the Move Score
 	 */
-	public int setMoveScore(){
-		return (int) (moveDist / setMoveDistBasis() ) * movePenalty;
+	public double setMoveScore(){
+		double move = ((double) (moveDist / setMoveDistBasis() ) ) * setMovPen();
+		return (move * 100) / 100 ;
 	}
 	
 	/*
@@ -166,58 +364,6 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	}
 	
 	/*
-	 * Initializes the multiple variables
-	 */
-	public void initializeScoreMult(){
-		timeBonus = setTimeBonus();
-		incorrectPenalty = setWrongPenalty();
-		correctBonus = setCorrectBonus() ;
-		movePenalty = setMovPen();
-	}
-	
-	/*
-	 * Sets the Time Bonus multiplier
-	 */
-	public int setTimeBonus(){
-		if (game.getDifficulty() ==0)
-			return 70;
-		if (game.getDifficulty() ==1)
-			return 60;
-		if (game.getDifficulty() ==2)
-			return 50;
-		else
-			return 35;
-	}
-	
-	/*
-	 * Sets the Wrong Answer multiplier
-	 */
-	public int setWrongPenalty(){
-		if (game.getDifficulty() ==0)
-			return 30;
-		if (game.getDifficulty() ==1)
-			return 40;
-		if (game.getDifficulty() ==2)
-			return 50;
-		else
-			return 75;
-	}
-	
-	/*
-	 * Sets the Correct Answer multiplier
-	 */
-	public int setCorrectBonus(){
-		if (game.getDifficulty() ==0)
-			return 80;
-		if (game.getDifficulty() ==1)
-			return 70;
-		if (game.getDifficulty() ==2)
-			return 60;
-		else
-			return 45;
-	}
-	
-	/*
 	 * Sets the Move Penalty Bonus multiplier
 	 */
 	public int setMovPen(){
@@ -230,6 +376,30 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		else
 			return 110;
 	}
+	
+//											THESE FUNCTIONS DEAL WITH THE TOTAL SCORE IN THE GAME
+	/*
+	 * Sets the Total Score
+	 */
+	public double setTotalScore(){
+		return timeScore + correctScore - incorrectScore - moveScore;
+	}
+	
+	
+//	/*
+//	 * Sets the Time Bonus multiplier
+//	 */
+//	public int setTimeBonus(){
+//		if (game.getDifficulty() ==0)
+//			return 70;
+//		if (game.getDifficulty() ==1)
+//			return 60;
+//		if (game.getDifficulty() ==2)
+//			return 50;
+//		else
+//			return 35;
+//	}
+	
 	
 	/*
 	 * Draws the Score on the Screen
@@ -248,6 +418,12 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		font.draw(batch, "Your Total score is " + setTotalScore(), 100, screenHeight -300);
 		font.draw(batch, "Click to Continue", 10, screenHeight -20);
 	}
+	
+	public void enterHiScores(){
+		displayScore =  false;
+		initialEnter = true;
+	}
+			
 	/*
 	 * Draws the three components to enter initials on the Screen
 	 */
@@ -257,6 +433,10 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		font3.draw(batch, Character.toString(initLetter[2]), (screenWidth * 6) / 10, 0);
 	}
 	
+	
+	/*
+	 * Clears the Score Variables values and resets them to 0
+	 */
 	public void clearScoreVariables(){
 		game.setMovement(0);
 		game.setRight(0);
@@ -312,10 +492,15 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	@Override
 	public boolean keyDown(int keycode) {
 		// TODO Auto-generated method stub
-		
+		if(displayScore){
+			enterHiScores();
+		}	
+		if(initialEnter){
 //		These functions will be called right before exiting the score screen
 		clearScoreVariables();
 		game.switchScreens(4);
+		}
+		enterHiScores();
 		return false;
 	}
 
@@ -364,14 +549,26 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 //			
 //		}
 		
-		
-		
+		if(displayScore){
+			enterHiScores();
+		}	
+		if(initialEnter){
 //		These functions will be called right before exiting the score screen
 		clearScoreVariables();
 		game.switchScreens(4);
+		}
+		
+		enterHiScores();
+		
+//		These functions will be called right before exiting the score screen
+//		clearScoreVariables();
+//		game.switchScreens(4);
+		
+		
+		
+		
 		return false;
 	}
-
 
 	@Override
 	public boolean touchUp(int screenX, int screenY, int pointer, int button) {
@@ -379,13 +576,11 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		return false;
 	}
 
-
 	@Override
 	public boolean touchDragged(int screenX, int screenY, int pointer) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 
 	@Override
 	public boolean mouseMoved(int screenX, int screenY) {
@@ -393,12 +588,9 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		return false;
 	}
 
-
 	@Override
 	public boolean scrolled(int amount) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
-
 }

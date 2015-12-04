@@ -6,17 +6,19 @@ import com.badlogic.gdx.graphics.Texture;
 class Player{
 	private float xPlayerLoc, yPlayerLoc, playerScale;
 	private Texture playerImage;
-	int diffSett;
-	
+	private int diffSett;
+	private String[] playerMoveImages;
+		//Index 0 is right image & Index 1 is left image
 	/*
 	 * Constructor for the player class that passes nothing in
 	 */
 	public Player (){
 //		xPlayerLoc = setPlayerXStart();
 		yPlayerLoc = 100;
-		playerImage = new Texture("YouDee.png");
+		playerImage = new Texture("Universal/PlayerImage-Right.png");
 		playerScale = .25f;
 		diffSett = 0;
+		setPlayerMoveImages();
 	}
 	/*
 	 * Constructor for the player class that passes the xlocation & difficulty in
@@ -24,9 +26,10 @@ class Player{
 	public Player (float xLoc, int diff){
 		xPlayerLoc = xLoc;
 		yPlayerLoc = 100;
-		playerImage = new Texture("YouDee.png");
+		playerImage = new Texture("Universal/PlayerImage-Right.png");
 		diffSett = diff;
 		playerScale = setPlayerScale();
+		setPlayerMoveImages();
 	}
 	/*
 	 * Constructor for the player class that passes the x location, y location & difficulty in
@@ -34,9 +37,10 @@ class Player{
 	public Player (float xLoc, float yLoc, int diff){
 		xPlayerLoc = xLoc;
 		yPlayerLoc = yLoc;
-		playerImage = new Texture(Gdx.files.internal("YouDee.png"));
+		playerImage = new Texture(Gdx.files.internal("Universal/PlayerImage-Right.png"));
 		diffSett = diff;
 		playerScale = setPlayerScale();
+		setPlayerMoveImages();
 	}
 	
 	/*
@@ -48,6 +52,7 @@ class Player{
 		playerImage = playImage;
 		diffSett = diff;
 		playerScale = setPlayerScale();
+		setPlayerMoveImages();
 	}
 	
 	/*
@@ -59,6 +64,7 @@ class Player{
 		playerImage = playImage;
 		diffSett = diff;
 		playerScale = setPlayerScale();
+		setPlayerMoveImages();
 	}
 
 	/*
@@ -89,6 +95,29 @@ class Player{
 		else
 			return .1f;
 	}
+	
+	public void setPlayerMoveImages(){
+		playerMoveImages = new String [2];
+		
+		/*
+		 * These next lines will set the player move images to the left and right
+		 * Later code should implement the images by parsing through an xml file
+		 */
+		playerMoveImages[0] = "Universal/PlayerImage-Right.png";
+		playerMoveImages[1] = "Universal/PlayerImage-Left.png";
+		
+		
+		
+	}
+	
+	
+	public void setPlayerImage(boolean right){
+		if(right)
+			playerImage = new Texture(playerMoveImages[0]);
+		else
+			playerImage = new Texture(playerMoveImages[1]);
+	}
+	
 	
 //	Getters & Setters for the Player Class
 	public float getxPlayerLoc() {
