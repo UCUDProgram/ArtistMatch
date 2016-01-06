@@ -162,8 +162,11 @@ public class LevelSelect implements Screen, InputProcessor, ApplicationListener 
 //			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				game.setArtist(button.getName());
-				game.switchScreens(4);
+				
 				System.out.println(game.getArtist());
+				
+				game.switchScreens(4);
+				
 			}
 		});
 		}

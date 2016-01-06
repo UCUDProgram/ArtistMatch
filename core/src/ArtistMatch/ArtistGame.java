@@ -48,10 +48,10 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	private BitmapFont font,font1, font2;
 	private Stage stage;
 	private SpriteBatch batch;
-	
+	private Texture tut1, tut2;
 	private List<String> correctA, selectedA,options,optionsList;
 	private float screenWidth,screenHeight,moveDistance;
-	private boolean goLeft, goRight,ballShoot, activeBall,turnUp, turnDown,win,tutorial;
+	private boolean goLeft, goRight,ballShoot, activeBall,turnUp, turnDown,win,tutorial1, tutorial2;
 	private Ball validBall;
 	private Player Player;
 	private List<Box> possAnswers;
@@ -67,7 +67,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		stage = new Stage();
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
-		Gdx.input.setInputProcessor(this);		
+			
 		
 		initializeVariables();
 		initializeBoolean();
@@ -82,11 +82,11 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeQuestion();
 		initializeSelectionArray();
 		initializeAnswer();	
-		
+		initializeTutScreen();
 		
 //		ballImage = setBallImage();
 //		playerImage = setPlayerImage();
-//		boxImage = setBoxImage();
+		
 //		backgroundImage = setBackgroundImage();
 		
 		
@@ -97,7 +97,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 //		Add box, player, & ball creator methods
 		
-		
+		boxImage = setBoxImage();
 		boxTester = new Box(game.getDifficulty());
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
@@ -105,6 +105,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		shape = new ShapeRenderer();
 		screenHeight = Gdx.graphics.getHeight(); 
 		screenWidth = Gdx.graphics.getWidth();
+		Gdx.input.setInputProcessor(this);	
 	}
 	
 	/*
@@ -161,7 +162,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		guessCounter = true;
 		
 		
-		tutorial = true;
+		tutorial1 = true;
+		tutorial2 = false;
 		win = false;
 		goLeft = false;
 		goRight = false;
@@ -169,6 +171,12 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		activeBall = false;
 	}
 	
+	public void initializeTutScreen(){
+		FileHandle TutorialOne = Gdx.files.internal("Universal/QuestionTutorial.png");
+		tut1 = new Texture(TutorialOne);
+		FileHandle TutorialTwo = Gdx.files.internal("Universal/PlayerControlInstruction.png");
+		tut2 = new Texture(TutorialTwo);
+	}
 	/*
 	 * Sets the XML File that will be used to get the question, options and correct answers
 	 * Based on game difficulty
@@ -527,7 +535,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		int numcount = 1;
 		int boxTotal = optionsList.size();
 		for(int i=0; i< boxTotal; i++){			
-			possAnswers.add(new Box(setBoxOptionString(), setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
+			possAnswers.add(new Box(setBoxOptionString(), setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i], setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty(),boxImage) );
 
 			
 //			possAnswers.add(new Box(answers[i], setBoxXLoc(numcount),setBoxYLoc(numcount),displayAnswer[i],setDisplayXDrawPos(numcount), setDisplayYDrawPos(numcount),game.getDifficulty() ) );
@@ -601,13 +609,23 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	public void render(float delta) {
 		// TODO Auto-generated method stub
 		batch.begin();
-		if(tutorial){
+		if(tutorial1){
 			Gdx.gl.glClearColor(0, 0, 0, 0);
 			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 			font.setColor(Color.WHITE);
 			font.setScale(1,1);
+			batch.draw(tut1,0,0, screenWidth, screenHeight);
 			font.draw(batch, "Press, 'ESC' to return to menu", 0f, screenHeight);		
-		} else if((!win) && !tutorial){
+		} 
+		else if(tutorial2){
+//			Gdx.gl.glClearColor(0, 0, 0, 0);
+//			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+//			font.setColor(Color.WHITE);
+//			font.setScale(1,1);
+			batch.draw(tut2,0,0, screenWidth, screenHeight);
+			font.draw(batch, "Press, 'ESC' to return to menu", 0f, screenHeight);		
+		} 
+		else if((!win) && !tutorial1 && !tutorial2){
 			stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 60f));
 			Gdx.gl.glClearColor(1, 1, 1, 1);
 			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -1039,8 +1057,13 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	@Override
 	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
 		// TODO Auto-generated method stub
-		if(tutorial){
-			tutorial = false;
+		if(tutorial1){
+			tutorial1 = false;
+			tutorial2 = true;
+//			startTime = System.currentTimeMillis();
+		}
+		if(tutorial2){
+			tutorial2 = false;
 			startTime = System.currentTimeMillis();
 		}
 		

@@ -8,7 +8,12 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class Score implements Screen, InputProcessor, ApplicationListener{
 	private ArtistMatch game;
@@ -17,13 +22,20 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	private BitmapFont font, font1, font2, font3;
 	private float screenWidth,screenHeight,moveDist;
 	private double timeScore, correctScore, incorrectScore, moveScore, totalScore;
+	private boolean displayScore, initialEnter,enterScore;
+	private float scaleX, scaleY;
 	
 	
 	private Stage stage;
-	private boolean displayScore, initialEnter,enterScore;
+	private Table table,table1,table2;
+	private Skin skin;
 	private char [] letters,initLetter;
 	private int letIndex1,letIndex2,letIndex3;
+	
+	
 	private int timeBonus, incorrectPenalty, correctBonus, movePenalty;
+	private String initials;
+	
 	
 	
 	public Score(ArtistMatch game){
@@ -45,8 +57,24 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		font1.setColor(Color.GREEN);
 		font2.setColor(Color.RED);
 		
-		
 		stage = new Stage();
+		skin = new Skin (Gdx.files.internal("uiskin.json"));
+		scaleX = screenWidth/640;
+		scaleY = screenHeight/480;
+		table = new Table(skin);
+		table1 = new Table(skin);
+		table2 = new Table(skin);
+		addIncreaseButtons();
+		addDecreaseButtons();
+		addEnterButton();
+		
+		table1.setFillParent(true);
+		table1.bottom();
+		stage.addActor(table1);
+		table2.setFillParent(true);
+		table2.right();
+		stage.addActor(table2);
+		
 		char [] letters = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 		letIndex1 = letters.length / 2;
 		letIndex2 = letters.length / 2;
@@ -55,12 +83,14 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		initLetter[0] = letters[letIndex1];
 		initLetter[1] = letters[letIndex2];
 		initLetter[2] = letters[letIndex3];
+//		initials = initLetter[0] + initLetter[1] + initLetter[2];
+		
 		font3 = new BitmapFont();
 		font3.setScale((screenWidth * 3) / 10, screenHeight);
 		
 		
 		Gdx.input.setInputProcessor(this);
-//		Gdx.input.setInputProcessor(stage);
+		Gdx.input.setInputProcessor(stage);
 	}
 	
 	
@@ -75,7 +105,10 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		} else{
 //			(initialEnter){
 //			drawHiScore();
-			font1.draw(batch, "The Entering initials Screen is working ", 100, screenHeight -100);
+			addIncreaseButtons();
+			addDecreaseButtons();
+			font.draw(batch, "Score " + totalScore, (2* (screenWidth / 3) ), 20);
+//			font.draw(batch, "The Entering initials Screen is working", 100, screenHeight/2);
 		}
 		
 		batch.end();
@@ -344,8 +377,12 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	 * Sets the Move Score
 	 */
 	public double setMoveScore(){
-		double move = ((double) (moveDist / setMoveDistBasis() ) ) * setMovPen();
-		return (move * 100) / 100 ;
+		double initMoveScore = (double) ( (moveDist / setMoveDistBasis() ) * setMovPen() );
+		return formatDouble(initMoveScore);
+//		move = 
+//		return Math.round(move);
+//		return move  100);		
+//		return movement / 100 ;
 	}
 	
 	/*
@@ -376,6 +413,17 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		else
 			return 110;
 	}
+	/*
+	 * Formats the Movement score to two decimal Places
+	 * Takes in the Move Score, with all of its decimal places
+	 * Produces a double formatted to XXXXX.XX
+	 */
+	public double formatDouble(double movScore){
+		int base = (int) movScore / 1;
+		int decimalbase = (int) movScore * 100;
+		int dec = decimalbase % 100;
+		return (double) (base + (dec * .01));
+	}
 	
 //											THESE FUNCTIONS DEAL WITH THE TOTAL SCORE IN THE GAME
 	/*
@@ -400,6 +448,109 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 //			return 35;
 //	}
 	
+	public void addIncreaseButtons(){
+//		Table table4,table5,table6;
+//		table4 = new Table(skin);
+//		table5 = new Table(skin);
+//		table6 = new Table(skin);
+		table.row();
+		final TextButton increaseLetterOne = new TextButton("Next",skin);
+		increaseLetterOne.setName("Next");
+		table.add(increaseLetterOne).width(increaseLetterOne.getWidth()*scaleX).height(increaseLetterOne.getHeight()*scaleY);
+//		table1.row();
+		increaseLetterOne.addListener(new ClickListener(){
+//			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				
+				
+			}
+		});
+		
+		
+		final TextButton increaseLetterTwo = new TextButton("Next",skin);
+		increaseLetterTwo.setName("Next");
+		table.add(increaseLetterTwo).width(increaseLetterTwo.getWidth()*scaleX).height(increaseLetterTwo.getHeight()*scaleY);
+//		table.row();
+		increaseLetterTwo.addListener(new ClickListener(){
+//			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				
+				
+			}
+		});
+		
+		final TextButton increaseLetterThree = new TextButton("Next",skin);
+		increaseLetterThree.setName("Next");
+		table.add(increaseLetterThree).width(increaseLetterThree.getWidth()*scaleX).height(increaseLetterThree.getHeight()*scaleY);
+//		table.row();
+		increaseLetterThree.addListener(new ClickListener(){
+//			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				
+				
+			}
+		});
+		
+		table.setFillParent(true);
+		table.top().center();
+		stage.addActor(table);
+	}
+	
+	public void addDecreaseButtons(){
+		final TextButton decreaseLetterOne = new TextButton("Next",skin);
+		decreaseLetterOne.setName("Next");
+		table1.add(decreaseLetterOne).width(decreaseLetterOne.getWidth()*scaleX).height(decreaseLetterOne.getHeight()*scaleY);
+//		table.row();
+		decreaseLetterOne.addListener(new ClickListener(){
+//			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				
+				
+			}
+		});
+		
+		final TextButton decreaseLetterTwo = new TextButton("Next",skin);
+		decreaseLetterTwo.setName("Next");
+		table1.add(decreaseLetterTwo).width(decreaseLetterTwo.getWidth()*scaleX).height(decreaseLetterTwo.getHeight()*scaleY);
+//		table.row();
+		decreaseLetterTwo.addListener(new ClickListener(){
+//			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				
+				
+			}
+		});
+		
+		final TextButton decreaseLetterThree = new TextButton("Next",skin);
+		decreaseLetterThree.setName("Next");
+		table1.add(decreaseLetterThree).width(decreaseLetterThree.getWidth()*scaleX).height(decreaseLetterThree.getHeight()*scaleY);
+//		table.row();
+		decreaseLetterThree.addListener(new ClickListener(){
+//			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				
+				
+			}
+		});
+		
+		table1.setFillParent(true);
+		table1.bottom().center();
+		stage.addActor(table1);
+		
+	}
+	
+	public void addEnterButton(){
+		String initials = initialsFormation();
+		
+//		game.switchScreens(4);
+	}
+	
+	
+	public String initialsFormation(){
+	
+		
+		return "String";
+	}
 	
 	/*
 	 * Draws the Score on the Screen
@@ -423,7 +574,14 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		displayScore =  false;
 		initialEnter = true;
 	}
-			
+//						These functions address the initials entering part of Hi Score
+	
+	
+	public void updateInitials(){
+		
+	}
+	
+	
 	/*
 	 * Draws the three components to enter initials on the Screen
 	 */
@@ -492,9 +650,9 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	@Override
 	public boolean keyDown(int keycode) {
 		// TODO Auto-generated method stub
-		if(displayScore){
-			enterHiScores();
-		}	
+//		if(displayScore){
+//			enterHiScores();
+//		}	
 		if(initialEnter){
 //		These functions will be called right before exiting the score screen
 		clearScoreVariables();
@@ -549,9 +707,9 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 //			
 //		}
 		
-		if(displayScore){
-			enterHiScores();
-		}	
+//		if(displayScore){
+//			enterHiScores();
+//		}	
 		if(initialEnter){
 //		These functions will be called right before exiting the score screen
 		clearScoreVariables();
