@@ -6,3 +6,5 @@ To answer the question, the player launches a ball at what they think is the cor
 The "quiz" ends after all the correct answers have been chosen.
 After each "quiz", the player will get a score, based on how well they did.
 
+The player can change the difficulty of the game, to make it harder or easier.  
+
