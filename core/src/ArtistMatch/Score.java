@@ -61,36 +61,33 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		skin = new Skin (Gdx.files.internal("uiskin.json"));
 		scaleX = screenWidth/640;
 		scaleY = screenHeight/480;
-		table = new Table(skin);
-		table1 = new Table(skin);
-		table2 = new Table(skin);
-		addIncreaseButtons();
-		addDecreaseButtons();
-		addEnterButton();
+//		table = new Table(skin);
+//		table1 = new Table(skin);
+//		table2 = new Table(skin);
+
 		
-		table1.setFillParent(true);
-		table1.bottom();
-		stage.addActor(table1);
-		table2.setFillParent(true);
-		table2.right();
-		stage.addActor(table2);
-		
-		char [] letters = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
-		letIndex1 = letters.length / 2;
-		letIndex2 = letters.length / 2;
-		letIndex3 = letters.length / 2;
-		initLetter = new char[3];
-		initLetter[0] = letters[letIndex1];
-		initLetter[1] = letters[letIndex2];
-		initLetter[2] = letters[letIndex3];
+//		addIncreaseButtons();
+//		addDecreaseButtons();
+//		addEnterButton();		
+//		table1.setFillParent(true);
+//		table1.bottom();
+//		stage.addActor(table1);
+//		table2.setFillParent(true);
+//		table2.right();
+//		stage.addActor(table2);
+//		char [] letters = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+//		letIndex1 = letters.length / 2;
+//		letIndex2 = letters.length / 2;
+//		letIndex3 = letters.length / 2;
+//		initLetter = new char[3];
+//		initLetter[0] = letters[letIndex1];
+//		initLetter[1] = letters[letIndex2];
+//		initLetter[2] = letters[letIndex3];
 //		initials = initLetter[0] + initLetter[1] + initLetter[2];
-		
-		font3 = new BitmapFont();
-		font3.setScale((screenWidth * 3) / 10, screenHeight);
-		
-		
+//		font3 = new BitmapFont();
+//		font3.setScale((screenWidth * 3) / 10, screenHeight);		
 		Gdx.input.setInputProcessor(this);
-		Gdx.input.setInputProcessor(stage);
+//		Gdx.input.setInputProcessor(stage);
 	}
 	
 	
@@ -105,8 +102,12 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 		} else{
 //			(initialEnter){
 //			drawHiScore();
-			addIncreaseButtons();
-			addDecreaseButtons();
+			
+			
+//			addIncreaseButtons();
+//			addDecreaseButtons();
+			
+			
 			font.draw(batch, "Score " + totalScore, (2* (screenWidth / 3) ), 20);
 //			font.draw(batch, "The Entering initials Screen is working", 100, screenHeight/2);
 		}
@@ -650,15 +651,18 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 	@Override
 	public boolean keyDown(int keycode) {
 		// TODO Auto-generated method stub
-//		if(displayScore){
+		if(displayScore){
 //			enterHiScores();
-//		}	
-		if(initialEnter){
+			
+			clearScoreVariables();
+			game.switchScreens(4);	
+		}	
+//		if(initialEnter){
 //		These functions will be called right before exiting the score screen
-		clearScoreVariables();
-		game.switchScreens(4);
-		}
-		enterHiScores();
+//		clearScoreVariables();
+//		game.switchScreens(4);
+//		}
+//		enterHiScores();
 		return false;
 	}
 
@@ -686,45 +690,36 @@ public class Score implements Screen, InputProcessor, ApplicationListener{
 //				if( ( (screenHeight/ 2) < screenY ) && (letIndex1 !=letters.length ))
 //					letIndex1++;
 //			}
-//			
 //			if( (( (screenWidth / 10) *3) <= screenX) && (screenX < ((screenWidth / 10) *6  ))){
 //				if( (screenY <= (screenHeight/ 2) ) && (letIndex2 !=0))
 //					letIndex2--;
 //				if( ( (screenHeight/ 2) < screenY ) && (letIndex2 !=letters.length ))
 //					letIndex2++;
 //			}
-//
 //			if( (( (screenWidth / 10) *6) <= screenX) && (screenX < ((screenWidth / 10) *9  ))){
 //				if( (screenY <= (screenHeight/ 2) ) && (letIndex3 !=0))
 //					letIndex3--;
 //				if( ( (screenHeight/ 2) < screenY ) && (letIndex3 !=letters.length ))
 //					letIndex3++;
 //			}
-//
-//			if( (( (screenWidth / 10) *9) <= screenX) && (screenX <= screenWidth)){
-//	
+//			if( (( (screenWidth / 10) *9) <= screenX) && (screenX <= screenWidth)){	
 //			}
-//			
 //		}
 		
-//		if(displayScore){
+		if(displayScore){
+			clearScoreVariables();
+			game.switchScreens(4);
+		}	
 //			enterHiScores();
-//		}	
-		if(initialEnter){
-//		These functions will be called right before exiting the score screen
-		clearScoreVariables();
-		game.switchScreens(4);
-		}
-		
-		enterHiScores();
-		
+//		if(initialEnter){
 //		These functions will be called right before exiting the score screen
 //		clearScoreVariables();
 //		game.switchScreens(4);
-		
-		
-		
-		
+//		}
+//		enterHiScores();
+//		These functions will be called right before exiting the score screen
+//		clearScoreVariables();
+//		game.switchScreens(4);
 		return false;
 	}
 

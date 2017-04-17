@@ -41,8 +41,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	//2nd List is to be used to randomize the options
 //	private String [] answers;
 	
-	private String ques,cAnswer,xmlFile;
-	private Texture background, ballImage, boxImage,playerImage;
+	private String ques,cAnswer,xmlFile,ballImage,boxImage;
+	private Texture background,playerImage;
 	private long startTime, endTime;
 	private int angle,ballCount,incorrectGuesses,correctGuess;
 	private BitmapFont font,font1, font2;
@@ -84,7 +84,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		initializeAnswer();	
 		initializeTutScreen();
 		
-//		ballImage = setBallImage();
+		ballImage = setBallImage();
+//		System.out.println(ballImage);
+		
 //		playerImage = setPlayerImage();
 		
 //		backgroundImage = setBackgroundImage();
@@ -92,13 +94,17 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 		background = new Texture("ShooterBackground.png");
 		
+//		Player = new Player(setPlayerXStart(), setYMax(), game.getDifficulty());
+//		validBall = new Ball(0,0,angle,false,game.getDifficulty());
+		
 		Player = new Player(setPlayerXStart(), setYMax(), game.getDifficulty());
-		validBall = new Ball(0,0,angle,false,game.getDifficulty());
+		validBall = new Ball(0,0,angle,false,ballImage,game.getDifficulty());
+		
 		
 //		Add box, player, & ball creator methods
 		
 		boxImage = setBoxImage();
-		boxTester = new Box(game.getDifficulty());
+		boxTester = new Box(game.getDifficulty(), boxImage);
 		possAnswers = new ArrayList<Box>();
 		setBoxes();
 				
@@ -283,7 +289,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	/*
 	 * Function to set the Image of the Ball
 	 */
-	public Texture setBallImage(){
+	public String setBallImage(){
 		List<String> ballSelection = new ArrayList<String>();
 		
 //		Adds the universal ball images to the List
@@ -308,16 +314,16 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 		
 //		Random number generator to choose a random image as the ball image
-		int randomBall = (int) Math.random() * ballSelection.size();
-		FileHandle ballImage = Gdx.files.internal(ballSelection.get(randomBall));
-		return new Texture(ballImage) ;
+		int randomBall = (int) (Math.random() * ballSelection.size());
+		String bImage = ballSelection.get(randomBall);
+		return bImage;
 	}
 
 	
 	/*
 	 * Function to set the Image of the Box
 	 */
-	public Texture setBoxImage(){
+	public String setBoxImage(){
 		List<String> boxSelection = new ArrayList<String>();
 		
 //		Adds the universal box images to the List
@@ -332,8 +338,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 //		Use of xml file readers to add strings to the balls List
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
-		Element ball = root.getChildByName("artist");
-		Element artist = ball.getChildByName(formatName(game.getArtist()));
+		Element box = root.getChildByName("artist");
+		Element artist = box.getChildByName(formatName(game.getArtist()));
 		Array<Element> boxSelectArray = artist.getChildrenByName("box");
 		for (int i = 0; i < boxSelectArray.size; i++)
 			boxSelection.add(boxSelectArray.get(i).getText());
@@ -342,9 +348,9 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		}
 		
 //		Random number generator to choose a random image as the box image
-		int randomBox = (int) Math.random() * boxSelection.size();
-		FileHandle boxImage = Gdx.files.internal(boxSelection.get(randomBox));
-		return new Texture(boxImage) ;
+		int randomBox = (int) (Math.random() * boxSelection.size());
+		String BoxString = boxSelection.get(randomBox);
+		return BoxString;
 	}
 	
 	/*
@@ -365,8 +371,8 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 		
 //		Use of xml file readers to add strings to the player List
 		try{Element root = new XmlReader().parse(Gdx.files.internal("gameImages.xml"));
-		Element ball = root.getChildByName("artist");
-		Element artist = ball.getChildByName(formatName(game.getArtist()));
+		Element playe = root.getChildByName("artist");
+		Element artist = playe.getChildByName(formatName(game.getArtist()));
 		Array<Element> playerSelectArray = artist.getChildrenByName("player");
 		for (int i = 0; i < playerSelectArray.size; i++)
 			playerSelection.add(playerSelectArray.get(i).getText());
@@ -656,15 +662,15 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 				isEndTime = true;
 			}
 			if(displayTimeCount){
-				System.out.println("The time to complete the level is " + duration(startTime,endTime) + " seconds." );
+//				System.out.println("The time to complete the level is " + duration(startTime,endTime) + " seconds." );
 				displayTimeCount = false;
 			}
 			if(moveDistanceCount){
-				System.out.println("The distance traveled is " + moveDistance);
+//				System.out.println("The distance traveled is " + moveDistance);
 				moveDistanceCount = false;
 			}
 			if(guessCounter){
-			System.out.println("The number of incorrect guesses is " + incorrectGuesses);
+//			System.out.println("The number of incorrect guesses is " + incorrectGuesses);
 			guessCounter = false;
 			}
 			
@@ -771,7 +777,7 @@ public class ArtistGame implements Screen, InputProcessor, ApplicationListener {
 	 * Initializes the Ball
 	 */
 	public void setBallInitial(){
-	validBall = new Ball(Player.getxPlayerLoc(),Player.getyPlayerLoc(), angle,true,game.getDifficulty());
+	validBall = new Ball(Player.getxPlayerLoc(),Player.getyPlayerLoc(), angle,true,ballImage,game.getDifficulty());
 }
 	
 	

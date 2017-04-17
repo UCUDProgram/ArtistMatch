@@ -13,35 +13,38 @@ class Ball{
 	private Texture ballImage;
 	private boolean activeBall;
 	private double ballSpeed;
+	private String bImg;
 	
 	/*
 	 * Constructor for the ball class
 	 * 
 	 */
-	public Ball(float xLocation, float yLocation, int bAngle,boolean active, int diff){
-		xLoc = xLocation;
-		yLoc = yLocation;
-		ballAngle = bAngle;
-		String test = "SoccerBall.png";
-		FileHandle handle = Gdx.files.internal(test);
-		ballImage = new Texture(handle);
-
-//		ballImage = new Texture("SoccerBall.png");
-		activeBall = active;
-		gameDiff = diff;
-		ballScale = ballS();
-		ballSpeed = setBallSpeed();
-	}
+//	public Ball(float xLocation, float yLocation, int bAngle,boolean active, int diff){
+//		xLoc = xLocation;
+//		yLoc = yLocation;
+//		ballAngle = bAngle;
+//		String test = "SoccerBall.png";
+//		FileHandle handle = Gdx.files.internal(test);
+//		ballImage = new Texture(handle);
+//
+////		ballImage = new Texture("SoccerBall.png");
+//		activeBall = active;
+//		gameDiff = diff;
+//		ballScale = ballS();
+//		ballSpeed = setBallSpeed();
+//	}
 	
 	/*
 	 * Constructor for the ball class
 	 * Takes in an x position, y position, angle, active boolean, Ball Image & Difficulty
 	 */
-	public Ball(float xLocation, float yLocation, int bAngle,boolean active,Texture ballIm, int diff){
+	public Ball(float xLocation, float yLocation, int bAngle,boolean active,String ballIm, int diff){
 		xLoc = xLocation;
 		yLoc = yLocation;
 		ballAngle = bAngle;
-		ballImage = ballIm;
+		bImg = ballIm;
+		FileHandle handle = Gdx.files.internal(bImg);
+		ballImage = new Texture(handle);
 		activeBall = active;
 		gameDiff = diff;
 		ballScale = ballS();
