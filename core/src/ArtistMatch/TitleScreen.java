@@ -30,7 +30,7 @@ public class TitleScreen implements Screen, InputProcessor, ApplicationListener{
 	
 	public void create(){
 		FileHandle file = Gdx.files.internal("Universal/ArtistMatch Background.png");
-		background = new Texture(file);
+		background = new Texture(file);		
 		FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
 		gameTitle = new Texture(title);
 	 	initializeMusicImages();

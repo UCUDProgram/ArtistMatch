@@ -42,7 +42,7 @@ public class MainMenu implements Screen, InputProcessor, ApplicationListener {
 		this.game = game;
 	}
 	 public void create(){
-		 	background = new Texture("ArtistMatch Background.png");
+		 	background = new Texture("ArtistMatchBackground.png");
 		 	FileHandle title = Gdx.files.internal("Universal/Game Title Screen.png");
 			gameTitle = new Texture(title);
 		 	skin = new Skin (Gdx.files.internal("uiskin.json"));
