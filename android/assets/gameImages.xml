@@ -24,6 +24,37 @@
        <box>Universal/SixteenthNote-Box.png</box>
        <player></player>
     </Universal>
+    <Score>
+        <letter>Score/letterA.png</letter>
+        <letter>Score/letterB.png</letter>
+        <letter>Score/letterC.png</letter>
+        <letter>Score/letterD.png</letter>
+        <letter>Score/letterE.png</letter>
+        <letter>Score/letterF.png</letter>
+        <letter>Score/letterG.png</letter>
+        <letter>Score/letterH.png</letter>
+        <letter>Score/letterI.png</letter>
+        <letter>Score/letterJ.png</letter>
+        <letter>Score/letterK.png</letter>
+        <letter>Score/letterL.png</letter>
+        <letter>Score/letterM.png</letter>
+        <letter>Score/letterN.png</letter>
+        <letter>Score/letterO.png</letter>
+        <letter>Score/letterP.png</letter>
+        <letter>Score/letterQ.png</letter>
+        <letter>Score/letterR.png</letter>
+        <letter>Score/letterS.png</letter>
+        <letter>Score/letterT.png</letter>
+        <letter>Score/letterU.png</letter>
+        <letter>Score/letterV.png</letter>
+        <letter>Score/letterW.png</letter>
+        <letter>Score/letterX.png</letter>
+        <letter>Score/letterY.png</letter>
+        <letter>Score/letterZ.png</letter>
+        <buttons>Score/enterButtonImg.png</buttons>
+        <buttons>Score/previous.png</buttons>
+        <buttons>Score/next.png</buttons>
+    </Score>
     <artist>
         <TheBeatles>
            	<background></background>
@@ -48,10 +79,10 @@
             <player></player>
         </TheBeatles>
         <Beyonce>
+            <background>Beyonce/Beyonce-1st5AlbumsPlatinumSingles-Background.png</background>
     	    <background>Beyonce/Beyonce-4Album-Background.png</background>
     	    <background>Beyonce/Beyonce-B-DayAlbum-Background.png</background>
     	    <background>Beyonce/Beyonce-GoldSingles-Background.png</background>
-    	    <background>Beyonce/Beyonce-1st5AlbumsPlatinumSingles-Background.png</background>
     	    <background>Beyonce/Beyonce-PlatinumAlbums-Background.png</background>
     	    <ball>Beyonce/Beyonce-Afro-Ball.png</ball>
     	    <ball>Beyonce/Beyonce-Halo-Ball.png</ball>
@@ -74,9 +105,9 @@
             <player></player>
     	</Beyonce>
         <CarrieUnderwood>
-    	    <background>Carrie/CarrieUnderwood-PlatinumAlbums-Background.png</background>
     	    <background>Carrie/CarrieUnderwood-1&2AlbumsPlatinumSingles-Background.png</background>
     	    <background>Carrie/CarrieUnderwood-3&4AlbumsPlatinumSingles-Background.png</background>
+    	    <background>Carrie/CarrieUnderwood-PlatinumAlbums-Background.png</background>
     	    <ball>Carrie/Carrie-Underwood-Football-Ball.png</ball>
     	    <ball>Carrie/Carrie-Underwood-Puck-Ball.png</ball>
             <box>Carrie/Carrie-Underwood-CarnivalRideAlbum-Box.png</box>
@@ -130,7 +161,6 @@
     	    <background>Mariah/MariahCarey-MerryChristmasAlbum-Background.png</background>
     	    <background>Mariah/MariahCarey-MusicBoxAlbum-Background.png</background>
     	    <background>Mariah/MariahCarey-PlatinumAlbums-Background.png</background>
-    	    <background>Mariah/MariahCarey-1990'sGoldSingles-Background.png</background>
     	    <ball>Mariah/Mariah-Carey-Infinity-Ball.png</ball>
     	    <box>Mariah/Mariah-Carey-AngelsCry-Box.png</box>
     	    <box>Mariah/Mariah-Carey-Butterfly-Box.png</box>
@@ -151,14 +181,14 @@
             <player></player>
     	</MariahCarey>
         <MichaelJackson>
-		   <background>Michael/MichaelJackson-BadAlbum-Background.png</background>
-		   <background>Michael/MichaelJackson-OfftheWallAlbum-Background.png</background>
-		   <background>Michael/MichaelJackson-SilverUKSingles-Background.png</background>
-		   <background>Michael/MichaelJackson-ThrillerAlbum-Background.png</background>
-		   <background>Michael/MichaelJackson-US:UKGoldSingles-Background.png</background>
-		   <background>Michael/MichaelJackson-US:UKPlatinumSingles-Background.png</background>
-		   <background>Michael/MichaelJackson-CompilationAlbums-Background.png</background>
-		   <background>Michael/MichaelJackson-StudioAlbums-Background.png</background>
+		   	<background>Michael/MichaelJackson-BadAlbum-Background.png</background>
+		   	<background>Michael/MichaelJackson-CompilationAlbums-Background.png</background>
+		   	<background>Michael/MichaelJackson-OfftheWallAlbum-Background.png</background>
+		   	<background>Michael/MichaelJackson-SilverUKSingles-Background.png</background>
+		   	<background>Michael/MichaelJackson-StudioAlbums-Background.png</background>
+		   	<background>Michael/MichaelJackson-ThrillerAlbum-Background.png</background>
+		   	<background>Michael/MichaelJackson-US:UKGoldSingles-Background.png</background>
+		   	<background>Michael/MichaelJackson-US:UKPlatinumSingles-Background.png</background>
 		    <ball></ball>
             <box>Michael/Michael-Jackson-Bubbles-Box.png</box>
             <box>Michael/Michael-Jackson-Indiana-Box.png</box>
