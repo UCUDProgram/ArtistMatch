@@ -63,3 +63,89 @@ eclipse.project {
     name = appName + "-ios"
     natures 'org.robovm.eclipse.RoboVMNature'
 }
+
+// Added to the build file to use roboVM
+
+
+group = 'com.mobidevelop.robovm'
+version = '2.3.3'
+
+ext {
+                                            roboVMVersion = '2.3.3'
+}
+
+// Pull the plugin from Maven Central
+buildscript {
+    project.ext.roboVMVersion = "2.3.3"
+    project.ext.roboVMGradleVersion = "2.3.3"
+
+    repositories {
+    	mavenLocal()
+        mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    }
+    dependencies {
+        classpath group: 'com.mobidevelop.robovm', name: 'robovm-gradle-plugin', version: project.roboVMGradleVersion
+        //classpath group: 'org.robovm', name: 'robovm-gradle-plugin', version: project.roboVMGradleVersion
+        
+    }
+}
+
+// Apply the plugin
+apply plugin: 'robovm'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+dependencies {
+    compile group: 'com.mobidevelop.robovm', name: 'robovm-rt', version: project.roboVMVersion
+    compile group: 'com.mobidevelop.robovm', name: 'robovm-cocoatouch', version: project.roboVMVersion
+    compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
+    
+}
+
+dependencies {
+    compileOnly gradleApi()
+    compileOnly localGroovy()
+    compile "org.apache.commons:commons-compress:1.5"
+    compile "com.mobidevelop.robovm:robovm-dist-compiler:${roboVMVersion}"
+    compile 'org.sonatype.aether:aether:1.13.1'
+    compile 'org.sonatype.aether:aether-connector-wagon:1.13.1'
+    compile 'org.apache.maven:maven-aether-provider:3.0.4'
+    compile 'org.apache.maven.wagon:wagon-provider-api:2.4'
+    compile 'org.apache.maven.wagon:wagon-http:2.4'
+   	compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
+    
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+robovm {
+    // Configure robovm
+}
+
+
+project(":ios") {
+	apply plugin: "java"
+	apply plugin: "robovm"
+
+	eclipse{
+		project{
+			name = "Artist Match-ios"
+		}
+	}
+	dependencies {
+		compile project(":core")
+		compile "org.robovm:robovm-rt:$roboVMVersion"
+		compile "org.robovm:robovm-cocoatouch:$roboVMVersion"
+		compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
+		compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
+		compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
+		compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-ios"
+	}
+}
+
+
+
